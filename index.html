@@ -46,6 +46,7 @@
         position: sticky;
         top: 0;
         z-index: 1000;
+        opacity: 0.7;
     }
     @keyframes gradient {
         0% {
@@ -57,6 +58,10 @@
         100% {
             background-position: 0% 50%;
         }
+    }
+    header:hover{
+        animation-play-state: paused;
+        opacity: 1;
     }
     .navbar-toggler {
         border: none;
@@ -95,6 +100,7 @@
     .navbar-toggler.collapsed .navbar-toggler-icon::after {
         transform: rotate(-45deg) translate(5px, -5px);
     }
+    
 </style>
 </head>
 <body>
@@ -104,7 +110,7 @@
                 <a href="/" class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none">
                     <img class="rounded me-3" src="./images/demo.jpg" alt="Logo" width="40" height="40">
                 </a>
-                <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNav">
@@ -115,10 +121,10 @@
                         <li><a href="#" class="nav-link px-2 text-white">FAQs</a></li>
                         <li><a href="#" class="nav-link px-2 text-white">About</a></li>
                     </ul>
+                    <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3">
+                        <input type="search" class="form-control form-control-dark" placeholder="Search..." aria-label="Search">
+                    </form>
                 </div>
-                <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3">
-                    <input type="search" class="form-control form-control-dark" placeholder="Search..." aria-label="Search">
-                </form>
                 <div class="dropdown text-end">
                     <a href="#" class="d-block link-light text-decoration-none dropdown-toggle" id="dropdownUser1" data-toggle="dropdown" aria-expanded="false">
                         <img src="./images/demo.jpg" alt="Profile Picture" class="rounded-circle" width="40" height="40">
