@@ -58,22 +58,64 @@
             background-position: 0% 50%;
         }
     }
+    .navbar-toggler {
+        border: none;
+        background: transparent;
+    }
+    .navbar-toggler-icon {
+        width: 30px;
+        height: 3px;
+        background-color: white;
+        display: block;
+        position: relative;
+        transition: background 0.3s ease;
+    }
+    .navbar-toggler-icon::before,
+    .navbar-toggler-icon::after {
+        content: '';
+        width: 30px;
+        height: 3px;
+        background-color: white;
+        display: block;
+        position: absolute;
+        transition: transform 0.3s ease;
+    }
+    .navbar-toggler-icon::before {
+        top: -10px;
+    }
+    .navbar-toggler-icon::after {
+        bottom: -10px;
+    }
+    .navbar-toggler.collapsed .navbar-toggler-icon {
+        background-color: transparent;
+    }
+    .navbar-toggler.collapsed .navbar-toggler-icon::before {
+        transform: rotate(45deg) translate(5px, 5px);
+    }
+    .navbar-toggler.collapsed .navbar-toggler-icon::after {
+        transform: rotate(-45deg) translate(5px, -5px);
+    }
 </style>
 </head>
 <body>
     <header class="p-3 text-white">
         <div class="container">
-            <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
-                <a href="/" class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none ">
-                    <img class="rounded me-3" src="./images/demo.jpg"  alt="Logo" width="40" height="40" class="me-2">
+            <div class="d-flex flex-wrap align-items-center justify-content-between">
+                <a href="/" class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none">
+                    <img class="rounded me-3" src="./images/demo.jpg" alt="Logo" width="40" height="40">
                 </a>
-                <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
-                    <li><a href="#" class="nav-link px-2 text-white">Home</a></li>
-                    <li><a href="#" class="nav-link px-2 text-white">Features</a></li>
-                    <li><a href="#" class="nav-link px-2 text-white">Pricing</a></li>
-                    <li><a href="#" class="nav-link px-2 text-white">FAQs</a></li>
-                    <li><a href="#" class="nav-link px-2 text-white">About</a></li>
-                </ul>
+                <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+                        <li><a href="#" class="nav-link px-2 text-white">Home</a></li>
+                        <li><a href="#" class="nav-link px-2 text-white">Features</a></li>
+                        <li><a href="#" class="nav-link px-2 text-white">Pricing</a></li>
+                        <li><a href="#" class="nav-link px-2 text-white">FAQs</a></li>
+                        <li><a href="#" class="nav-link px-2 text-white">About</a></li>
+                    </ul>
+                </div>
                 <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3">
                     <input type="search" class="form-control form-control-dark" placeholder="Search..." aria-label="Search">
                 </form>
