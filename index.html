@@ -27,10 +27,10 @@
         width: 100%;
         transform: scaleX(0);
         height: 3px;
-        bottom: 0;
+        bottom: 0;                              
         left: 0;
         background-color: white;
-        transform-origin: bottom right;
+        transform-origin: bottom right ;
         transition: transform 0.25s ease-out;
     }
     .nav-link:hover::after {
@@ -38,7 +38,7 @@
         transform-origin: bottom left;
     }
     header {
-        margin: 5px;
+        margin: 10px;
         border-radius: 15px;
         background: linear-gradient(270deg, #ecd1e5, #5e8699, #2d3c49, #2d4d40, #44573f);
         background-size: 400% 400%;
@@ -47,6 +47,7 @@
         top: 0;
         z-index: 1000;
         opacity: 0.9;
+        font-size: 1.08rem;
     }
     @keyframes gradient {
         0% {
@@ -59,7 +60,7 @@
             background-position: 0% 50%;
         }
     }
-    header:hover {
+    header:hover{
         animation-play-state: paused;
         opacity: 1;
         transition: 0.3s ease-in-out;
@@ -109,29 +110,46 @@
         .navbar-toggler {
             display: none;
         }
+
     }
+    @media (max-width: 992px) {
+        .dropdown {
+            display: none;
+        }
+        .d{
+            top: 5px;
+        }
+
+    }   
+    body {
+        font-family: 'Poppins', sans-serif;
+        background-color: #262627;
+    }
+    
 </style>
 </head>
 <body>
+    
     <header class="p-3 text-white">
         <div class="container">
             <div class="d-flex flex-wrap align-items-center justify-content-between">
-                <a href="/" class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none">
+                <a href="/" class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none d">
                     <img class="rounded me-3" src="./images/demo.jpg" alt="Logo" width="40" height="40">
                 </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav mr-auto">
-                        <li class="nav-item"><a href="#" class="nav-link px-2 text-white">Home</a></li>
-                        <li class="nav-item"><a href="#" class="nav-link px-2 text-white">Features</a></li>
-                        <li class="nav-item"><a href="#" class="nav-link px-2 text-white">Pricing</a></li>
-                        <li class="nav-item"><a href="#" class="nav-link px-2 text-white">FAQs</a></li>
-                        <li class="nav-item"><a href="#" class="nav-link px-2 text-white">About</a></li>
+                    <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+                        <li><a href="#" class="nav-link px-2 text-white">Home</a></li>
+                        <li><a href="#" class="nav-link px-2 text-white">East</a></li>
+                        <li><a href="#" class="nav-link px-2 text-white">West</a></li>
+                        <li><a href="#" class="nav-link px-2 text-white">North</a></li>
+                        <li><a href="#" class="nav-link px-2 text-white">South</a></li>
+                        <li><a href="#" class="nav-link px-2 text-white">Contact Us</a></li>
                     </ul>
-                    <form class="form-inline my-2 my-lg-0">
-                        <input class="form-control mr-sm-2" type="search" placeholder="Search..." aria-label="Search">
+                    <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3">
+                        <input type="search" class="form-control form-control-dark" placeholder="Search..." aria-label="Search">
                     </form>
                 </div>
                 <div class="dropdown text-end">
@@ -141,14 +159,17 @@
                     <div class="dropdown-menu dropdown-menu-right text-small" aria-labelledby="dropdownUser1">
                         <h4 class="dropdown-item">Developers</h4>
                         <div class="dropdown-divider"></div>
-                        <h6 class="dropdown-item">Raman, Huzaifa</h6>
+                        <h6 class="dropdown-item" href="#">Raman , Huzaifa</h6>
                         <div class="dropdown-divider"></div>
-                        <h6 class="dropdown-item">X_X</h6>
+                        <h6 class="dropdown-item" href="#">X_X</h6>
                     </div>
                 </div>
             </div>
         </div>
     </header>
+    <section>
+        
+    </section>
     <script>
         $(document).ready(function(){
             $('#dropdownUser1').on('click', function (e) {
