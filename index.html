@@ -27,10 +27,10 @@
         width: 100%;
         transform: scaleX(0);
         height: 3px;
-        bottom: 0;                              
+        bottom: 0;
         left: 0;
         background-color: white;
-        transform-origin: bottom right ;
+        transform-origin: bottom right;
         transition: transform 0.25s ease-out;
     }
     .nav-link:hover::after {
@@ -46,7 +46,7 @@
         position: sticky;
         top: 0;
         z-index: 1000;
-        opacity: 0.7;
+        opacity: 0.9;
     }
     @keyframes gradient {
         0% {
@@ -59,9 +59,10 @@
             background-position: 0% 50%;
         }
     }
-    header:hover{
+    header:hover {
         animation-play-state: paused;
         opacity: 1;
+        transition: 0.3s ease-in-out;
     }
     .navbar-toggler {
         border: none;
@@ -100,7 +101,15 @@
     .navbar-toggler.collapsed .navbar-toggler-icon::after {
         transform: rotate(-45deg) translate(5px, -5px);
     }
-    
+    @media (min-width: 992px) {
+        .navbar-collapse {
+            display: flex !important;
+            flex-basis: auto;
+        }
+        .navbar-toggler {
+            display: none;
+        }
+    }
 </style>
 </head>
 <body>
@@ -114,15 +123,15 @@
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
-                        <li><a href="#" class="nav-link px-2 text-white">Home</a></li>
-                        <li><a href="#" class="nav-link px-2 text-white">Features</a></li>
-                        <li><a href="#" class="nav-link px-2 text-white">Pricing</a></li>
-                        <li><a href="#" class="nav-link px-2 text-white">FAQs</a></li>
-                        <li><a href="#" class="nav-link px-2 text-white">About</a></li>
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item"><a href="#" class="nav-link px-2 text-white">Home</a></li>
+                        <li class="nav-item"><a href="#" class="nav-link px-2 text-white">Features</a></li>
+                        <li class="nav-item"><a href="#" class="nav-link px-2 text-white">Pricing</a></li>
+                        <li class="nav-item"><a href="#" class="nav-link px-2 text-white">FAQs</a></li>
+                        <li class="nav-item"><a href="#" class="nav-link px-2 text-white">About</a></li>
                     </ul>
-                    <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3">
-                        <input type="search" class="form-control form-control-dark" placeholder="Search..." aria-label="Search">
+                    <form class="form-inline my-2 my-lg-0">
+                        <input class="form-control mr-sm-2" type="search" placeholder="Search..." aria-label="Search">
                     </form>
                 </div>
                 <div class="dropdown text-end">
@@ -132,9 +141,9 @@
                     <div class="dropdown-menu dropdown-menu-right text-small" aria-labelledby="dropdownUser1">
                         <h4 class="dropdown-item">Developers</h4>
                         <div class="dropdown-divider"></div>
-                        <h6 class="dropdown-item" href="#">Raman , Huzaifa</h6>
+                        <h6 class="dropdown-item">Raman, Huzaifa</h6>
                         <div class="dropdown-divider"></div>
-                        <h6 class="dropdown-item" href="#">X_X</h6>
+                        <h6 class="dropdown-item">X_X</h6>
                     </div>
                 </div>
             </div>
