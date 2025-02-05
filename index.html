@@ -4,16 +4,71 @@
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.11.6/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<style>
+    .dropdown:hover .dropdown-menu {
+        display: block;
+        margin-top: 0; /* remove the gap so it doesn't close */
+        transition: opacity 0.5s ease-in-out;
+        opacity: 1;
+    }
+    .dropdown-menu {
+        opacity: 0;
+        transition: opacity 0.5s ease-in-out;
+    }
+    .nav-link {
+        position: relative;
+        display: inline-block;
+        padding-bottom: 5px;
+    }
+    .nav-link::after {
+        content: '';
+        position: absolute;
+        width: 100%;
+        transform: scaleX(0);
+        height: 3px;
+        bottom: 0;                              
+        left: 0;
+        background-color: white;
+        transform-origin: bottom right ;
+        transition: transform 0.25s ease-out;
+    }
+    .nav-link:hover::after {
+        transform: scaleX(1);
+        transform-origin: bottom left;
+    }
+    header {
+        margin: 5px;
+        border-radius: 15px;
+        background: linear-gradient(270deg, #ecd1e5, #5e8699, #2d3c49, #2d4d40, #44573f);
+        background-size: 400% 400%;
+        animation: gradient 10s ease infinite;
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+    }
+    @keyframes gradient {
+        0% {
+            background-position: 0% 50%;
+        }
+        50% {
+            background-position: 100% 50%;
+        }
+        100% {
+            background-position: 0% 50%;
+        }
+    }
+</style>
 </head>
 <body>
-    <header class="p-3 bg-dark text-white">
+    <header class="p-3 text-white">
         <div class="container">
             <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
-                <a href="/" class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none">
-                    <svg class="bi me-2" width="40" height="32" role="img" aria-label="Bootstrap"><use xlink:href="#bootstrap"/></svg>
+                <a href="/" class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none ">
+                    <img class="rounded me-3" src="./images/demo.jpg"  alt="Logo" width="40" height="40" class="me-2">
                 </a>
                 <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
-                    <li><a href="#" class="nav-link px-2 text-secondary">Home</a></li>
+                    <li><a href="#" class="nav-link px-2 text-white">Home</a></li>
                     <li><a href="#" class="nav-link px-2 text-white">Features</a></li>
                     <li><a href="#" class="nav-link px-2 text-white">Pricing</a></li>
                     <li><a href="#" class="nav-link px-2 text-white">FAQs</a></li>
@@ -22,18 +77,28 @@
                 <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3">
                     <input type="search" class="form-control form-control-dark" placeholder="Search..." aria-label="Search">
                 </form>
-                <div class="text-end">
-                    <button type="button" class="btn btn-outline-light me-2">Login</button>
-                    <button type="button" class="btn btn-warning">Sign-up</button>
+                <div class="dropdown text-end">
+                    <a href="#" class="d-block link-light text-decoration-none dropdown-toggle" id="dropdownUser1" data-toggle="dropdown" aria-expanded="false">
+                        <img src="./images/demo.jpg" alt="Profile Picture" class="rounded-circle" width="40" height="40">
+                    </a>
+                    <div class="dropdown-menu dropdown-menu-right text-small" aria-labelledby="dropdownUser1">
+                        <h4 class="dropdown-item">Developers</h4>
+                        <div class="dropdown-divider"></div>
+                        <h6 class="dropdown-item" href="#">Raman , Huzaifa</h6>
+                        <div class="dropdown-divider"></div>
+                        <h6 class="dropdown-item" href="#">X_X</h6>
+                    </div>
                 </div>
             </div>
         </div>
     </header>
-    <div class="container mt-5 pt-5">
-        <header class="my-4">
-            <h1>Welcome to Eproject</h1>
-            <p>Your one-stop solution for project management.</p>
-        </header>
-    </div>
+    <script>
+        $(document).ready(function(){
+            $('#dropdownUser1').on('click', function (e) {
+                e.preventDefault();
+                $(this).next('.dropdown-menu').toggle();
+            });
+        });
+    </script>
 </body>
 </html>
