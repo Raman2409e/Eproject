@@ -184,14 +184,30 @@
     .carousel {
         margin: 25px;
         width: 70%;
-        margin-left: 1%;
         border-radius: 50px;
         opacity: 0.8;
         height: 90%;
         transition: 0.3s ease-in-out;
     }
-
+    .carousel-caption {
+        position: absolute;
+        bottom: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+        background: rgba(0, 0, 0, 0.5);
+        border-radius: 20px;
+        opacity: 0.8;
+        width: 80%;
+        text-align: center;
+        padding: 10px;
+        font-size: 1.5rem;
+    }
+    .carousel-caption h3 {
+        margin: 0;
+        font-size: 2rem;
+    }
     .carousel-caption .btn {
+        margin-top: 10px;
         background-color: #d47f86;
         border: none;
         color: white;
@@ -199,22 +215,19 @@
         border-radius: 50px;
         transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
         opacity: 0.9;
-
     }
-
     .carousel-caption .btn:hover {
         opacity: 1;
         transition: 0.3s ease-in-out;
         transform: scale(1.1);
     }
-
     .top {
         background: linear-gradient(-45deg, #ffffff, #ffffff, #d3d3d3);
         color: #333;
         font-family: 'Poppins', sans-serif;
         font-weight: bold;
         width: 100%;
-        height: 764px;
+        height: 90%;
         font-size: 20px;
         margin-top: 25px;
         border-radius: 25px;
@@ -226,76 +239,76 @@
         overflow: hidden;
         animation: fadeIn 0.5s ease-in-out;
     }
-
     .top::before {
         content: '';
         position: absolute;
         top: 0;
         left: 0;
         width: 100%;
-        height: 400%;
-        background: rgba(255, 255, 255, 0.5);
+        height: 100%;
         z-index: 1;
         transition: opacity 0.3s ease-in-out;
         column-gap: 10px;
     }
-
     .top:hover::before {
         opacity: 0;
     }
-
     .top .article {
         font-size: 18px;
         z-index: 2;
         position: relative;
         margin-bottom: 15px;
     }
-
     .top .article h4 {
         margin: 0;
         font-size: 24px;
     }
-
     .top .article p {
         margin: 5px 0 0;
+        font-size: 24px;
     }
-
     .top:hover {
         transform: scale(1.05);
         box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
     }
-
     @media (max-width: 992px) {
+        .carousel-caption {
+            width: 90%;
+            font-size: 1rem;
+        }
+        .carousel-caption h3 {
+            font-size: 1.5rem;
+        }
         .top {
             height: auto;
-            font-size: 16px;
+            font-size: 8px;
         }
-
         .top .article h4 {
-            font-size: 20px;
+            font-size: 10px;
+        }
+        .top .article p{
+            font-size: 8px;
         }
     }
-
     .carousel-container {
         display: flex;
         flex-wrap: wrap;
+        border-radius: 25px;
+        margin-right: 10px;
     }
-
     .carousel-container .carousel {
         flex: 1;
+        margin-right: 25px;
     }
-
     .carousel-container .top {
         flex: 0 0 25%;
         margin-left: 1%;
     }
-
     @keyframes fadeIn {
         from {
             opacity: 0;
             transform: translateY(20px);
         }
-
         to {
             opacity: 1;
             transform: translateY(0);
@@ -359,8 +372,8 @@
                         </div>'>
                         <img src="./images/dandadan.jpg" class="d-block w-100" alt="...">
                         <div class="carousel-caption d-none d-md-block">
-                            <h5>First slide label</h5>
-                            <p>Some representative placeholder content for the first slide.</p>
+                            <h3>First slide label</h3>
+                        
                             <a href="#" class="btn">Learn more...</a>
                         </div>
                     </div>
@@ -374,8 +387,8 @@
 '>
                         <img src="./images/tanjiro.jpg" class="d-block w-100" alt="...">
                         <div class="carousel-caption d-none d-md-block">
-                            <h5>Second slide label</h5>
-                            <p>Some representative placeholder content for the second slide.</p>
+                            <h3>Second slide label</h3>
+                            
                             <a href="#" class="btn">Learn more...</a>
                         </div>
                     </div>
@@ -389,8 +402,7 @@
                         '>
                         <img src="./images/toji.jpg" class="d-block w-100" alt="...">
                         <div class="carousel-caption d-none d-md-block">
-                            <h5>Third slide label</h5>
-                            <p>Some representative placeholder content for the third slide.</p>
+                            <h3>Third slide label</h3>
                             <a href="#" class="btn">Learn more...</a>
                         </div>
                     </div>
@@ -409,6 +421,7 @@
             <div class="top" id="topContent">
                 <div class="article" style="height: 50%;">
                     <h1>Recent Articles:</h1>
+                    <hr/>
                     <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Impedit temporibus aperiam laborum
                         suscipit, fuga quam, saepe cupiditate mollitia laboriosam cum quia fugit, quos corporis
                         necessitatibus facilis quas magni. Fugiat, sunt.</p>
