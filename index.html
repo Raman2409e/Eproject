@@ -16,7 +16,8 @@
         /* remove the gap so it doesn't close */
         transition: opacity 0.5s ease-in-out;
         opacity: 1;
-        background: linear-gradient(-45deg, #f0f0f0, #f0f0f0, #c0c0c0);
+        background: linear-gradient(-45deg, #eed859, #eed859, #c7b44a);
+        box-shadow: 0 5px 5px black;
     }
 
     .dropdown-menu {
@@ -159,7 +160,7 @@
 
     body {
         font-family: 'Poppins';
-        background-color:rgb(243, 238, 192); /* Updated dark background color */
+        background-color:#f3eec0; /* Updated dark background color */
         display: flex;
         
         flex-direction: column;
@@ -203,6 +204,7 @@
     .carousel-caption {
         position: absolute;
         bottom: 20px;
+        font-weight: bold;
         left: 50%;
         transform: translateX(-50%);
         border-radius: 20px;
@@ -216,10 +218,12 @@
     .carousel-caption h3 {
         margin: 0;
         font-size: 2rem;
+        font-weight: bold;
     }
     .carousel-caption .btn {
         margin-top: 10px;
         transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+        font-weight: bold;
         opacity: 0.9;
         color: black;
         background-color: #eed859;
@@ -272,6 +276,7 @@
         margin-bottom: 15px;
     }
     .top .article h4 {
+        
         margin: 0;
         font-size: 24px;
     }
@@ -434,7 +439,14 @@
         }
     }
     .frs {
-        
+        background-color:#c4bf9a ;
+        width: 100%;
+        height: auto;
+        justify-content: center;
+        border-radius: 20px;
+        animation: autoShow both;
+        animation-timeline: view(auto auto);
+        animation-range: entry 0;
         columns: 1;
                
     }
@@ -447,6 +459,7 @@
         width: 400px;
         border-radius: 15px;
         margin: 20px;
+        gap: 50px;
         padding: 20px;
         border-bottom: black 10px solid;
         border-right: black 7px solid;
@@ -456,36 +469,6 @@
         transform: scale(1.01);
         box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
         transition:0.5s ease-in-out ;
-    }
-    .gap1{
-        margin-right: 100px;
-    }
-    .gap2{
-        margin-left: 500px;
-    }
-    @media (max-width: 990px) {
-        .gap1 {
-            margin-right: 30px;
-        }
-        .gap2 {
-            margin-left: 30px;
-        }
-    }
-    @media (max-width: 768px) {
-        .gap1 {
-            margin-right: 20px;
-        }
-        .gap2 {
-            margin-left: 20px;
-        }
-    }
-    @media (max-width: 576px) {
-        .gap1 {
-            margin-right: 10px;
-        }
-        .gap2 {
-            margin-left: 10px;
-        }
     }
     footer{
         
@@ -497,7 +480,6 @@
         width: 100%;
         padding: 25px;
         text-align: left;
-        border-radius: 25px;
         margin-top: 30px;
         transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
         box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
@@ -516,21 +498,21 @@
         opacity: 1;
         transform: translateY(0);
     }
-    .py-5{
-                animation: autoShow both;
-        animation-timeline: view(auto auto);
-        animation-range: entry 0;
-    }
     .icon{
         
         font-size: xx-large;
 
     }
+    #east{
+        background-color: rgb(131, 184, 166);
+        height: 300px;
+        width: 300px;
+    }
 </style>
 </head>
 
 <body>
-
+    
     <header class="p-3">
         <div class="container text-black">
             <div class="d-flex flex-wrap align-items-center justify-content-between">
@@ -639,49 +621,30 @@
                         suscipit, fuga quam, saepe cupiditate mollitia laboriosam cum quia fugit, quos corporis
                         necessitatibus facilis quas magni. Fugiat, sunt.</p>
                 </div>
-                <div class="icon">
-                    <a href="https://facebook.com" class="text-dark mx-2"><i class="fab fa-facebook fa-2x"></i></a>
-                    <a href="https://twitter.com" class="text-dark mx-2"><i class="fab fa-tiktok fa-2x"></i></a>
-                    <a href="https://instagram.com" class="text-dark mx-2"><i class="fab fa-instagram fa-2x"></i></a>
-                </div>
                  </div>
                  
 
             
         </div>
-        <div class="container-fluid row mt-4 box scroll-animation text-center">
+        <div class="container-fluid row box mt-4 scroll-animation text-center">
            <h2 class="text-center">FOUR DIRECTION OF HISTORICAL MONUMENTS</h2>
         </div>
-        <div class="frs container-fluid mt-4 scroll-animation">
-            <div class="row text-center">
-                <div class="col-md-3 mb-4">
-                    <div id="east" class="rounded-square">
-                        <p style="color: white; padding-top: 60px;">Square 1</p>
-                    </div>
-                </div>
-                <div class="col-md-3 mb-4">
-                    <div id="west" class="rounded-square">
-                        <p style="color: white; padding-top: 60px;">Square 2</p>
-                    </div>
-                </div>
-                <div class="col-md-3 mb-4">
-                    <div id="north" class="rounded-square">
-                        <p style="color: white; padding-top: 60px;">Square 3</p>
-                    </div>
-                </div>
-                <div class="col-md-3 mb-4">
-                    <div id="south" class="rounded-square">
-                        <p style="color: white; padding-top: 60px;">Square 4</p>
-                    </div>
-                </div>
-            </div>
+        
+
+        <div class="row container-fluid text-center mt-5">
+            <div id="east" class="col-md-3"><i class="fa fa-compass mt-4" style="font-size:50px;" aria-hidden="true"></i><h3 class="text-dark">East</h3><div class="btn btn-primary">Wanna See?</div></div>
+            <div class="col-md-3">Square 2</div>
+            <div class="col-md-3">Square 3</div>
+            <div class="col-md-3">Square 4</div>
         </div>
+
+
     </section>
-    <footer class="py-5">
+    <footer class="mt-5 py-5">
         <div class="container-fluid">
             <div class="row">
                 <div class="col-12 col-md">
-                    <img  src="./images/pfp.jpg" alt="Logo" class="rounded" width="60" height="60" class="mb-2">
+                    <img  src="./images/pfp.jpg" alt="Logo" class="" width="60" height="60" class="mb-2">
                     <small class="d-block mb-3 text-muted">&copy; 2023</small>
                 </div>
                 <div class="col-6 col-md">
@@ -730,38 +693,38 @@
             </div>
         </div>
     </footer>
-    <script>
-        $(document).ready(function () {
-            $('#dropdownUser1').on('click', function (e) {
-                e.preventDefault();
-                $(this).next('.dropdown-menu').toggle();
-            });
 
-            $('#carouselExampleFade').on('slide.bs.carousel', function (e) {
-                var nextSlide = $(e.relatedTarget);
-                var topContent = nextSlide.data('top-content');
-                $('#topContent').html(topContent).addClass('animated');
-                setTimeout(function () {
-                    $('#topContent').removeClass('animated');
-                }, 500);
-            });
-        });
-
-        document.addEventListener('DOMContentLoaded', function () {
-            const elements = document.querySelectorAll('.scroll-animation');
-            const observer = new IntersectionObserver(entries => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.classList.add('visible');
-                    }
-                });
-            });
-
-            elements.forEach(element => {
-                observer.observe(element);
-            });
-        });
-    </script>
 </body>
+<script>
+    $(document).ready(function () {
+        $('#dropdownUser1').on('click', function (e) {
+            e.preventDefault();
+            $(this).next('.dropdown-menu').toggle();
+        });
 
+        $('#carouselExampleFade').on('slide.bs.carousel', function (e) {
+            var nextSlide = $(e.relatedTarget);
+            var topContent = nextSlide.data('top-content');
+            $('#topContent').html(topContent).addClass('animated');
+            setTimeout(function () {
+                $('#topContent').removeClass('animated');
+            }, 500);
+        });
+    });
+
+    document.addEventListener('DOMContentLoaded', function () {
+        const elements = document.querySelectorAll('.scroll-animation');
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        });
+
+        elements.forEach(element => {
+            observer.observe(element);
+        });
+    });
+</script>
 </html>
