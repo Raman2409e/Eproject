@@ -2,22 +2,19 @@
 <link rel="stylesheet" href="./css/bootstrap.css">
 <link rel="shortcut icon" href="./images/Rockstar_Games_Logo.svg.png" type="image/icon">
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.8.1/font/bootstrap-icons.min.css">
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.11.6/umd/popper.min.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
-    html{
-        scroll-behavior: smooth;
-    }
     .dropdown:hover .dropdown-menu {
         display: block;
         margin-top: 0;
         /* remove the gap so it doesn't close */
         transition: opacity 0.5s ease-in-out;
         opacity: 1;
-        background: linear-gradient(-45deg, #eed859, #eed859, #c7b44a);
-        box-shadow: 0 5px 5px black;
+        background: linear-gradient(-45deg, #ffffff, #ffffff, #d3d3d3);
     }
 
     .dropdown-menu {
@@ -40,7 +37,7 @@
         height: 5px;
         bottom: 0;
         left: 0;
-        background-color: #ff6f61;
+        background-color: white;
         border-radius: 2px;
         transform-origin: bottom right;
         transition: transform 0.25s ease-out;
@@ -50,39 +47,41 @@
     .nav-link.active::after {
         transform: scaleX(1);
         transform-origin: bottom left;
-        color: #ff6f61;
+        color: black;
     }
 
     header {
         margin: 10px;
         border-radius: 15px;
-        background-color:  #eed859;
+        background-color: #476769;
         background-size: 400% 400%;
+        animation: gradient 10s ease infinite;
         position: sticky;
         top: 0;
-        color: black; /* Set font color to black */
         z-index: 1000;
-        opacity: 0.7;
         font-size: 1.08rem;
         border: black 3px solid;
     }
-    header .nav-link {
-        color: black !important; /* Ensure nav link color is black */
-    }
-    header .nav-link:hover,
-    header .nav-link.active {
-        color: #ff6f61 !important; /* Set hover and active color */
-    }
-    header .text-white {
-        color: black !important; /* Ensure text color is black */
+
+    @keyframes gradient {
+        0% {
+            background-position: 0% 50%;
+        }
+
+        50% {
+            background-position: 100% 50%;
+        }
+
+        100% {
+            background-position: 0% 50%;
+        }
     }
 
     header:hover {
 
-        
-        opacity: 1;
-        transition: 0.3s ease-in-out;
-        transform: scale(1.01);
+
+        transition: 0.5s ease-in;
+        transition: 0.5s ease-out;
 
     }
 
@@ -159,21 +158,13 @@
     }
 
     body {
-        font-family: 'Poppins';
-        background-color:#f3eec0; /* Updated dark background color */
-        display: flex;
-        
-        flex-direction: column;
-        min-height: 100vh;
-    }
-
-    main {
-        flex: 1;
+        font-family: 'Poppins', sans-serif;
+        background-color: white;
     }
 
     .form-control-dark {
-        background-color: #505050;
-        border: 2px solid #606060;
+        background-color: #343a40;
+        border: 2px solid #495057;
         color: white;
         border-radius: 50px;
         padding: 0.5rem 1rem;
@@ -181,8 +172,8 @@
     }
 
     .form-control-dark:focus {
-        background-color: #505050;
-        border-color: #ff6f61;
+        background-color: #343638;
+        border-color: #d47f86;
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
         color: white;
     }
@@ -194,57 +185,79 @@
     .carousel {
         margin: 25px;
         width: 70%;
+        margin-left: 1%;
+        border-radius: 50px;
         height: 90%;
         transition: 0.3s ease-in-out;
-        border: black 5px solid;
-        border-radius: 10px;
-
-
     }
+
     .carousel-caption {
         position: absolute;
         bottom: 20px;
-        font-weight: bold;
         left: 50%;
         transform: translateX(-50%);
         border-radius: 20px;
-        opacity: 0.8;
+        opacity: 0.9;
         width: 80%;
         text-align: center;
-        padding: 15px;
+
+        padding: 10px;
         font-size: 2rem;
-        transition: 0.3s ease-in-out;
     }
+
     .carousel-caption h3 {
-        margin: 0;
-        font-size: 2rem;
-        font-weight: bold;
+        margin: 10px;
+        font-size: 2.5rem;
     }
-    .carousel-caption .btn {
-        margin-top: 10px;
-        transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
-        font-weight: bold;
-        opacity: 0.9;
-        color: black;
-        background-color: #eed859;
-    }
+
     .carousel-caption .btn:hover {
-        opacity: 1;
-        background-color: transparent;
-        border: black 2px solid;
-        color: white;
         transition: 0.3s ease-in-out;
         transform: scale(1.1);
     }
 
-    .top {
-        background-color: #eed859;
-        color: black;
+    .carousel-background {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        margin-top: 10px;
+        height: 100%;
+        z-index: -1;
+
+    }
+
+    @media screen and (max-width: 768px) {
+        .carousel-background {
+            display: none;
+        }
+
+    }
+
+    .carousel-caption .btn {
+        margin-top: 10px;
+        transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+        font-weight: bold;
+        font-size: 1.5rem;
+        color: white;
+        background-color: #659194;
+        border-bottom: 8px;
+        border-left: 2px;
+        border-top: 2px;
+        border-right: 5px;
+        border-color: black;
+        border-style: solid;
+        border-radius: 13px;
+    }
+
+    .recent-articles {
+        background-color: #94adaf;
+        color: white;
         font-family: 'Poppins', sans-serif;
         font-weight: bold;
         width: 100%;
-        height: 100%; /* Match height of the carousel */
+        height: 100%;
         font-size: 20px;
+        margin-right: 1%;
         margin-top: 25px;
         border-radius: 25px;
         padding: 25px;
@@ -255,76 +268,199 @@
         overflow: hidden;
         animation: fadeIn 0.5s ease-in-out;
     }
-    .top::before {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        z-index: 1;
-        transition: opacity 0.3s ease-in-out;
-        column-gap: 10px;
+
+    .recent-articles h1 {
+        font-size: 24px;
     }
-    .top:hover::before {
-        opacity: 0;
-    }
-    .top .article {
+
+    .recent-articles p {
         font-size: 18px;
-        z-index: 2;
-        position: relative;
-        margin-bottom: 15px;
     }
-    .top .article h4 {
-        
-        margin: 0;
-        font-size: 24px;
+
+
+    @media screen and (max-width: 768px) {
+        .carousel-container {
+            width: 100%;
+        }
+
+        .carousel-caption .btn {
+            display: block;
+        }
+
+        .recent-articles {
+            margin-top: 15px;
+            height: 100%;
+        }
     }
-    .top .article p {
-        margin: 5px 0 0;
-        font-size: 24px;
+
+    .recent-articles {
+        flex: 0 0 25%;
+        margin-left: 1%;
+        height: 100%;
     }
-    .top:hover {
-        transform: scale(1.05);
-        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
     }
+
+    @media screen and (max-width: 768px) {
+        .carousel-container {
+            width: 100%;
+        }
+
+        .carousel-caption .btn {
+            display: block;
+        }
+
+        .recent-articles {
+            margin-top: 15px;
+            height: 100%;
+        }
+    }
+
     @media (max-width: 992px) {
-        .top {
-            height: 100%; /* Match height of the carousel */
-            font-size: 16px; /* Adjust font size for smaller screens */
+        .carousel {
+            width: 100%;
+            /* Make carousel fit fully on the screen */
+            margin: 0;
+            /* Remove margin */
+            border-radius: 0;
+            /* Remove border radius */
         }
-        .top .article h4 {
-            font-size: 20px;
+
+        .carousel-caption {
+            width: 90%;
+            font-size: 1rem;
         }
-        .top .article p {
-            font-size: 16px;
+
+        .carousel-caption h3 {
+            font-size: 1.5rem;
         }
+
+        .recent-articles {
+            order: 2;
+            /* Ensure recent articles come after the carousel */
+            width: 100%;
+            margin-top: 15px;
+        }
+
+        .carousel-container {
+            flex-direction: column;
+        }
+    }
+
+    .carousel-container {
+        display: flex;
+        flex-wrap: wrap;
+        border-radius: 25px;
+        margin-right: 10px;
+    }
+
+    .carousel-container .carousel {
+        flex: 1;
+        margin-right: 25px;
+    }
+
+    .carousel-container .top {
+        flex: 0 0 25%;
+        margin-left: 1%;
+    }
+
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+            transform: translateY(20px);
+        }
+
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    @media (min-width: 992px) {
+        .recent-articles {
+            height: 90%;
+            /* Match the height of the carousel */
+        }
+    }
+
+    @media (min-width: 1116px) and (max-width: 2650px) {
+        .recent-articles {
+            height: 100%;
+            /* Match the height of the carousel */
+        }
+    }
+
+    @media (max-width: 1104px) {
+        .carousel {
+            width: 100%;
+            /* Make carousel fit fully on the screen */
+            margin: 0;
+            /* Remove margin */
+            border-radius: 0;
+            /* Remove border radius */
+        }
+
+        .recent-articles {
+            order: 2;
+            /* Ensure recent articles come after the carousel */
+            width: 100%;
+            margin-top: 15px;
+        }
+
+        .carousel-container {
+            flex-direction: column;
+        }
+    }
+
+    .icon {
+        font-size: 2rem;
+        /* Increase icon size */
+        text-align: center;
+        margin-top: 20px;
+        background-color:rgb(236, 236, 236);
+        font-weight: bold;
+        padding: 20px;
+        color: black;
+        /* Ensure icons are visible */
+    }
+
+    .icon i {
+        display: block;
+        font-weight: bold;
+        font-size: 3rem;
+        /* Further increase icon size */
+    }
+
+    .icon h4 {
+        margin-top: 5px;
+        font-weight: bold;
+        font-size: 1.2rem;
+    }
+
+    .icon .col-md-1 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .text{
+        margin-top: 20px;
+        text-align: center;
+        padding: 20px;
+        color: black;
+        justify-content: center;
+        width: 50%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .text h1{
+        font-weight: bold;
+        padding: 20px;
     }
     @media (max-width: 768px) {
-        .top {
-            height: 100%; /* Match height of the carousel */
-            font-size: 14px; /* Further adjust font size for smaller screens */
+        .carousel {
+            width: 100%;
+            margin: 0;
+            border-radius: 0;
         }
-        .top .article h4 {
-            font-size: 18px;
-        }
-        .top .article p {
-            font-size: 14px;
-        }
-    }
-    @media (max-width: 576px) {
-        .top {
-            height: 100%; /* Match height of the carousel */
-            font-size: 12px; /* Further adjust font size for smaller screens */
-        }
-        .top .article h4 {
-            font-size: 16px;
-        }
-        .top .article p {
-            font-size: 12px;
-        }
-    }
-    @media (max-width: 992px) {
         .carousel-caption {
             width: 90%;
             font-size: 1rem;
@@ -332,158 +468,57 @@
         .carousel-caption h3 {
             font-size: 1.5rem;
         }
-        .top {
-            height: 100%; /* Match height of the carousel */
-            font-size: 8px;
+        .recent-articles {
+            width: 100%;
+            margin-top: 15px;
         }
-        .top .article h4 {
-            font-size: 10px;
+        .icon {
+            font-size: 1.5rem;
+            padding: 10px;
         }
-        .top .article p{
-            font-size: 8px;
+        .icon i {
+            font-size: 2rem;
         }
-    }
-    @media screen and (max-width: 1804px) {
-        .top {
-            height:100%;
-            
+        .icon h4 {
+            font-size: 1rem;
         }
-        .top .article h4 {
-            font-size: 22px;
+        .text {
+            width: 90%;
         }
-        .top .article p{
-            font-size: 22px;
+        .boxes .col-md-3 {
+            width: 100%;
+            margin-bottom: 15px;
         }
-        
-    }
-    @media screen and (max-width: 1450px) {
-        .top {
-            height:100%;
+        .icon{
+        columns:3px;
         }
-        .top .article h4 {
-            font-size: 11px;
-        }
-        .top .article p{
-            font-size: 9px;
-        }
-        
-    }
-    .carousel-container {
-        display: flex;
-        flex-wrap: wrap;
-        border-radius: 25px;
-        margin-right: 10px;
-    }
-    .carousel-container .carousel {
-        flex: 1;
-        margin-right: 25px;
-    }
-    .carousel-container .top {
-        flex: 0 0 25%;
-        margin-left: 1%;
-    }
-    @keyframes fadeIn {
-        from {
-            opacity: 0;
-            transform: translateY(20px);
-        }
-        to {
-            opacity: 1;
-            transform: translateY(0);
-        }
-    }
-    .box {
-        background-color: black;
-        font-size: xx-large;
-        color:white;
-        font-weight: bold;
-        border-radius: 15px;
-        margin-top: 30px;
-        border-bottom: white 5px solid;
-        width: 98%;
-        animation: autoShow both;
-        animation-timeline: view(auto auto);
-        animation-range: entry 0;
-        margin-left: 1%; /* Match the width of the header */
-        padding: 25px 100px; /* Center align with the header */
-        transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-    }
-    .box:hover {
-        transform: scale(1.01);
-        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-    }
-    @keyframes autoShow {
-        from{
-            opacity:0;
-            transform: translateY(200px) scale(0.5);
-        }
-        to{
-            opacity: 1;
-            transform: translateY(0) scale(1);
-        }
-        
-    }
-    @media (max-width: 992px) {
-        .box {
-            font-size: large; /* Adjust font size for smaller screens */
-        }
-    }
-    @media (max-width: 768px) {
-        .box {
-            font-size: medium; /* Further adjust font size for smaller screens */
-        }
-    }
-    @media (max-width: 576px) {
-        .box {
-            font-size: small; /* Further adjust font size for smaller screens */
-        }
-    }
-    
-    footer{
-        
-        background-color: #eed859;
-        color: black;
-        font-family: 'Poppins', sans-serif;
-        font-size: x-large;
-        font-weight: bold;
-        width: 100%;
-        padding: 25px;
-        text-align: left;
-        margin-top: 30px;
-        transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-        position: relative;
-        overflow: hidden;
-        animation: fadeIn 0.5s ease-in-out;
-        border-top:black 5px solid;
-    }
-    .scroll-animation {
-        opacity: 0;
-        animation-timeline: view();
-        transform: translateY(20px);
-        transition: opacity 0.6s ease-out, transform 0.6s ease-out;
-    }
-    .scroll-animation.visible {
-        opacity: 1;
-        transform: translateY(0);
-    }
-    .icon{
-        
-        font-size: xx-large;
-
     }
     #east{
-        background-color: rgb(131, 184, 166);
-        height: 300px;
-        width: 300px;
+        background-color: #476769;
+    }
+    .box{
+        background-color: #476769;
+        color: white;
+        font-weight: bold;
+        padding: 20px;
+        margin-top: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .box h1, .box p{
+        text-align: center;
+        width: 50%;
+        font-weight: bold;
     }
 </style>
 </head>
 
 <body>
-    
-    <header class="p-3">
-        <div class="container text-black">
+
+    <header class="p-3 text-white ">
+        <div class="container">
             <div class="d-flex flex-wrap align-items-center justify-content-between">
                 <a href="/" class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none d">
                     <img class="rounded me-3 " src="./images/pfp.jpg" alt="Logo" width="50" height="50">
@@ -494,13 +529,12 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
-                        <li><a href="./index.html" class="nav-link px-2 text-white active">Home</a></li>
-                        <li><a href="#east" class="nav-link px-2 text-white">East</a></li>
-                        <li><a href="#west" class="nav-link px-2 text-white">West</a></li>
-                        <li><a href="#north" class="nav-link px-2 text-white">North</a></li>
-                        <li><a href="#south" class="nav-link px-2 text-white">South</a></li>
+                        <li><a href="#" class="nav-link px-2 text-white active">Home</a></li>
+                        <li><a href="#" class="nav-link px-2 text-white">East</a></li>
+                        <li><a href="#" class="nav-link px-2 text-white">West</a></li>
+                        <li><a href="#" class="nav-link px-2 text-white">North</a></li>
+                        <li><a href="#" class="nav-link px-2 text-white">South</a></li>
                         <li><a href="#" class="nav-link px-2 text-white">Contact Us</a></li>
-
                     </ul>
                     <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3">
                         <input type="search" class="form-control form-control-dark" placeholder="Search..."
@@ -524,21 +558,14 @@
         </div>
     </header>
     <section class="container-fluid">
-        <div class="carousel-container scroll-animation">
+        <div class="carousel-container">
             <div id="carouselExampleFade" class="carousel slide carousel-fade" data-ride="carousel">
-                <div class="carousel-inner">
-                    <div class="carousel-item active" data-top-content='
-                        <div class="article">
-                            <h1>Recent Articles:</h1>
-                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Impedit temporibus aperiam laborum
-                        suscipit, fuga quam, saepe cupiditate mollitia laboriosam cum quia fugit, quos corporis
-                        necessitatibus facilis quas magni. Fugiat, sunt.</p>
-                        </div>'>
+                <div class="carousel-inner rounded">
+                    <div class="carousel-item active" data-top-content=''>
                         <img src="./images/dandadan.jpg" class="d-block w-100" alt="...">
                         <div class="carousel-caption d-none d-md-block">
                             <h3>First slide label</h3>
-                        
-                            <a href="#" class="btn">LEARN MORE...</a>
+                            <a href="#" class="btn">Learn more...</a>
                         </div>
                     </div>
                     <div class="carousel-item" data-top-content='
@@ -547,13 +574,11 @@
                     <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Impedit temporibus aperiam laborum
                         suscipit, fuga quam, saepe cupiditate mollitia laboriosam cum quia fugit, quos corporis
                         necessitatibus facilis quas magni. Fugiat, sunt.</p>
-                        </div>
-'>
+                        </div>'>
                         <img src="./images/tanjiro.jpg" class="d-block w-100" alt="...">
                         <div class="carousel-caption d-none d-md-block">
                             <h3>Second slide label</h3>
-                            
-                            <a href="#" class="btn">LEARN MORE...</a>
+                            <a href="#" class="btn">Learn more...</a>
                         </div>
                     </div>
                     <div class="carousel-item" data-top-content='
@@ -566,10 +591,12 @@
                         '>
                         <img src="./images/toji.jpg" class="d-block w-100" alt="...">
                         <div class="carousel-caption d-none d-md-block">
+
                             <h3>Third slide label</h3>
-                            <a href="#" class="btn">LEARN MORE...</a>
+                            <a href="#" class="btn">Learn more...</a>
                         </div>
                     </div>
+
                 </div>
                 <button class="carousel-control-prev" type="button" data-target="#carouselExampleFade"
                     data-slide="prev">
@@ -582,118 +609,73 @@
                     <span class="visually-hidden">Next</span>
                 </button>
             </div>
-            <div class="top col" id="topContent">
-                <div class="article" style="height: 50%;">
-                    <h1>Recent Articles:</h1>
-                    <hr/>
-                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Impedit temporibus aperiam laborum
-                        suscipit, fuga quam, saepe cupiditate mollitia laboriosam cum quia fugit, quos corporis
-                        necessitatibus facilis quas magni. Fugiat, sunt.</p>
-                </div>
-                 </div>
-                 
-
-            
-        </div>
-        <div class="container-fluid row box mt-4 scroll-animation text-center">
-           <h2 class="text-center">FOUR DIRECTION OF HISTORICAL MONUMENTS</h2>
-        </div>
-        
-
-        <div class="row container-fluid text-center mt-5">
-            <div id="east" class="col-md-3"><i class="fa fa-compass mt-4" style="font-size:50px;" aria-hidden="true"></i><h3 class="text-dark">East</h3><div class="btn btn-primary">Wanna See?</div></div>
-            <div class="col-md-3">Square 2</div>
-            <div class="col-md-3">Square 3</div>
-            <div class="col-md-3">Square 4</div>
-        </div>
-
-
-    </section>
-    <footer class="mt-5 py-5">
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-12 col-md">
-                    <img  src="./images/pfp.jpg" alt="Logo" class="" width="60" height="60" class="mb-2">
-                    <small class="d-block mb-3 text-muted">&copy; 2023</small>
-                </div>
-                <div class="col-6 col-md">
-                    <h5>Features</h5>
-                    <ul class="list-unstyled text-small">
-                        <li><a class="text-muted" href="#">Cool stuff</a></li>
-                        <li><a class="text-muted" href="#">Random feature</a></li>
-                        <li><a class="text-muted" href="#">Team feature</a></li>
-                        <li><a class="text-muted" href="#">Stuff for developers</a></li>
-                        <li><a class="text-muted" href="#">Another one</a></li>
-                        <li><a class="text-muted" href="#">Last time</a></li>
-                    </ul>
-                </div>
-                <div class="col-6 col-md">
-                    <h5>Resources</h5>
-                    <ul class="list-unstyled text-small">
-                        <li><a class="text-muted" href="#">Resource</a></li>
-                        <li><a class="text-muted" href="#">Resource name</a></li>
-                        <li><a class="text-muted" href="#">Another resource</a></li>
-                        <li><a class="text-muted" href="#">Final resource</a></li>
-                    </ul>
-                </div>
-                <div class="col-6 col-md">
-                    <h5>About</h5>
-                    <ul class="list-unstyled text-small">
-                        <li><a class="text-muted" href="#">Team</a></li>
-                        <li><a class="text-muted" href="#">Locations</a></li>
-                        <li><a class="text-muted" href="#">Privacy</a></li>
-                        <li><a class="text-muted" href="#">Terms</a></li>
-                    </ul>
-                </div>
-                <div class="col-12 col-md">
-                    <h5>Feedback</h5>
-                    <form>
-                        <div class="form mb-3">
-                            <label for="feedbackEmail" class="form-label">Email address</label>
-                            <input type="email" class="form-control form-control-dark" id="feedbackEmail" placeholder="name@example.com">
-                        </div>
-                        <div class="form mb-3">
-                            <label for="feedbackMessage" class="form-label">Message</label>
-                            <textarea class="form-control form-control-dark" id="feedbackMessage" rows="3"></textarea>
-                        </div>
-                        <button type="submit" style="background-color: black;color:white;" class="btn">Submit</button>
-                    </form>
-                </div>
+            <div class="recent-articles scroll-animation">
+                <h1>Recent Articles:</h1>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Impedit temporibus aperiam laborum
+                    suscipit, fuga quam, saepe cupiditate mollitia laboriosam cum quia fugit, quos corporis
+                    necessitatibus facilis quas magni. Fugiat, sunt.</p>
             </div>
         </div>
+        </div>
+        <div class="row icon text-dark">
+            <div class="col-md-2">
+                <i class="bi bi-binoculars" aria-hidden="true"></i>
+                <h4>Binocular</h4>
+            </div>
+            <div class="col-md-2">
+                <i class="bi bi-compass" aria-hidden="true"></i>
+                <h4>Explore</h4>
+            </div>
+            <div class="col-md-2">
+                <i class="bi bi-wifi" aria-hidden="true"></i>
+                <h4>Network</h4>
+            </div>
+            <div class="col-md-2">
+                <i class="bi bi-wifi" aria-hidden="true"></i>
+                <h4>Network</h4>
+            </div>
+            <div class="col-md-2">
+                <i class="bi bi-wifi" aria-hidden="true"></i>
+                <h4>Network</h4>
+            </div>
+            <div class="col-md-2">
+                <i class="bi bi-wifi" aria-hidden="true"></i>
+                <h4>Network</h4>
+            </div>
+        </div>
+        <div class="row  text-dark text-center box">
+            <h1>HISTORICAL MONUMENTS</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse at quae nisi delectus dolorem consequuntur
+                voluptatibus quos quis aut aliquam! Molestiae et odit optio exercitationem fuga numquam ipsam, delectus
+                illum.</p>
+        <div class="row text-dark text-center">
+            <div id="east" class="col-md-2">square1</div>
+            <div id="west" class="col-md-2">square1</div>
+            <div id="north" class="col-md-2">square1</div>
+            <div id="south" class="col-md-2">square1</div>
+        </div>
+    </div>
+    </section>
+    <footer>
+
     </footer>
+    <script>
+        $(document).ready(function () {
+            $('#dropdownUser1').on('click', function (e) {
+                e.preventDefault();
+                $(this).next('.dropdown-menu').toggle();
+            });
 
-</body>
-<script>
-    $(document).ready(function () {
-        $('#dropdownUser1').on('click', function (e) {
-            e.preventDefault();
-            $(this).next('.dropdown-menu').toggle();
-        });
-
-        $('#carouselExampleFade').on('slide.bs.carousel', function (e) {
-            var nextSlide = $(e.relatedTarget);
-            var topContent = nextSlide.data('top-content');
-            $('#topContent').html(topContent).addClass('animated');
-            setTimeout(function () {
-                $('#topContent').removeClass('animated');
-            }, 500);
-        });
-    });
-
-    document.addEventListener('DOMContentLoaded', function () {
-        const elements = document.querySelectorAll('.scroll-animation');
-        const observer = new IntersectionObserver(entries => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('visible');
-                }
+            $('#carouselExampleFade').on('slide.bs.carousel', function (e) {
+                var nextSlide = $(e.relatedTarget);
+                var topContent = nextSlide.data('top-content');
+                $('#topContent').html(topContent).addClass('animated');
+                setTimeout(function () {
+                    $('#topContent').removeClass('animated');
+                }, 500);
             });
         });
+    </script>
+</body>
 
-        elements.forEach(element => {
-            observer.observe(element);
-        });
-    });
-</script>
 </html>
