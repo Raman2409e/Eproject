@@ -1,518 +1,587 @@
-<title>Eproject</title>
-<link rel="stylesheet" href="./css/bootstrap.css">
-<link rel="shortcut icon" href="./images/Rockstar_Games_Logo.svg.png" type="image/icon">
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.8.1/font/bootstrap-icons.min.css">
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.11.6/umd/popper.min.js"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<style>
-    .dropdown:hover .dropdown-menu {
-        display: block;
-        margin-top: 0;
-        /* remove the gap so it doesn't close */
-        transition: opacity 0.5s ease-in-out;
-        opacity: 1;
-        background: linear-gradient(-45deg, #ffffff, #ffffff, #d3d3d3);
-    }
+<html lang="en">
 
-    .dropdown-menu {
-        opacity: 0;
-        transition: opacity 0.5s ease-in-out;
-    }
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eproject</title>
+    <link rel="stylesheet" href="./css/bootstrap.css">
+    <link rel="shortcut icon" href="./images/Rockstar_Games_Logo.svg.png" type="image/icon">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.8.1/font/bootstrap-icons.min.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.11.6/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
 
-    .nav-link {
-        position: relative;
-        display: inline-block;
-        padding-bottom: 5px;
-        font-size: 1.08rem;
-    }
-
-    .nav-link::after {
-        content: '';
-        position: absolute;
-        width: 100%;
-        transform: scaleX(0);
-        height: 5px;
-        bottom: 0;
-        left: 0;
-        background-color: white;
-        border-radius: 2px;
-        transform-origin: bottom right;
-        transition: transform 0.25s ease-out;
-    }
-
-    .nav-link:hover::after,
-    .nav-link.active::after {
-        transform: scaleX(1);
-        transform-origin: bottom left;
-        color: black;
-    }
-
-    header {
-        margin: 10px;
-        border-radius: 15px;
-        background-color: #476769;
-        background-size: 400% 400%;
-        animation: gradient 10s ease infinite;
-        position: sticky;
-        top: 0;
-        z-index: 1000;
-        font-size: 1.08rem;
-        border: black 3px solid;
-    }
-
-    @keyframes gradient {
-        0% {
-            background-position: 0% 50%;
+        .dropdown:hover .dropdown-menu {
+            display: block;
+            margin-top: 0;
+            /* remove the gap so it doesn't close */
+            transition: opacity 0.5s ease-in-out;
+            opacity: 1;
+            background: linear-gradient(-45deg, #ffffff, #ffffff, #d3d3d3);
         }
 
-        50% {
-            background-position: 100% 50%;
+        .dropdown-menu {
+            opacity: 0;
+            transition: opacity 0.5s ease-in-out;
         }
 
-        100% {
-            background-position: 0% 50%;
+        .nav-link {
+            position: relative;
+            display: inline-block;
+            padding-bottom: 5px;
+            font-size: 1.08rem;
         }
-    }
 
-    header:hover {
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            transform: scaleX(0);
+            height: 5px;
+            bottom: 0;
+            left: 0;
+            background-color: white;
+            border-radius: 2px;
+            transform-origin: bottom right;
+            transition: transform 0.25s ease-out;
+        }
+
+        .nav-link:hover::after,
+        .nav-link.active::after {
+            transform: scaleX(1);
+            transform-origin: bottom left;
+            color: black;
+        }
+
+        header {
+            margin: 10px;
+            border-radius: 15px;
+            background-color: #476769;
+            background-size: 400% 400%;
+            animation: gradient 10s ease infinite;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            font-size: 1.08rem;
+            border: black 3px solid;
+            scroll-behavior: smooth;
+        }
+
+        @keyframes gradient {
+            0% {
+                background-position: 0% 50%;
+            }
+
+            50% {
+                background-position: 100% 50%;
+            }
+
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+        header:hover {
 
 
-        transition: 0.5s ease-in;
-        transition: 0.5s ease-out;
+            transition: 0.5s ease-in;
+            transition: 0.5s ease-out;
 
-    }
-
-    .navbar-toggler {
-        border: none;
-        background: transparent;
-    }
-
-    .navbar-toggler-icon {
-        width: 30px;
-        height: 3px;
-        background-color: white;
-        display: block;
-        position: relative;
-        transition: background 0.3s ease;
-    }
-
-    .navbar-toggler-icon::before,
-    .navbar-toggler-icon::after {
-        content: '';
-        width: 30px;
-        height: 3px;
-        background-color: white;
-        display: block;
-        position: absolute;
-        transition: transform 0.3s ease;
-    }
-
-    .navbar-toggler-icon::before {
-        top: -10px;
-    }
-
-    .navbar-toggler-icon::after {
-        bottom: -10px;
-    }
-
-    .navbar-toggler.collapsed .navbar-toggler-icon {
-        background-color: transparent;
-    }
-
-    .navbar-toggler.collapsed .navbar-toggler-icon::before {
-        transform: rotate(45deg) translate(5px, 5px);
-    }
-
-    .navbar-toggler.collapsed .navbar-toggler-icon::after {
-        transform: rotate(-45deg) translate(5px, -5px);
-    }
-
-    @media (min-width: 992px) {
-        .navbar-collapse {
-            display: flex !important;
-            flex-basis: auto;
         }
 
         .navbar-toggler {
-            display: none;
+            border: none;
+            background: transparent;
         }
 
-    }
-
-    @media (max-width: 992px) {
-        .dropdown {
-            display: none;
+        .navbar-toggler-icon {
+            width: 30px;
+            height: 3px;
+            background-color: white;
+            display: block;
+            position: relative;
+            transition: background 0.3s ease;
         }
 
-        .d {
-            top: 5px;
+        .navbar-toggler-icon::before,
+        .navbar-toggler-icon::after {
+            content: '';
+            width: 30px;
+            height: 3px;
+            background-color: white;
+            display: block;
+            position: absolute;
+            transition: transform 0.3s ease;
+        }
+
+        .navbar-toggler-icon::before {
+            top: -10px;
+        }
+
+        .navbar-toggler-icon::after {
+            bottom: -10px;
+        }
+
+        .navbar-toggler.collapsed .navbar-toggler-icon {
+            background-color: transparent;
+        }
+
+        .navbar-toggler.collapsed .navbar-toggler-icon::before {
+            transform: rotate(45deg) translate(5px, 5px);
+        }
+
+        .navbar-toggler.collapsed .navbar-toggler-icon::after {
+            transform: rotate(-45deg) translate(5px, -5px);
+        }
+
+        @media (min-width: 992px) {
+            .navbar-collapse {
+                display: flex !important;
+                flex-basis: auto;
+            }
+
+            .navbar-toggler {
+                display: none;
+            }
+
+        }
+
+        @media (max-width: 992px) {
+            .dropdown {
+                display: none;
+            }
+
+            .d {
+                top: 5px;
+            }
+
+            .form-control-dark {
+                margin-top: 10px;
+            }
+
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: white;
         }
 
         .form-control-dark {
-            margin-top: 10px;
+            background-color: #343a40;
+            border: 2px solid #495057;
+            color: white;
+            border-radius: 50px;
+            padding: 0.5rem 1rem;
+            transition: all 0.3s ease-in-out;
         }
 
-    }
-
-    body {
-        font-family: 'Poppins', sans-serif;
-        background-color: white;
-    }
-
-    .form-control-dark {
-        background-color: #343a40;
-        border: 2px solid #495057;
-        color: white;
-        border-radius: 50px;
-        padding: 0.5rem 1rem;
-        transition: all 0.3s ease-in-out;
-    }
-
-    .form-control-dark:focus {
-        background-color: #343638;
-        border-color: #d47f86;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-        color: white;
-    }
-
-    .form-control-dark::placeholder {
-        color: white;
-    }
-
-    .carousel {
-        margin: 25px;
-        width: 70%;
-        margin-left: 1%;
-        border-radius: 50px;
-        height: 90%;
-        transition: 0.3s ease-in-out;
-    }
-
-    .carousel-caption {
-        position: absolute;
-        bottom: 20px;
-        left: 50%;
-        transform: translateX(-50%);
-        border-radius: 20px;
-        opacity: 0.9;
-        width: 80%;
-        text-align: center;
-
-        padding: 10px;
-        font-size: 2rem;
-    }
-
-    .carousel-caption h3 {
-        margin: 10px;
-        font-size: 2.5rem;
-    }
-
-    .carousel-caption .btn:hover {
-        transition: 0.3s ease-in-out;
-        transform: scale(1.1);
-    }
-
-    .carousel-background {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        margin-top: 10px;
-        height: 100%;
-        z-index: -1;
-
-    }
-
-    @media screen and (max-width: 768px) {
-        .carousel-background {
-            display: none;
+        .form-control-dark:focus {
+            background-color: #343638;
+            border-color: #d47f86;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+            color: white;
         }
 
-    }
-
-    .carousel-caption .btn {
-        margin-top: 10px;
-        transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
-        font-weight: bold;
-        font-size: 1.5rem;
-        color: white;
-        background-color: #659194;
-        border-bottom: 8px;
-        border-left: 2px;
-        border-top: 2px;
-        border-right: 5px;
-        border-color: black;
-        border-style: solid;
-        border-radius: 13px;
-    }
-
-    .recent-articles {
-        background-color: #94adaf;
-        color: white;
-        font-family: 'Poppins', sans-serif;
-        font-weight: bold;
-        width: 100%;
-        height: 100%;
-        font-size: 20px;
-        margin-right: 1%;
-        margin-top: 25px;
-        border-radius: 25px;
-        padding: 25px;
-        text-align: left;
-        transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-        position: relative;
-        overflow: hidden;
-        animation: fadeIn 0.5s ease-in-out;
-    }
-
-    .recent-articles h1 {
-        font-size: 24px;
-    }
-
-    .recent-articles p {
-        font-size: 18px;
-    }
-
-
-    @media screen and (max-width: 768px) {
-        .carousel-container {
-            width: 100%;
+        .form-control-dark::placeholder {
+            color: white;
         }
 
-        .carousel-caption .btn {
-            display: block;
-        }
-
-        .recent-articles {
-            margin-top: 15px;
-            height: 100%;
-        }
-    }
-
-    .recent-articles {
-        flex: 0 0 25%;
-        margin-left: 1%;
-        height: 100%;
-    }
-    }
-
-    @media screen and (max-width: 768px) {
-        .carousel-container {
-            width: 100%;
-        }
-
-        .carousel-caption .btn {
-            display: block;
-        }
-
-        .recent-articles {
-            margin-top: 15px;
-            height: 100%;
-        }
-    }
-
-    @media (max-width: 992px) {
         .carousel {
-            width: 100%;
-            /* Make carousel fit fully on the screen */
-            margin: 0;
-            /* Remove margin */
-            border-radius: 0;
-            /* Remove border radius */
-        }
-
-        .carousel-caption {
-            width: 90%;
-            font-size: 1rem;
-        }
-
-        .carousel-caption h3 {
-            font-size: 1.5rem;
-        }
-
-        .recent-articles {
-            order: 2;
-            /* Ensure recent articles come after the carousel */
-            width: 100%;
-            margin-top: 15px;
-        }
-
-        .carousel-container {
-            flex-direction: column;
-        }
-    }
-
-    .carousel-container {
-        display: flex;
-        flex-wrap: wrap;
-        border-radius: 25px;
-        margin-right: 10px;
-    }
-
-    .carousel-container .carousel {
-        flex: 1;
-        margin-right: 25px;
-    }
-
-    .carousel-container .top {
-        flex: 0 0 25%;
-        margin-left: 1%;
-    }
-
-    @keyframes fadeIn {
-        from {
-            opacity: 0;
-            transform: translateY(20px);
-        }
-
-        to {
-            opacity: 1;
-            transform: translateY(0);
-        }
-    }
-
-    @media (min-width: 992px) {
-        .recent-articles {
+            margin: 25px;
+            width: 70%;
+            margin-left: 1%;
+            border-radius: 50px;
             height: 90%;
-            /* Match the height of the carousel */
-        }
-    }
-
-    @media (min-width: 1116px) and (max-width: 2650px) {
-        .recent-articles {
-            height: 100%;
-            /* Match the height of the carousel */
-        }
-    }
-
-    @media (max-width: 1104px) {
-        .carousel {
-            width: 100%;
-            /* Make carousel fit fully on the screen */
-            margin: 0;
-            /* Remove margin */
-            border-radius: 0;
-            /* Remove border radius */
+            transition: 0.3s ease-in-out;
         }
 
-        .recent-articles {
-            order: 2;
-            /* Ensure recent articles come after the carousel */
-            width: 100%;
-            margin-top: 15px;
-        }
-
-        .carousel-container {
-            flex-direction: column;
-        }
-    }
-
-    .icon {
-        font-size: 2rem;
-        /* Increase icon size */
-        text-align: center;
-        margin-top: 20px;
-        background-color:rgb(236, 236, 236);
-        font-weight: bold;
-        padding: 20px;
-        color: black;
-        /* Ensure icons are visible */
-    }
-
-    .icon i {
-        display: block;
-        font-weight: bold;
-        font-size: 3rem;
-        /* Further increase icon size */
-    }
-
-    .icon h4 {
-        margin-top: 5px;
-        font-weight: bold;
-        font-size: 1.2rem;
-    }
-
-    .icon .col-md-1 {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-    .text{
-        margin-top: 20px;
-        text-align: center;
-        padding: 20px;
-        color: black;
-        justify-content: center;
-        width: 50%;
-        margin-left: auto;
-        margin-right: auto;
-    }
-    .text h1{
-        font-weight: bold;
-        padding: 20px;
-    }
-    @media (max-width: 768px) {
-        .carousel {
-            width: 100%;
-            margin: 0;
-            border-radius: 0;
-        }
         .carousel-caption {
-            width: 90%;
-            font-size: 1rem;
-        }
-        .carousel-caption h3 {
-            font-size: 1.5rem;
-        }
-        .recent-articles {
-            width: 100%;
-            margin-top: 15px;
-        }
-        .icon {
-            font-size: 1.5rem;
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            border-radius: 20px;
+            opacity: 0.9;
+            width: 80%;
+            text-align: center;
+
             padding: 10px;
-        }
-        .icon i {
             font-size: 2rem;
         }
-        .icon h4 {
-            font-size: 1rem;
+
+        .carousel-caption h3 {
+            margin: 10px;
+            font-size: 2.5rem;
         }
-        .text {
-            width: 90%;
+
+        .carousel-caption .btn:hover {
+            transition: 0.3s ease-in-out;
+            transform: scale(1.1);
         }
-        .boxes .col-md-3 {
+
+        .carousel-background {
+            position: absolute;
+            top: 0;
+            left: 0;
             width: 100%;
-            margin-bottom: 15px;
+            margin-top: 10px;
+            height: 100%;
+            z-index: -1;
+
         }
-        .icon{
-        columns:3px;
+
+        @media screen and (max-width: 768px) {
+            .carousel-background {
+                display: none;
+            }
+
         }
-    }
-    #east{
-        background-color: #476769;
-    }
-    .box{
-        background-color: #476769;
-        color: white;
-        font-weight: bold;
-        padding: 20px;
-        margin-top: 20px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-    }
-    .box h1, .box p{
-        text-align: center;
-        width: 50%;
-        font-weight: bold;
-    }
-</style>
+
+        .carousel-caption .btn {
+            margin-top: 10px;
+            transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+            font-weight: bold;
+            font-size: 1.5rem;
+            color: #343638;
+            background-color: #659194;
+            border-bottom: 8px;
+            border-left: 2px;
+            border-top: 2px;
+            border-right: 5px;
+            border-color: black;
+            border-style: solid;
+            border-radius: 13px;
+        }
+
+        .recent-articles {
+            background-color: #94adaf;
+            color: white;
+            font-family: 'Poppins', sans-serif;
+            font-weight: bold;
+            width: 100%;
+            height: 100%;
+            font-size: 20px;
+            margin-right: 1%;
+            margin-top: 25px;
+            border-radius: 25px;
+            padding: 25px;
+            text-align: left;
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+            position: relative;
+            overflow: hidden;
+            animation: fadeIn 0.5s ease-in-out;
+        }
+
+        .recent-articles h1 {
+            font-size: 24px;
+        }
+
+        .recent-articles p {
+            font-size: 18px;
+        }
+
+
+        @media screen and (max-width: 768px) {
+            .carousel-container {
+                width: 100%;
+            }
+
+            .carousel-caption .btn {
+                display: block;
+            }
+
+            .recent-articles {
+                margin-top: 15px;
+                height: 100%;
+            }
+
+            .box h1,
+            .box p {
+                width: 100%;
+            }
+        }
+
+        .recent-articles {
+            flex: 0 0 25%;
+            margin-left: 1%;
+            height: 100%;
+        }
+
+        @media screen and (max-width: 768px) {
+            .carousel-container {
+                width: 100%;
+            }
+
+            .carousel-caption .btn {
+                display: block;
+            }
+
+            .recent-articles {
+                margin-top: 15px;
+                height: 100%;
+            }
+        }
+
+        @media (max-width: 992px) {
+            .carousel {
+                width: 100%;
+                /* Make carousel fit fully on the screen */
+                margin: 0;
+                /* Remove margin */
+                border-radius: 0;
+                /* Remove border radius */
+            }
+
+            .carousel-caption {
+                width: 90%;
+                font-size: 1rem;
+            }
+
+            .carousel-caption h3 {
+                font-size: 1.5rem;
+            }
+
+            .recent-articles {
+                order: 2;
+                /* Ensure recent articles come after the carousel */
+                width: 100%;
+                margin-top: 15px;
+            }
+
+            .carousel-container {
+                flex-direction: column;
+            }
+        }
+
+        .carousel-container {
+            display: flex;
+            flex-wrap: wrap;
+            border-radius: 25px;
+            margin-right: 10px;
+        }
+
+        .carousel-container .carousel {
+            flex: 1;
+            margin-right: 25px;
+        }
+
+        .carousel-container .top {
+            flex: 0 0 25%;
+            margin-left: 1%;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @media (min-width: 992px) {
+            .recent-articles {
+                height: 90%;
+                /* Match the height of the carousel */
+            }
+        }
+
+        @media (min-width: 1116px) and (max-width: 2650px) {
+            .recent-articles {
+                height: 100%;
+                /* Match the height of the carousel */
+            }
+        }
+
+        @media (max-width: 1104px) {
+            .carousel {
+                width: 100%;
+                /* Make carousel fit fully on the screen */
+                margin: 0;
+                /* Remove margin */
+                border-radius: 0;
+                /* Remove border radius */
+            }
+
+            .recent-articles {
+                order: 2;
+                /* Ensure recent articles come after the carousel */
+                width: 100%;
+                margin-top: 15px;
+            }
+
+            .carousel-container {
+                flex-direction: column;
+            }
+        }
+
+        .icon {
+            font-size: 2rem;
+            /* Increase icon size */
+            text-align: center;
+            margin-top: 20px;
+            background-color: rgb(236, 236, 236);
+            font-weight: bold;
+            padding: 20px;
+            color: black;
+            /* Ensure icons are visible */
+        }
+
+        .icon i {
+            display: block;
+            font-weight: bold;
+            font-size: 3rem;
+            /* Further increase icon size */
+        }
+
+        .icon h4 {
+            margin-top: 5px;
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+
+        .icon .col-md-1 {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .text {
+            margin-top: 20px;
+            text-align: center;
+            padding: 20px;
+            color: black;
+            justify-content: center;
+            width: 50%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .text h1 {
+            font-weight: bold;
+            padding: 20px;
+        }
+
+        @media (max-width: 768px) {
+            .carousel {
+                width: 100%;
+                margin: 0;
+                border-radius: 0;
+            }
+
+            .carousel-caption {
+                width: 90%;
+                font-size: 1rem;
+            }
+
+            .carousel-caption h3 {
+                font-size: 1.5rem;
+            }
+
+            .recent-articles {
+                width: 100%;
+                margin-top: 15px;
+            }
+
+            .icon {
+                font-size: 1.5rem;
+                padding: 10px;
+            }
+
+            .icon i {
+                font-size: 2rem;
+            }
+
+            .icon h4 {
+                font-size: 1rem;
+            }
+
+            .text {
+                width: 90%;
+            }
+
+            .boxes .col-md-3 {
+                width: 100%;
+                margin-bottom: 15px;
+            }
+
+            .icon {
+                columns: 3px;
+            }
+        }
+
+        .box {
+            background-color: #476769;
+            color: white;
+            font-weight: bold;
+            padding: 20px;
+            margin-top: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .box h1,
+        .box p {
+            text-align: center;
+            width: 50%;
+            color: #030303;
+            font-weight: bold;
+        }
+
+        @media (max-width: 425px) {
+            .box p {
+                display: none;
+            }
+        }
+
+        .boxes {
+
+            width: 100%;
+            height: 100%;
+            color: white;
+            justify-content: center;
+        }
+
+        .boxes .col-lg-2 {
+            margin: 25px;
+            padding: 15px;
+            border-radius: 13px;
+            border-bottom: 10px black solid;
+            border-right: 8px black solid;
+            background-color: #343638;
+            border-left: 2px black solid;
+            border-top: 2px black solid;
+
+        }
+
+        .boxes p {
+            color: white;
+            width: 100%;
+            font-size: small;
+        }
+
+        .boxes i {
+            padding: 20px;
+            font-size: 50px;
+        }
+
+        .boxes-btn {
+            justify-content: center;
+            width: 100%;
+            margin-left: 40px;
+            color: #476769;
+        }
+    </style>
 </head>
 
 <body>
@@ -530,10 +599,10 @@
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
                         <li><a href="#" class="nav-link px-2 text-white active">Home</a></li>
-                        <li><a href="#" class="nav-link px-2 text-white">East</a></li>
-                        <li><a href="#" class="nav-link px-2 text-white">West</a></li>
-                        <li><a href="#" class="nav-link px-2 text-white">North</a></li>
-                        <li><a href="#" class="nav-link px-2 text-white">South</a></li>
+                        <li><a href="#east" class="nav-link px-2 text-white">East</a></li>
+                        <li><a href="#west" class="nav-link px-2 text-white">West</a></li>
+                        <li><a href="#north" class="nav-link px-2 text-white">North</a></li>
+                        <li><a href="#south" class="nav-link px-2 text-white">South</a></li>
                         <li><a href="#" class="nav-link px-2 text-white">Contact Us</a></li>
                     </ul>
                     <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3">
@@ -620,44 +689,106 @@
         <div class="row icon text-dark">
             <div class="col-md-2">
                 <i class="bi bi-binoculars" aria-hidden="true"></i>
-                <h4>Binocular</h4>
+                <h4>HUNT</h4>
             </div>
             <div class="col-md-2">
                 <i class="bi bi-compass" aria-hidden="true"></i>
-                <h4>Explore</h4>
+                <h4>EXPLORE</h4>
             </div>
             <div class="col-md-2">
-                <i class="bi bi-wifi" aria-hidden="true"></i>
-                <h4>Network</h4>
+                <i class="bi bi-tiktok" aria-hidden="true"></i>
+                <h4>TIKTOK</h4>
             </div>
             <div class="col-md-2">
-                <i class="bi bi-wifi" aria-hidden="true"></i>
-                <h4>Network</h4>
+                <i class="bi bi-google" aria-hidden="true"></i>
+                <h4>GOOGLE</h4>
             </div>
             <div class="col-md-2">
-                <i class="bi bi-wifi" aria-hidden="true"></i>
-                <h4>Network</h4>
+                <i class="bi bi-facebook" aria-hidden="true"></i>
+                <h4>FACEBOOK</h4>
             </div>
             <div class="col-md-2">
-                <i class="bi bi-wifi" aria-hidden="true"></i>
-                <h4>Network</h4>
+                <i class="bi bi-instagram" aria-hidden="true"></i>
+                <h4>INSTAGRAM</h4>
             </div>
         </div>
-        <div class="row  text-dark text-center box">
+        <div class="row text-center box">
             <h1>HISTORICAL MONUMENTS</h1>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse at quae nisi delectus dolorem consequuntur
                 voluptatibus quos quis aut aliquam! Molestiae et odit optio exercitationem fuga numquam ipsam, delectus
                 illum.</p>
-        <div class="row text-dark text-center">
-            <div id="east" class="col-md-2">square1</div>
-            <div id="west" class="col-md-2">square1</div>
-            <div id="north" class="col-md-2">square1</div>
-            <div id="south" class="col-md-2">square1</div>
+            <div class="row text-center boxes ">
+                <div id="east" class="col-lg-2">
+                    <i class="bi bi-compass" aria-hidden="true"></i>
+                    <h5>EAST</h5>
+                    <p>Lorem ipsum dolor sit amet consectetur?</p>
+                    <div>
+                        <a style="text-decoration: none;" href="#" class="boxes-btn">Visit Page <i
+                                class="bi bi-arrow-circle-up" aria-hidden="true"></i></a>
+                    </div>
+                </div>
+                <div id="west" class="col-lg-2"> <i class="bi bi-compass" aria-hidden="true"></i>
+                    <h5>WEST</h5>
+                    <p>Lorem ipsum dolor sit amet consectetur?</p>
+                    <div>
+                        <a style="text-decoration: none;" href="#" class="boxes-btn">Visit Page <i
+                                class="bi bi-arrow-circle-up" aria-hidden="true"></i></a>
+                    </div>
+                </div>
+                <div id="north" class="col-lg-2"> <i class="bi bi-compass" aria-hidden="true"></i>
+                    <h5>NORTH</h5>
+                    <p>Lorem ipsum dolor sit amet consectetur?</p>
+                    <div>
+                        <a style="text-decoration: none;" href="#" class="boxes-btn">Visit Page <i
+                                class="bi bi-arrow-circle-up" aria-hidden="true"></i></a>
+                    </div>
+                </div>
+                <div id="south" class="col-lg-2"> <i class="bi bi-compass" aria-hidden="true"></i>
+                    <h5>SOUTH</h5>
+                    <p>Lorem ipsum dolor sit amet consectetur?</p>
+                    <div>
+                        <a style="text-decoration: none;" href="#" class="boxes-btn">Visit Page <i
+                                class="bi bi-arrow-circle-up" aria-hidden="true"></i></a>
+                    </div>
+                </div>
+            </div>
         </div>
-    </div>
     </section>
-    <footer>
-
+    <footer style="border-top: 5px black solid;" class="py-5 bg-dark ">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-12 col-md">
+                    <img src="./images/pfp.jpg" alt="Logo" class="rounded" width="60" height="60" class="mb-2">
+                    <small class="d-block mb-3 text-light">&copy; 2025</small>
+                </div>
+                <div style="font-size: larger;" class="col-6 col-md">
+                    <h4>QUICK LINKS</h4>
+                    <ul class="list-unstyled text-small">
+                        <li><a class="text-light" href="./index.html">Home</a></li>
+                        <li><a class="text-light" href="#">East</a></li>
+                        <li><a class="text-light" href="#">West</a></li>
+                        <li><a class="text-light" href="#">North</a></li>
+                        <li><a class="text-light" href="#">South</a></li>
+                    </ul>
+                </div>
+                <div class="col-12 col-md">
+                    <h4 style="font-weight: bold;">Feedback</h4>
+                    .
+                    <form>
+                        <div class="form mb-3">
+                            <label for="feedbackEmail" class="form-label">Email address</label>
+                            <input type="email" class="form-control form-control-dark" id="feedbackEmail"
+                                placeholder="name@example.com">
+                        </div>
+                        <div class="form mb-3">
+                            <label for="feedbackMessage" class="form-label">Message</label>
+                            <textarea class="form-control form-control-dark" id="feedbackMessage" rows="3"></textarea>
+                        </div>
+                        <button type="submit" style="background-color: black;color:white;" class="btn">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
     </footer>
     <script>
         $(document).ready(function () {
