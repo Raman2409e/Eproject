@@ -156,7 +156,7 @@
 
         body {
             font-family: 'Poppins', sans-serif;
-            background-color: white;
+            background: linear-gradient(180deg, #ffffff, #ffffff, #304647);
         }
 
         .form-control-dark {
@@ -595,6 +595,16 @@
             transition: 0.3s ease-in-out;
             color: #343638;
         }
+        .scroll-animation {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+
+        .scroll-animation.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
     </style>
 </head>
 
@@ -641,7 +651,7 @@
         </div>
     </header>
     <section class="container-fluid">
-        <div class="carousel-container">
+        <div class="carousel-container scroll-animation">
             <div id="carouselExampleFade" class="carousel slide carousel-fade" data-ride="carousel">
                 <div class="carousel-inner rounded">
                     <div class="carousel-item active" data-top-content=''>
@@ -706,7 +716,7 @@
             </div>
         </div>
         </div>
-        <div class="row icon text-dark">
+        <div class="row icon text-dark scroll-animation">
             <div class="col-md-2">
                 <i class="bi bi-binoculars" aria-hidden="true"></i>
                 <h4>HUNT</h4>
@@ -732,7 +742,7 @@
                 <h4>INSTAGRAM</h4>
             </div>
         </div>
-        <div class="row text-center box">
+        <div class="row text-center box scroll-animation">
             <h1>HISTORICAL MONUMENTS</h1>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse at quae nisi delectus dolorem consequuntur
                 voluptatibus quos quis aut aliquam! Molestiae et odit optio exercitationem fuga numquam ipsam, delectus
@@ -774,7 +784,7 @@
             </div>
         </div>
     </section>
-    <footer style="border-top: 5px black solid;margin-top: 20px;" class="py-5 bg-dark ">
+    <footer style="border-top: 5px black solid;margin-top: 20px;" class="py-5 bg-dark scroll-animation">
         <div class="container">
             <div class="row">
                 <div class="col-12 col-md">
@@ -824,6 +834,41 @@
                     $('#topContent').removeClass('animated');
                 }, 500);
             });
+
+            // Scroll animation
+            const scrollElements = document.querySelectorAll('.scroll-animation');
+
+            const elementInView = (el, dividend = 1) => {
+                const elementTop = el.getBoundingClientRect().top;
+                return (
+                    elementTop <= (window.innerHeight || document.documentElement.clientHeight) / dividend
+                );
+            };
+
+            const displayScrollElement = (element) => {
+                element.classList.add('visible');
+            };
+
+            const hideScrollElement = (element) => {
+                element.classList.remove('visible');
+            };
+
+            const handleScrollAnimation = () => {
+                scrollElements.forEach((el) => {
+                    if (elementInView(el, 1.25)) {
+                        displayScrollElement(el);
+                    } else {
+                        hideScrollElement(el);
+                    }
+                });
+            };
+
+            window.addEventListener('scroll', () => {
+                handleScrollAnimation();
+            });
+
+            // Initial check to display elements already in view
+            handleScrollAnimation();
         });
     </script>
 </body>
