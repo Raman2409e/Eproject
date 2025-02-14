@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -190,7 +190,7 @@
     }
 
     .banner {
-        background-color: #405c5e;
+        background: linear-gradient(180deg, #4e7072, #3b5557);
         color: #d47f86;
         text-align: center;
         padding: 200px 0;
@@ -232,6 +232,7 @@
         font-size: 6rem;
         color: #343638;
         margin-top: 5px;
+        transition: 0.3s ease-in-out;
     }
 
     .thick-line {
@@ -242,9 +243,14 @@
         margin-top: -10px;
         /* Adjust to remove gap between banner and line */
     }
-    .banner .down-arrow a i:hover{
-        color: #d47f86;
+
+    .banner .down-arrow a i:hover {
+        color: #343a40;
+        background: linear-gradient(180deg, #d47f86, #79484c);
+        background-clip: text;
         transition: 0.3s ease-in-out;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
     }
 
     @media screen and (max-width: 768px) {
@@ -309,11 +315,44 @@
     .slider .list .item .content p:nth-child(1) {
         text-transform: uppercase;
         letter-spacing: 10px;
+        font-size: 1.2rem;
     }
 
     .slider .list .item .content h3 {
         font-size: 4.8rem;
         margin: 0;
+    }
+
+    .slider .list .item .content p:nth-child(3) {
+        font-size: 1.2rem;
+    }
+
+    @media (max-width: 768px) {
+        .slider .list .item .content p:nth-child(1) {
+            font-size: 1rem;
+        }
+
+        .slider .list .item .content h3 {
+            font-size: 3rem;
+        }
+
+        .slider .list .item .content p:nth-child(3) {
+            font-size: 1rem;
+        }
+    }
+
+    @media (max-width: 425px) {
+        .slider .list .item .content p:nth-child(1) {
+            font-size: 0.8rem;
+        }
+
+        .slider .list .item .content h3 {
+            font-size: 2rem;
+        }
+
+        .slider .list .item .content p:nth-child(3) {
+            font-size: 0.8rem;
+        }
     }
 
     .slider .list .item.active {
@@ -436,15 +475,35 @@
         font-weight: bold;
         color: #343638;
         background-color: #659194;
-        border: 2px solid black;
+        border: 1px 3px 5px 1px solid black;
         border-radius: 13px;
         text-decoration: none;
         transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+        z-index: 2;
+        border-bottom: 8px black solid;
+        border-right: 5px black solid;
+        border-left: 2px black solid;
+        border-top: 2px black solid;
+
     }
 
     .slider .list .item .content .btn-book-ticket:hover {
         background-color: #d47f86;
         transform: scale(1.05);
+    }
+
+    @media (max-width: 768px) {
+        .slider .list .item .content .btn-book-ticket {
+            font-size: 1.2rem;
+            padding: 8px 16px;
+        }
+    }
+
+    @media (max-width: 425px) {
+        .slider .list .item .content .btn-book-ticket {
+            font-size: 1rem;
+            padding: 6px 12px;
+        }
     }
 </style>
 
@@ -497,7 +556,8 @@
                 <p> historical monuments in the East, that usually includes regions such as Asia, the Middle East, and
                     parts of Eastern Europe.</p>
                 <div class="down-arrow">
-                    <a style="color: #304647;" href="#slider"><i class="bi bi-arrow-down-circle"></i>
+                    <a style="color: #343a40; transition: 0.5s ease-in-out;" href="#slider"><i
+                            class="bi bi-arrow-down-circle"></i>
                     </a>
 
                 </div>
@@ -508,16 +568,15 @@
             <!-- list Items -->
             <div class="list">
                 <div class="item active">
-                    <img src="../images/East/chinawall.webp">
+                    <img src="image/img2.jpg">
                     <div class="content">
                         <p>design</p>
-                        <h3>The Great Wall Of China</h3>
+                        <h3>Slider 01</h3>
                         <p>
-                            This monumental bronze statue of Amida Buddha stands at over 13 meters tall. It’s one of
-                            Japan’s most revered cultural symbols, representing peace, enlightenment, and the country’s
-                            deep Buddhist heritage.
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore, neque?
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum, ex.
                         </p>
-                        <a href="#" class="btn-book-ticket">Book Ticket</a>
+                        <a href="https://www.skyscanner.net" class="btn-book-ticket">Book Ticket</a>
                     </div>
                 </div>
                 <div class="item">
@@ -529,7 +588,7 @@
                             Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore, neque?
                             Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum, ex.
                         </p>
-                        <a href="#" class="btn-book-ticket">Book Ticket</a>
+                        <a href="https://www.skyscanner.net" class="btn-book-ticket">Book Ticket</a>
                     </div>
                 </div>
                 <div class="item">
@@ -541,7 +600,7 @@
                             Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore, neque?
                             Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum, ex.
                         </p>
-                        <a href="#" class="btn-book-ticket">Book Ticket</a>
+                        <a href="https://www.skyscanner.net" class="btn-book-ticket">Book Ticket</a>
                     </div>
                 </div>
                 <div class="item">
@@ -553,7 +612,7 @@
                             Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore, neque?
                             Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum, ex.
                         </p>
-                        <a href="#" class="btn-book-ticket">Book Ticket</a>
+                        <a href="https://www.skyscanner.net" class="btn-book-ticket">Book Ticket</a>
                     </div>
                 </div>
                 <div class="item">
@@ -565,7 +624,7 @@
                             Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore, neque?
                             Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum, ex.
                         </p>
-                        <a href="#" class="btn-book-ticket">Book Ticket</a>
+                        <a href="https://www.skyscanner.net" class="btn-book-ticket">Book Ticket</a>
                     </div>
                 </div>
             </div>
