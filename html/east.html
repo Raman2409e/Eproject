@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Historical Monuments-East</title>
     <link rel="stylesheet" href="../css/bootstrap.css">
-    <link rel="shortcut icon" href="../images/logo.png" type="image/icon">
+    <link rel="shortcut icon" href="../images/logo.png" type="mage/icon">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.8.1/font/bootstrap-icons.min.css">
@@ -14,499 +14,9 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.11.6/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style.css">
 
 </head>
-<style>
-    @media (prefers-color-scheme: dark) {
-        body {
-            background-color: black;
-        }
-    }
-
-    @media (prefers-color-scheme: light) {
-        body {
-            background-color: white;
-        }
-    }
-
-    .dropdown:hover .dropdown-menu {
-        display: block;
-        margin-top: 0;
-        /* remove the gap so it doesn't close */
-        transition: opacity 0.5s ease-in-out;
-        opacity: 1;
-        background: linear-gradient(-45deg, #ffffff, #ffffff, #d3d3d3);
-    }
-
-    .dropdown-menu {
-        opacity: 0;
-        transition: opacity 0.5s ease-in-out;
-    }
-
-    .nav-link {
-        position: relative;
-        display: inline-block;
-        padding-bottom: 5px;
-        font-size: 1.08rem;
-    }
-
-    .nav-link::after {
-        content: '';
-        position: absolute;
-        width: 100%;
-        transform: scaleX(0);
-        height: 5px;
-        bottom: 0;
-        left: 0;
-        background-color: #d47f86;
-        border-radius: 2px;
-        transform-origin: bottom right;
-        transition: transform 0.25s ease-out;
-    }
-
-    .nav-link:hover::after,
-    .nav-link.active::after {
-        transform: scaleX(1);
-        transform-origin: bottom left;
-        color: black;
-    }
-
-    header {
-        margin: 10px;
-        border-radius: 15px;
-        background-color: #405c5e;
-        color: #d47f86;
-        background-size: 400% 400%;
-        position: sticky;
-        top: 0;
-        z-index: 1000;
-        font-size: 1.08rem;
-        border: black 3px solid;
-        scroll-behavior: smooth;
-    }
-
-    header:hover {
-        color: #d47f86;
-        transition: 0.5s ease-in, 0.5s ease-out;
-    }
-
-    header:hover .nav-link {
-        color: #d47f86;
-    }
-
-    .navbar-toggler {
-        border: none;
-        background: transparent;
-    }
-
-    .navbar-toggler-icon {
-        width: 30px;
-        height: 3px;
-        background-color: white;
-        display: block;
-        position: relative;
-        transition: background 0.3s ease;
-    }
-
-    .navbar-toggler-icon::before,
-    .navbar-toggler-icon::after {
-        content: '';
-        width: 30px;
-        height: 3px;
-        background-color: white;
-        display: block;
-        position: absolute;
-        transition: transform 0.3s ease;
-    }
-
-    .navbar-toggler-icon::before {
-        top: -10px;
-    }
-
-    .navbar-toggler-icon::after {
-        bottom: -10px;
-    }
-
-    .navbar-toggler.collapsed .navbar-toggler-icon {
-        background-color: transparent;
-    }
-
-    .navbar-toggler.collapsed .navbar-toggler-icon::before {
-        transform: rotate(45deg) translate(5px, 5px);
-    }
-
-    .navbar-toggler.collapsed .navbar-toggler-icon::after {
-        transform: rotate(-45deg) translate(5px, -5px);
-    }
-
-    @media (min-width: 992px) {
-        .navbar-collapse {
-            display: flex !important;
-            flex-basis: auto;
-        }
-
-        .navbar-toggler {
-            display: none;
-        }
-    }
-
-    @media (max-width: 992px) {
-        .dropdown {
-            display: none;
-        }
-
-        .d {
-            top: 5px;
-        }
-
-        .form-control-dark {
-            margin-top: 10px;
-        }
-    }
-
-    body {
-        font-family: 'Poppins', sans-serif;
-        background: linear-gradient(180deg, #ffffff, #ffffff, #304647);
-    }
-
-    .form-control-dark {
-        background-color: #343a40;
-        border: 2px solid #495057;
-        color: white;
-        border-radius: 50px;
-        padding: 0.5rem 1rem;
-        transition: all 0.3s ease-in-out;
-    }
-
-    .form-control-dark:focus {
-        background-color: #343638;
-        border-color: #d47f86;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-        color: white;
-    }
-
-    .form-control-dark::placeholder {
-        color: white;
-    }
-
-    .banner {
-        background: linear-gradient(180deg, #4e7072, #3b5557);
-        color: #d47f86;
-        text-align: center;
-        padding: 200px 0;
-        border-radius: 15px;
-        margin: 20px 0;
-        overflow: hidden;
-        /* Ensure content does not overflow */
-    }
-
-    .banner h1 {
-        font-size: 4rem;
-        font-weight: 700;
-        color: #343638;
-        margin-bottom: 20px;
-        word-wrap: break-word;
-        /* Break long words to fit within the container */
-        position: relative;
-    }
-
-    .banner h1::after {
-        content: '';
-        position: absolute;
-        bottom: -10px;
-        left: 50%;
-        transform: translateX(-50%);
-        width: 50%;
-        height: 10px;
-        border-radius: 5px;
-        background-color: #5d888b;
-    }
-
-    .banner p {
-        font-size: 1.2rem;
-        color: #343a40;
-        margin-bottom: 20px;
-    }
-
-    .banner .down-arrow {
-        font-size: 6rem;
-        color: #343638;
-        margin-top: 5px;
-        transition: 0.3s ease-in-out;
-    }
-
-    .thick-line {
-        height: 10px;
-        width: 100%;
-        border-radius: 20px;
-        background-color: #5d888b;
-        margin-top: -10px;
-        /* Adjust to remove gap between banner and line */
-    }
-
-    .banner .down-arrow a i:hover {
-        color: #343a40;
-        background: linear-gradient(180deg, #d47f86, #79484c);
-        background-clip: text;
-        transition: 0.3s ease-in-out;
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-    }
-
-    @media screen and (max-width: 768px) {
-        .banner {
-            padding: 100px 0;
-        }
-
-        .banner h1 {
-            font-size: 2.5rem;
-        }
-
-        .banner p {
-            font-size: 1rem;
-        }
-
-        .banner .down-arrow {
-            font-size: 2rem;
-        }
-    }
-
-    .slider {
-        height: 100vh;
-        position: relative;
-        overflow: hidden;
-        border-radius: 15px;
-        border: 5px solid black;
-    }
-
-    .slider .list .item {
-        position: absolute;
-        inset: 0 0 0 0;
-        overflow: hidden;
-        opacity: 0;
-        transition: opacity 0.5s ease-in-out;
-    }
-
-    .slider .list .item img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-    }
-
-    .slider .list .item::after {
-        content: '';
-        width: 100%;
-        height: 100%;
-        position: absolute;
-        left: 0;
-        bottom: 0;
-        background-image: linear-gradient(to top, #000 40%, transparent);
-    }
-
-    .slider .list .item .content {
-        position: absolute;
-        left: 10%;
-        top: 20%;
-        width: 500px;
-        max-width: 80%;
-        z-index: 1;
-    }
-
-    .slider .list .item .content p:nth-child(1) {
-        text-transform: uppercase;
-        letter-spacing: 10px;
-        font-size: 1.2rem;
-    }
-
-    .slider .list .item .content h3 {
-        font-size: 4.8rem;
-        margin: 0;
-    }
-
-    .slider .list .item .content p:nth-child(3) {
-        font-size: 1.2rem;
-    }
-
-    @media (max-width: 768px) {
-        .slider .list .item .content p:nth-child(1) {
-            font-size: 1rem;
-        }
-
-        .slider .list .item .content h3 {
-            font-size: 3rem;
-        }
-
-        .slider .list .item .content p:nth-child(3) {
-            font-size: 1rem;
-        }
-    }
-
-    @media (max-width: 425px) {
-        .slider .list .item .content p:nth-child(1) {
-            font-size: 0.8rem;
-        }
-
-        .slider .list .item .content h3 {
-            font-size: 2rem;
-        }
-
-        .slider .list .item .content p:nth-child(3) {
-            font-size: 0.8rem;
-        }
-    }
-
-    .slider .list .item.active {
-        opacity: 1;
-        z-index: 10;
-    }
-
-    @keyframes showContent {
-        to {
-            transform: translateY(0);
-            filter: blur(0);
-            opacity: 1;
-        }
-    }
-
-    .slider .list .item.active p:nth-child(1),
-    .slider .list .item.active h3,
-    .slider .list .item.active p:nth-child(3) {
-        transform: translateY(30px);
-        filter: blur(20px);
-        opacity: 0;
-        animation: showContent 0.5s 0.7s ease-in-out 1 forwards;
-    }
-
-    .slider .list .item.active h3 {
-        animation-delay: 1s;
-    }
-
-    .slider .list .item.active p:nth-child(3) {
-        animation-duration: 1.3s;
-    }
-
-    .arrows {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        z-index: 100;
-        display: flex;
-        gap: 10px;
-    }
-
-    .arrows button {
-        background-color: #eee5;
-        border: none;
-        font-family: monospace;
-        width: 40px;
-        height: 40px;
-        border-radius: 5px;
-        font-size: x-large;
-        color: #eee;
-        transition: 0.5s;
-    }
-
-    .arrows button:hover {
-        background-color: #d47f86;
-        color: black;
-    }
-
-    .thumbnail {
-        position: absolute;
-        bottom: 50px;
-        z-index: 11;
-        display: flex;
-        gap: 10px;
-        width: 100%;
-        height: 250px;
-        padding: 0 50px;
-        box-sizing: border-box;
-        overflow: auto;
-        justify-content: center;
-    }
-
-    .thumbnail::-webkit-scrollbar {
-        width: 0;
-    }
-
-    .thumbnail .item {
-        width: 150px;
-        height: 220px;
-        filter: brightness(0.5);
-        transition: 0.5s;
-        flex-shrink: 0;
-    }
-
-    .thumbnail .item img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        border-radius: 10px;
-    }
-
-    .thumbnail .item.active {
-        filter: brightness(1.2);
-    }
-
-    .thumbnail .item .content {
-        position: absolute;
-        inset: auto 10px 10px 10px;
-    }
-
-    @media screen and (max-width: 678px) {
-        .thumbnail {
-            justify-content: start;
-        }
-
-        .slider .list .item .content h2 {
-            font-size: 60px;
-        }
-
-        .arrows {
-            top: 10%;
-        }
-    }
-
-    .slider .list .item .content .btn-book-ticket {
-        margin-top: 20px;
-        padding: 10px 20px;
-        font-size: 1.5rem;
-        font-weight: bold;
-        color: #343638;
-        background-color: #659194;
-        border: 1px 3px 5px 1px solid black;
-        border-radius: 13px;
-        text-decoration: none;
-        transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
-        z-index: 2;
-        border-bottom: 8px black solid;
-        border-right: 5px black solid;
-        border-left: 2px black solid;
-        border-top: 2px black solid;
-
-    }
-
-    .slider .list .item .content .btn-book-ticket:hover {
-        background-color: #d47f86;
-        transform: scale(1.05);
-    }
-
-    @media (max-width: 768px) {
-        .slider .list .item .content .btn-book-ticket {
-            font-size: 1.2rem;
-            padding: 8px 16px;
-        }
-    }
-
-    @media (max-width: 425px) {
-        .slider .list .item .content .btn-book-ticket {
-            font-size: 1rem;
-            padding: 6px 12px;
-        }
-    }
-</style>
-
 <body>
     <header class="p-3 text-white">
         <div class="container">
@@ -539,7 +49,7 @@
                             height="50">
                     </a>
                     <div class="dropdown-menu dropdown-menu-right text-small" aria-labelledby="dropdownUser1">
-                        <h4 class="dropdown-item">Developers</h4>
+                        <h4 class="dropdown-item">ABOUT US</h4>
                         <div class="dropdown-divider"></div>
                         <h6 class="dropdown-item" href="#">Raman , Huzaifa</h6>
                         <div class="dropdown-divider"></div>
@@ -568,61 +78,100 @@
             <!-- list Items -->
             <div class="list">
                 <div class="item active">
-                    <img src="image/img2.jpg">
+                    <img src="../images/East/chinawall.webp">
                     <div class="content">
-                        <p>design</p>
-                        <h3>Slider 01</h3>
+                        <p>CHINA</p>
+                        <h3>Great Wall of China</h3>
                         <p>
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore, neque?
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum, ex.
+                            A series of fortifications built to protect the northern borders of China from invasions, stretching over 13,000 miles.
+                        </p>    
+                        <a href="https://www.skyscanner.net" class="btn-book-ticket">Book Ticket</a>
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="../images/East/pyramit-of-giza.webp">
+                    <div class="content">
+                        <p>EGYPT</p>
+                        <h3>Pyramids of Giza</h3>
+                        <p>
+                            The iconic pyramids, including the Great Pyramid of Khufu, are among the most famous and ancient monuments in the world, dating back to around 2580-2560 BCE.
                         </p>
                         <a href="https://www.skyscanner.net" class="btn-book-ticket">Book Ticket</a>
                     </div>
                 </div>
                 <div class="item">
-                    <img src="image/img2.jpg">
+                    <img src="../images/East/Petra.webp">
                     <div class="content">
-                        <p>design</p>
-                        <h3>Slider 02</h3>
+                        <p>JORDAN</p>
+                        <h3>Petra</h3>
                         <p>
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore, neque?
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum, ex.
+                            An ancient city carved into rose-red cliffs, Petra was the capital of the Nabataean Kingdom and a major trade center in antiquity.
                         </p>
                         <a href="https://www.skyscanner.net" class="btn-book-ticket">Book Ticket</a>
                     </div>
                 </div>
                 <div class="item">
-                    <img src="image/img3.jpg">
+                    <img src="../images/East/babylon.webp">
                     <div class="content">
-                        <p>design</p>
-                        <h3>Slider 03</h3>
+                        <p>IRAQ</p>
+                        <h3>Babylon</h3>
                         <p>
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore, neque?
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum, ex.
+                            The ruins of the ancient city of Babylon, once the center of the Babylonian Empire, featuring the Ishtar Gate and remnants of the Hanging Gardens (one of the Seven Wonders of the Ancient World).
                         </p>
                         <a href="https://www.skyscanner.net" class="btn-book-ticket">Book Ticket</a>
                     </div>
                 </div>
                 <div class="item">
-                    <img src="image/img4.jpg">
+                    <img src="../images/East/dome-of-the-rock.webp">
                     <div class="content">
-                        <p>design</p>
-                        <h3>Slider 04</h3>
+                        <p>JERUSALEM</p>
+                        <h3>Dome of the Rock</h3>
                         <p>
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore, neque?
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum, ex.
+                            A significant Islamic shrine located on Temple Mount, with great religious and historical importance to Muslims, Jews, and Christians.
                         </p>
                         <a href="https://www.skyscanner.net" class="btn-book-ticket">Book Ticket</a>
                     </div>
                 </div>
                 <div class="item">
-                    <img src="image/img5.jpg">
+                    <img src="../images/East/angkor-wat.webp">
                     <div class="content">
-                        <p>design</p>
-                        <h3>Slider 05</h3>
+                        <p>CAMBODIA</p>
+                        <h3>Angkor Wat</h3>
                         <p>
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore, neque?
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum, ex.
+                            A massive temple complex built in the 12th century, originally dedicated to the Hindu god Vishnu, later converted to a Buddhist temple. It's the largest religious monument in the world.
+                        </p>
+                        <a href="https://www.skyscanner.net" class="btn-book-ticket">Book Ticket</a>
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="../images/East/himeji castle.webp">
+                    <div class="content">
+                        <p>JAPAN</p>
+                        <h3>Himeji Castle</h3>
+                        <p>
+                            A well-preserved samurai-era castle with stunning architecture.
+                        </p>
+                        <a href="https://www.skyscanner.net" class="btn-book-ticket">Book Ticket</a>
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="../images/East/Gyeongbokgung Palace.webp">
+                    <div class="content">
+                        <p>SOUTH KOREA</p>
+                        <h3>Gyeongbokgung Palace</h3>
+                        <p>
+                            The main palace of the Joseon Dynasty, known for its elegant design.
+                        </p>
+                        <a href="https://www.skyscanner.net" class="btn-book-ticket">Book Ticket</a>
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="../images/East/Persepolis.webp">
+                    <div class="content">
+                        <p>IRAN</p>
+                        <h3>Persepolis</h3>
+                        <p>
+                            The main palace of the Joseon Dynasty, known for its elegant design.
                         </p>
                         <a href="https://www.skyscanner.net" class="btn-book-ticket">Book Ticket</a>
                     </div>
@@ -642,27 +191,51 @@
                     </div>
                 </div>
                 <div class="item">
-                    <img src="image/img2.jpg">
+                    <img src="../images/East/pyramit-of-giza.webp">
                     <div class="content">
-                        Name Slider
+                        Pyramids of Giza
                     </div>
                 </div>
                 <div class="item">
-                    <img src="image/img3.jpg">
+                    <img src="../images/East/Petra.webp">
                     <div class="content">
-                        Name Slider
+                        Petra
                     </div>
                 </div>
                 <div class="item">
-                    <img src="image/img4.jpg">
+                    <img src="../images/East/babylon.webp">
                     <div class="content">
-                        Name Slider
+                        Babylon
                     </div>
                 </div>
                 <div class="item">
-                    <img src="image/img4.jpg">
+                    <img src="../images/East/dome-of-the-rock.webp">
                     <div class="content">
-                        Name Slider
+                        Dome of the Rock
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="../images/East/angkor-wat.webp">
+                    <div class="content">
+                        Angkor Wat
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="../images/East/himeji castle.webp">
+                    <div class="content">
+                        Himeji Castle
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="../images/East/Gyeongbokgung Palace.webp">
+                    <div class="content">
+                        Gyeongbokgung Palace
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="../images/East/Persepolis.webp">
+                    <div class="content">
+                        Persepolis
                     </div>
                 </div>
             </div>
