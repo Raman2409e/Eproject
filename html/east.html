@@ -15,10 +15,16 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../style.css">
-
+    <link rel="stylesheet" href="../css/loaders/loader.css">
 </head>
 <body>
-    <header class="p-3 text-white">
+    <div class="loader">
+        <div class="loader__content">
+            <div class="loader__box"></div>
+            <div class="loader__shadow"></div>
+        </div>
+    </div>
+    <header class="p-3 text-white scroll-animation">
         <div class="container">
             <div class="d-flex flex-wrap align-items-center justify-content-between">
                 <a href="/" class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none d">
@@ -59,7 +65,7 @@
             </div>
         </div>
     </header>
-    <section class="container-fluid fade-up">
+    <section class="container-fluid fade-up scroll-animation">
         <div class="row banner">
             <div class="col-md-12">
                 <h1>EAST-MONUMENTS</h1>
@@ -73,8 +79,8 @@
                 </div>
             </div>
         </div>
-        <div class="thick-line"></div>
-        <div id="slider" class="slider mt-2">
+        <div class="thick-line mb-5"></div>
+        <div id="slider" class="slider mt-2 scroll-animation">
             <!-- list Items -->
             <div class="list">
                 <div class="item active">
@@ -240,14 +246,92 @@
                 </div>
             </div>
         </div>
-
+        <h1 class="text-center mt-5 text-dark b scroll-animation">MORE INFO ABOUT MONUMENTS</h1>
+        <div class="row mt-5 scroll-animation">
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-img-overlay d-flex flex-column justify-content-start">
+                        <h5 class="card-title text-white">Great Wall of China</h5>
+                        <button class="btn-learn-more" onclick="toggleCardText(this)">Learn More</button>
+                    </div>
+                    <img src="../images/East/chinawall.webp" class="card-img-top" alt="Great Wall of China">
+                    <div class="card-body d-none">
+                        <p class="card-text">A series of fortifications built to protect the northern borders of China from invasions, stretching over 13,000 miles.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-img-overlay d-flex flex-column justify-content-start">
+                        <h5 class="card-title text-white">Pyramids of Giza</h5>
+                        <button class="btn-learn-more" onclick="toggleCardText(this)">Learn More</button>
+                    </div>
+                    <img src="../images/East/pyramit-of-giza.webp" class="card-img-top" alt="Pyramids of Giza">
+                    <div class="card-body d-none">
+                        <p class="card-text">The iconic pyramids, including the Great Pyramid of Khufu, are among the most famous and ancient monuments in the world, dating back to around 2580-2560 BCE.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-img-overlay d-flex flex-column justify-content-start">
+                        <h5 class="card-title text-white">Petra</h5>
+                        <button class="btn-learn-more" onclick="toggleCardText(this)">Learn More</button>
+                    </div>
+                    <img src="../images/East/Petra.webp" class="card-img-top" alt="Petra">
+                    <div class="card-body d-none">
+                        <p class="card-text">An ancient city carved into rose-red cliffs, Petra was the capital of the Nabataean Kingdom and a major trade center in antiquity.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    <!-- INFO CARD -->
+        <div class="row mt-5 scroll-animation">
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-img-overlay d-flex flex-column justify-content-start">
+                        <h5 class="card-title text-white">Babylon</h5>
+                        <button class="btn-learn-more" onclick="toggleCardText(this)">Learn More</button>
+                    </div>
+                    <img src="../images/East/babylon.webp" class="card-img-top" alt="Babylon">
+                    <div class="card-body d-none">
+                        <p class="card-text">The ruins of the ancient city of Babylon, once the center of the Babylonian Empire, featuring the Ishtar Gate and remnants of the Hanging Gardens (one of the Seven Wonders of the Ancient World).</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-img-overlay d-flex flex-column justify-content-start">
+                        <h5 class="card-title text-white">Dome of the Rock</h5>
+                        <button class="btn-learn-more" onclick="toggleCardText(this)">Learn More</button>
+                    </div>
+                    <img src="../images/East/dome-of-the-rock.webp" class="card-img-top" alt="Dome of the Rock">
+                    <div class="card-body d-none">
+                        <p class="card-text">A significant Islamic shrine located on Temple Mount, with great religious and historical importance to Muslims, Jews, and Christians.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-img-overlay d-flex flex-column justify-content-start">
+                        <h5 class="card-title text-white">Angkor Wat</h5>
+                        <button class="btn-learn-more" onclick="toggleCardText(this)">Learn More</button>
+                    </div>
+                    <img src="../images/East/angkor-wat.webp" class="card-img-top" alt="Angkor Wat">
+                    <div class="card-body d-none">
+                        <p class="card-text">A massive temple complex built in the 12th century, originally dedicated to the Hindu god Vishnu, later converted to a Buddhist temple. It's the largest religious monument in the world.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- INFO CARD -->
     </section>
 
-    <footer style="border-top: 5px black solid;margin-top: 20px;" class="py-5 bg-dark fade-up">
+    <footer style="border-top: 5px black solid;margin-top: 20px;" class="py-5 bg-dark fade-up scroll-animation">
         <div class="container">
             <div class="row">
                 <div class="col-12 col-md">
-                    <img src="../images/pfp.jpg" alt="Logo" class="rounded" width="60" height="60" class="mb-2">
+                    <img src="../images/logo.png" alt="Logo" class="rounded" width="60" height="60" class="mb-2">
                     <small class="d-block mb-3 text-light">&copy; 2025</small>
                 </div>
                 <div style="font-size: larger;" class="col-6 col-md">
@@ -280,6 +364,11 @@
     </footer>
 </body>
 <script>
+    $(window).on('load', function () {
+        $('.loader').addClass('loaded');
+        $('.loader__content').addClass('fade-out');
+    });
+
     let items = document.querySelectorAll('.slider .list .item');
     let next = document.getElementById('next');
     let prev = document.getElementById('prev');
@@ -349,7 +438,58 @@
             window.scrollTo(0, 0);
         });
     });
+
+    function toggleCardText(button) {
+        const cardBody = button.closest('.card').querySelector('.card-body');
+        const card = button.closest('.card');
+        const allCards = document.querySelectorAll('.card');
+
+        // Collapse all other cards
+        allCards.forEach(c => {
+            if (c !== card) {
+                c.querySelector('.card-body').classList.add('d-none');
+                c.querySelector('.card-img-overlay').classList.remove('card-overlay-expanded');
+            }
+        });
+
+        // Toggle the clicked card
+        cardBody.classList.toggle('d-none');
+        card.querySelector('.card-img-overlay').classList.toggle('card-overlay-expanded');
+    }
+
+    // Scroll animation
+    const scrollElements = document.querySelectorAll('.scroll-animation');
+
+    const elementInView = (el, dividend = 1) => {
+        const elementTop = el.getBoundingClientRect().top;
+        return (
+            elementTop <= (window.innerHeight || document.documentElement.clientHeight) / dividend
+        );
+    };
+
+    const displayScrollElement = (element) => {
+        element.classList.add('visible');
+    };
+
+    const hideScrollElement = (element) => {
+        element.classList.remove('visible');
+    };
+
+    const handleScrollAnimation = () => {
+        scrollElements.forEach((el) => {
+            if (elementInView(el, 1.25)) {
+                displayScrollElement(el);
+            } else {
+                hideScrollElement(el);
+            }
+        });
+    };
+
+    window.addEventListener('scroll', () => {
+        handleScrollAnimation();
+    });
+
+    // Initial check to display elements already in view
+    handleScrollAnimation();
 </script>
-
-
 </html>

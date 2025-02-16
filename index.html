@@ -14,10 +14,17 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="../css/loaders/loader.css">
+
 </head>
 
 <body>
-
+    <div class="loader">
+        <div class="loader__content">
+            <div class="loader__box"></div>
+            <div class="loader__shadow"></div>
+        </div>
+    </div>
     <header class="p-3 text-white ">
         <div class="container">
             <div class="d-flex flex-wrap align-items-center justify-content-between">
@@ -228,6 +235,10 @@
         </div>
     </footer>
     <script>
+        $(window).on('load', function () {
+        $('.loader').addClass('loaded');
+        $('.loader__content').addClass('fade-out');
+    });
         $(document).ready(function () {
             $('#dropdownUser1').on('click', function (e) {
                 e.preventDefault();

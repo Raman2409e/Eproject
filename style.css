@@ -139,7 +139,7 @@ header:hover .nav-link {
 
 body {
     font-family: 'Poppins', sans-serif;
-    background: linear-gradient(180deg, #ffffff, #ffffff, #304647);
+    background-image: linear-gradient(to top, #304647, 60%, #fff);
 }
 
 .form-control-dark {
@@ -723,17 +723,59 @@ body {
 
 .slider .list .item .content p:nth-child(1) {
     text-transform: uppercase;
-    letter-spacing: 10px;
-    font-size: 1.2rem;
+    letter-spacing: 8px;
+    font-size: 1rem;
 }
 
 .slider .list .item .content h3 {
-    font-size: 4.8rem;
+    font-size: 3.5rem;
     margin: 0;
 }
 
 .slider .list .item .content p:nth-child(3) {
-    font-size: 1.2rem;
+    font-size: 1rem;
+}
+
+@media (max-width: 1440px) {
+    .slider .list .item .content p:nth-child(1) {
+        font-size: 0.9rem;
+    }
+
+    .slider .list .item .content h3 {
+        font-size: 3rem;
+    }
+
+    .slider .list .item .content p:nth-child(3) {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 1024px) {
+    .slider .list .item .content p:nth-child(1) {
+        font-size: 0.8rem;
+    }
+
+    .slider .list .item .content h3 {
+        font-size: 2.5rem;
+    }
+
+    .slider .list .item .content p:nth-child(3) {
+        font-size: 0.8rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .slider .list .item .content p:nth-child(1) {
+        font-size: 0.7rem;
+    }
+
+    .slider .list .item .content h3 {
+        font-size: 2rem;
+    }
+
+    .slider .list .item .content p:nth-child(3) {
+        font-size: 0.7rem;
+    }
 }
 
 @media (max-width: 768px) {
@@ -914,23 +956,80 @@ body {
         padding: 6px 12px;
     }
 }
-
-@keyframes fadeUp {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+.btn-learn-more {
+    margin-top: 10px;
+    padding: 5px 10px;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #343638;
+    background-color: #659194;
+    border: 1px solid black;
+    border-radius: 13px;
+    text-decoration: none;
+    transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+    z-index: 1;
+    opacity: 0.8;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+    border-bottom: 8px solid black;
+    border-right: 5px solid black;
+    border-left: 2px solid black;
+    border-top: 2px solid black;
 }
 
-.fade-up {
-    animation: fadeUp 0.6s ease-out;
+.btn-learn-more:hover {
+    background-color: #d47f86;
+    transform: scale(1.01);
+    
+}
+.card:hover{
+    transform: scale(1.01);
+    box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.1);
+    background-color: #d47f86;
+    transition: 0.3s ease-in-out;
+    color: #343638;
+    filter: brightness(0.8);
+}
+.card-overlay-expanded {
+    max-height: 500px; /* Adjust as needed */
+    opacity: 1;
+}
+::-webkit-scrollbar{
+    width:10px
+}
+::-webkit-scrollbar-track{
+    background: d1e5ff;
+}
+::-webkit-scrollbar-thumb{
+    background:linear-gradient(180deg, #304647, #659194);
+    border-radius: 10px;
+}
+.card{
+    margin: 20px;
+    border-bottom: 8px solid black;
+    border-right: 5px solid black;
+    border-left: 2px solid black;
+    border-top: 2px solid black;
+    border-radius: 15px;
+}
+.b{
+    padding: 50px 50px;
+    background-color: #304647;
+    color: #343638;
+    border-radius: 15px;
+    font-weight: bold;
+    border: 8px #343638 dashed;
+}
+.card-title{
+    font-size: 2rem;
+    text-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+}
+.animation {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
 }
 
-/* Apply fade-up animation to all elements except header */
-body > *:not(header) {
-    animation: fadeUp 0.6s ease-out;
+.animation.visible {
+    opacity: 1;
+    transform: translateY(0);
 }
