@@ -1,0 +1,94 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Historical Monuments-About Us</title>
+    <link rel="stylesheet" href="../css/bootstrap.css">
+    <link rel="shortcut icon" href="../images/logo.png" type="image/icon">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.8.1/font/bootstrap-icons.min.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.11.6/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../css/loaders/loader.css">
+</head>
+
+<body>
+    <div class="loader">
+        <div class="loader__content">
+            <div class="loader__box"></div>
+            <div class="loader__shadow"></div>
+        </div>
+    </div>
+    <header class="p-3 text-white ">
+        <div class="container">
+            <div class="d-flex flex-wrap align-items-center justify-content-between">
+                <a href="/" class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none d">
+                    <img class="rounded me-3 " src="../images/logo.png" alt="Logo" width="50" height="50">
+                </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+                        <li><a href="../index.html" class="nav-link px-2 text-white active">Home</a></li>
+                        <li><a href="./east.html" class="nav-link px-2 text-white">East</a></li>
+                        <li><a href="#west" class="nav-link px-2 text-white">West</a></li>
+                        <li><a href="#north" class="nav-link px-2 text-white">North</a></li>
+                        <li><a href="#south" class="nav-link px-2 text-white">South</a></li>
+                        <li><a href="#" class="nav-link px-2 text-white">Contact Us</a></li>
+                    </ul>
+                    <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3">
+                        <input type="search" class="form-control form-control-dark" placeholder="Search..."
+                            aria-label="Search">
+                    </form>
+                </div>
+                <div class="dropdown text-end">
+                    <a href="#" class="d-block link-light text-decoration-none dropdown-toggle" id="dropdownUser1"
+                        data-toggle="dropdown" aria-expanded="false">
+                        <img src="../images/logo.png" alt="Profile Picture" class="rounded-circle" width="50"
+                            height="50">
+                    </a>
+                    <div class="dropdown-menu dropdown-menu-right text-small" aria-labelledby="dropdownUser1">
+                        <h4 class="dropdown-item">ABOUT US</h4>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="./about.html">Visit Page <i class="bi bi-arrow-up-circle"
+                                aria-hidden="true"></i></a>
+                        <div class="dropdown-divider"></div>
+                        <h6 class="dropdown-item" href="#">X_X</h6>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <section class="container-fluid fade-up scroll-animation">
+        <div class="row banner">
+            <div class="col-md-12">
+                <h1>About Us</h1>
+                <p>Learn more about our mission, vision, and the team behind this project.</p>
+                <div class="down-arrow">
+                    <a style="color: #343a40; transition: 0.5s ease-in-out;" href="#content"><i
+                            class="bi bi-arrow-down-circle"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="thick-line mb-5"></div>
+        <div id="content" class="content mt-2 scroll-animation">
+            <!-- Add your content here -->
+        </div>
+    </section>
+</body>
+<script>
+    $(window).on('load', function () {
+        $('.loader').addClass('loaded');
+        $('.loader__content').addClass('fade-out');
+    });
+</script>
+
+</html>
