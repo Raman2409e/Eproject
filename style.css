@@ -1122,13 +1122,18 @@ body {
 }
 .subscription-box {
     margin-top: 20px;
-    background: #888;
+    background-image: url(./images/travel.webp);
+    background-blend-mode: multiply;
+    background-position-y: center;
+    background-color: #476769;
+    object-fit: cover;
+    background-size: cover;
     color: white;
     text-align: center;
     padding: 40px;
     border-radius: 10px;
     width: 100%;
-    max-width: 1920px;
+    max-width: 100%;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 .subscription-box h2 {
