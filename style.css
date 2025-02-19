@@ -489,6 +489,25 @@ body {
     }
 }
 
+@media (max-width: 1366px) and (max-height: 768px) {
+    .slider .list .item .content p:nth-child(1) {
+        font-size: 0.8rem;
+    }
+
+    .slider .list .item .content h3 {
+        font-size: 2.5rem;
+    }
+
+    .slider .list .item .content p:nth-child(3) {
+        font-size: 0.8rem;
+    }
+
+    .slider .list .item .content .btn-book-ticket {
+        font-size: 1.2rem;
+        padding: 8px 16px;
+    }
+}
+
 @media (max-width: 1024px) {
     .slider .list .item .content p:nth-child(1) {
         font-size: 0.8rem;
@@ -897,13 +916,29 @@ body {
     justify-content: space-between;
     align-items: center;
     margin: 20px 0;
+    position: relative;
+}
+.sp::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('./images/earth.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    opacity: 0.7;
+    z-index: -1;
 }
 @media (max-width: 425px) {
     .sp {
-        
         flex-direction: column;
         text-align: left;
         margin-right: 35px;
+    }
+    .sp::before {
+        display: none;
     }
 }
 
@@ -957,7 +992,6 @@ body {
     background: linear-gradient(90deg, #476769,#659194);
     box-shadow: 0 0 50px #476769, 0 0 50px #659194;
     animation: glowing 1.5s infinite alternate;
-    border-radius: 5px;
 }
 
 #z {
@@ -1227,5 +1261,36 @@ body {
 @media (max-width: 767px) {
     .black{
         color: white;
+    }
+}
+.sp {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px 0;
+    position: relative;
+}
+.sp::before {
+    content: '';
+    position: absolute;
+    top: 50;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('./images/earth.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    opacity: 0.7;
+    z-index: -1;
+}
+@media (max-width: 425px) {
+    .sp {
+        flex-direction: column;
+        text-align: left;
+        margin-right: 35px;
+    }
+    .sp::before {
+        display: none;
     }
 }
