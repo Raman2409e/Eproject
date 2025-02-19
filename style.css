@@ -11,6 +11,9 @@
     opacity: 0;
     transition: opacity 0.5s ease-in-out;
 }
+.dropdown-item .after{
+    background-color: #666;
+}
 
 .nav-link {
     position: relative;
