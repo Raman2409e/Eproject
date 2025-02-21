@@ -1,329 +1,493 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Historical Monuments-North</title>
-    <link rel="stylesheet" href="../css/bootstrap.css">
-    <link rel="shortcut icon" href="../images/logo.png" type="mage/icon">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.8.1/font/bootstrap-icons.min.css">
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.11.6/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../style.css">
-    <link rel="stylesheet" href="../css/loaders/loader.css">
-</head>
-<body style="background-image: linear-gradient(to top, #304647, 60%, #141414);">
-    <div class="loader">
-        <div class="loader__content">
-            <div class="loader__box"></div>
-            <div class="loader__shadow"></div>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Historical Monuments-North</title>
+        <link rel="stylesheet" href="../css/bootstrap.css">
+        <link rel="shortcut icon" href="../images/logo.png" type="mage/icon">
+        <link
+            href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap"
+            rel="stylesheet">
+        <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.8.1/font/bootstrap-icons.min.css">
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script
+            src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.11.6/umd/popper.min.js"></script>
+        <script
+            src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="../style.css">
+        <link rel="stylesheet" href="../css/loaders/loader.css">
+    </head>
+    <body
+        style="background-image: linear-gradient(to top, #304647, 60%, #141414);">
+        <div class="loader">
+            <div class="loader__content">
+                <div class="loader__box"></div>
+                <div class="loader__shadow"></div>
+            </div>
         </div>
-    </div>
-    <header class="p-3 text-white scroll-animation">
-        <div class="container">
-            <div class="d-flex flex-wrap align-items-center justify-content-between">
-                <a href="/" class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none d">
-                    <img class="rounded me-3" src="../images/logo.png" alt="Logo" width="50" height="50">
-                </a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
-                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
-                        <li><a href="../index.html" class="nav-link px-2 text-white">Home</a></li>
-                        <li><a href="./east.html" class="nav-link px-2 text-white ">East</a></li>
-                        <li><a href="./west.html" class="nav-link px-2 text-white ">West</a></li>
-                        <li><a href="./north.html" class="nav-link px-2 text-white active">North</a></li>
-                        <li><a href="./south.html" class="nav-link px-2 text-white">South</a></li>
-                        <li><a href="./contact.html" class="nav-link px-2 text-white">Contact Us</a></li>
-                    </ul>
-                    <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3">
-                        <input type="search" class="form-control form-control-dark" placeholder="Search..."
-                            aria-label="Search">
-                    </form>
-                </div>
-                <div class="dropdown text-end">
-                    <a href="#" class="d-block link-light text-decoration-none dropdown-toggle" id="dropdownUser1"
-                        data-toggle="dropdown" aria-expanded="false">
-                        <img src="../images/logo.png" alt="Profile Picture" class="rounded-circle" width="50"
-                            height="50">
+        <header class="p-3 text-white scroll-animation">
+            <div class="container">
+                <div
+                    class="d-flex flex-wrap align-items-center justify-content-between">
+                    <a href="/"
+                        class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none d">
+                        <img class="rounded me-3" src="../images/logo.png"
+                            alt="Logo" width="50" height="50">
                     </a>
-                    <div class="dropdown-menu dropdown-menu-right text-small" aria-labelledby="dropdownUser1">
-                        <h4 class="dropdown-item">ABOUT US</h4>
-                        <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="./about.html">Visit Page <i class="bi bi-arrow-up-circle" aria-hidden="true"></i></a>
-                        <div class="dropdown-divider"></div>
-                        <h6 class="dropdown-item" href="#">X_X</h6>
+                    <button class="navbar-toggler" type="button"
+                        data-toggle="collapse" data-target="#navbarNav"
+                        aria-controls="navbarNav" aria-expanded="false"
+                        aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul
+                            class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+                            <li><a href="../index.html"
+                                    class="nav-link px-2 text-white">Home</a></li>
+                            <li><a href="./east.html"
+                                    class="nav-link px-2 text-white ">East</a></li>
+                            <li><a href="./west.html"
+                                    class="nav-link px-2 text-white ">West</a></li>
+                            <li><a href="./north.html"
+                                    class="nav-link px-2 text-white active">North</a></li>
+                            <li><a href="./south.html"
+                                    class="nav-link px-2 text-white">South</a></li>
+                            <li><a href="./contact.html"
+                                    class="nav-link px-2 text-white">Contact
+                                    Us</a></li>
+                        </ul>
+                        <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3">
+                            <input type="search"
+                                class="form-control form-control-dark"
+                                placeholder="Search..."
+                                aria-label="Search">
+                        </form>
+                    </div>
+                    <div class="dropdown text-end">
+                        <a href="#"
+                            class="d-block link-light text-decoration-none dropdown-toggle"
+                            id="dropdownUser1"
+                            data-toggle="dropdown" aria-expanded="false">
+                            <img src="../images/logo.png" alt="Profile Picture"
+                                class="rounded-circle" width="50"
+                                height="50">
+                        </a>
+                        <div
+                            class="dropdown-menu dropdown-menu-right text-small"
+                            aria-labelledby="dropdownUser1">
+                            <h4 class="dropdown-item">ABOUT US</h4>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="./about.html">Visit
+                                Page <i class="bi bi-arrow-up-circle"
+                                    aria-hidden="true"></i></a>
+                            <div class="dropdown-divider"></div>
+                            <h6 class="dropdown-item" href="#">X_X</h6>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </header>
-    <section class="container-fluid fade-up scroll-animation">
-        <div class="row banner text-light" style="background: linear-gradient(180deg, #3b5557, #2e3b4e);">
-            <div class="col-md-12">
-                <h1 class="text-light">NORTH-MONUMENTS</h1>
-                <p class="text-light">Historical monuments in the North, that usually includes regions such as Northern Europe, Russia, and parts of North America.</p>
-                <div class="down-arrow">
-                    <a style="color: #343a40; transition: 0.5s ease-in-out;" href="#slider"><i class="bi bi-arrow-down-circle"></i></a>
-                </div>
-            </div>
-        </div>
-        <div class="thick-line mb-5"></div>
-        <div id="slider" class="slider mt-2 scroll-animation">
-            <!-- list Items -->
-            <div class="list">
-                <div class="item active">
-                    <img src="../images/North/stonehenge.webp">
-                    <div class="content">
-                        <p>UK</p>
-                        <h3>Stonehenge</h3>
-                        <p>
-                            A prehistoric monument in Wiltshire, England, consisting of a ring of standing stones.
-                        </p>    
-                        <a href="https://www.skyscanner.net" class="btn-book-ticket">Book Ticket</a>
-                    </div>
-                </div>
-                <div class="item">
-                    <img src="../images/North/red-square.webp">
-                    <div class="content">
-                        <p>RUSSIA</p>
-                        <h3>Red Square</h3>
-                        <p>
-                            A historic square in Moscow, Russia, known for its iconic buildings including the Kremlin and St. Basil's Cathedral.
-                        </p>
-                        <a href="https://www.skyscanner.net" class="btn-book-ticket">Book Ticket</a>
-                    </div>
-                </div>
-                <div class="item">
-                    <img src="../images/North/mount-rushmore.webp">
-                    <div class="content">
-                        <p>USA</p>
-                        <h3>Mount Rushmore</h3>
-                        <p>
-                            A massive sculpture carved into the granite face of Mount Rushmore in South Dakota, featuring the heads of four U.S. presidents.
-                        </p>
-                        <a href="https://www.skyscanner.net" class="btn-book-ticket">Book Ticket</a>
-                    </div>
-                </div>
-                <div class="item">
-                    <img src="../images/North/niagara-falls.webp">
-                    <div class="content">
-                        <p>CANADA/USA</p>
-                        <h3>Niagara Falls</h3>
-                        <p>
-                            A group of three waterfalls at the southern end of Niagara Gorge, spanning the border between Ontario, Canada, and New York, USA.
-                        </p>
-                        <a href="https://www.skyscanner.net" class="btn-book-ticket">Book Ticket</a>
-                    </div>
-                </div>
-                <div class="item">
-                    <img src="../images/North/edinburgh-castle.webp">
-                    <div class="content">
-                        <p>SCOTLAND</p>
-                        <h3>Edinburgh Castle</h3>
-                        <p>
-                            A historic fortress which dominates the skyline of Edinburgh, Scotland, from its position on the Castle Rock.
-                        </p>
-                        <a href="https://www.skyscanner.net" class="btn-book-ticket">Book Ticket</a>
-                    </div>
-                </div>
-                <div class="item">
-                    <img src="../images/North/bran-castle.webp">
-                    <div class="content">
-                        <p>ROMANIA</p>
-                        <h3>Bran Castle</h3>
-                        <p>
-                            A national monument and landmark in Romania, commonly known as "Dracula's Castle".
-                        </p>
-                        <a href="https://www.skyscanner.net" class="btn-book-ticket">Book Ticket</a>
+        </header>
+        <section class="container-fluid fade-up scroll-animation">
+            <div class="row banner text-light"
+                style="background: linear-gradient(180deg, #3b5557, #2e3b4e);">
+                <div class="col-md-12">
+                    <h1 class="text-light">NORTH-MONUMENTS</h1>
+                    <p class="text-light">Historical monuments in the North,
+                        that usually includes regions such as Northern Europe,
+                        Russia, and parts of North America.</p>
+                    <div class="down-arrow">
+                        <a style="color: #343a40; transition: 0.5s ease-in-out;"
+                            href="#slider"><i
+                                class="bi bi-arrow-down-circle"></i></a>
                     </div>
                 </div>
             </div>
-            <!-- button arrows -->
-            <div class="arrows">
-                <button id="prev"><</button>
-                        <button id="next">></button>
+            <div class="thick-line mb-5"></div>
+            <div id="slider" class="slider mt-2 scroll-animation">
+                <!-- list Items -->
+                <div class="list">
+                    <div class="item active">
+                        <img src="../images/North/stonehenge.webp">
+                        <div class="content">
+                            <p>UK</p>
+                            <h3>Stonehenge</h3>
+                            <p>
+                                A prehistoric monument in Wiltshire, England,
+                                consisting of a ring of standing stones.
+                            </p>
+                            <a href="https://www.skyscanner.net"
+                                class="btn-book-ticket">Book Ticket</a>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <img src="../images/North/red-square.webp">
+                        <div class="content">
+                            <p>RUSSIA</p>
+                            <h3>Red Square</h3>
+                            <p>
+                                A historic square in Moscow, Russia, known for
+                                its iconic buildings including the Kremlin and
+                                St. Basil's Cathedral.
+                            </p>
+                            <a href="https://www.skyscanner.net"
+                                class="btn-book-ticket">Book Ticket</a>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <img src="../images/North/mount-rushmore.webp">
+                        <div class="content">
+                            <p>USA</p>
+                            <h3>Mount Rushmore</h3>
+                            <p>
+                                A massive sculpture carved into the granite face
+                                of Mount Rushmore in South Dakota, featuring the
+                                heads of four U.S. presidents.
+                            </p>
+                            <a href="https://www.skyscanner.net"
+                                class="btn-book-ticket">Book Ticket</a>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <img src="../images/North/niagara-falls.webp">
+                        <div class="content">
+                            <p>CANADA/USA</p>
+                            <h3>Niagara Falls</h3>
+                            <p>
+                                A group of three waterfalls at the southern end
+                                of Niagara Gorge, spanning the border between
+                                Ontario, Canada, and New York, USA.
+                            </p>
+                            <a href="https://www.skyscanner.net"
+                                class="btn-book-ticket">Book Ticket</a>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <img src="../images/North/edinburgh-castle.webp">
+                        <div class="content">
+                            <p>SCOTLAND</p>
+                            <h3>Edinburgh Castle</h3>
+                            <p>
+                                A historic fortress which dominates the skyline
+                                of Edinburgh, Scotland, from its position on the
+                                Castle Rock.
+                            </p>
+                            <a href="https://www.skyscanner.net"
+                                class="btn-book-ticket">Book Ticket</a>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <img src="../images/North/bran-castle.webp">
+                        <div class="content">
+                            <p>ROMANIA</p>
+                            <h3>Bran Castle</h3>
+                            <p>
+                                A national monument and landmark in Romania,
+                                commonly known as "Dracula's Castle".
+                            </p>
+                            <a href="https://www.skyscanner.net"
+                                class="btn-book-ticket">Book Ticket</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- button arrows -->
+                <div class="arrows">
+                    <button id="prev"><</button>
+                    <button id="next">></button>
+                </div>
+                <!-- thumbnail -->
+                <div class="thumbnail">
+                    <div class="item active">
+                        <img src="../images/North/stonehenge.webp">
+                        <div class="content">
+                            Stonehenge
+                        </div>
+                    </div>
+                    <div class="item">
+                        <img src="../images/North/red-square.webp">
+                        <div class="content">
+                            Red Square
+                        </div>
+                    </div>
+                    <div class="item">
+                        <img src="../images/North/mount-rushmore.webp">
+                        <div class="content">
+                            Mount Rushmore
+                        </div>
+                    </div>
+                    <div class="item">
+                        <img src="../images/North/niagara-falls.webp">
+                        <div class="content">
+                            Niagara Falls
+                        </div>
+                    </div>
+                    <div class="item">
+                        <img src="../images/North/edinburgh-castle.webp">
+                        <div class="content">
+                            Edinburgh Castle
+                        </div>
+                    </div>
+                    <div class="item">
+                        <img src="../images/North/bran-castle.webp">
+                        <div class="content">
+                            Bran Castle
+                        </div>
+                    </div>
+                </div>
             </div>
-            <!-- thumbnail -->
-            <div class="thumbnail">
-                <div class="item active">
-                    <img src="../images/North/stonehenge.webp">
-                    <div class="content">
-                        Stonehenge
+            <div class="container mt-5 b text-light">
+                <h2 class="text-center">Unique Features of Northern
+                    Monuments</h2>
+                <p class="text-center">Northern monuments are known for their
+                    resilience and historical significance. Here are some unique
+                    features:</p>
+                <ul>
+                    <li>Resilience against harsh climates</li>
+                    <li>Historical significance</li>
+                    <li>Architectural uniqueness</li>
+                </ul>
+            </div>
+            <h1 class="text-center mt-5 text-dark b scroll-animation">MORE INFO
+                ABOUT MONUMENTS</h1>
+            <div class="row mt-5 scroll-animation">
+                <div class="col-md-4">
+                    <div class="card">
+                        <div
+                            class="card-img-overlay d-flex flex-column justify-content-start">
+                            <h5 class="card-title text-white">Stonehenge</h5>
+                            <button class="btn-learn-more"
+                                onclick="toggleCardText(this)">Learn
+                                More</button>
+                        </div>
+                        <img src="../images/North/stonehenge.webp"
+                            class="card-img-top" alt="Stonehenge">
+                        <div class="card-body d-none">
+                            <p class="card-text">Stonehenge is a prehistoric
+                                monument located in Wiltshire, England,
+                                consisting of a ring of standing stones set
+                                within earthworks. Believed to have been
+                                constructed between 3000 and 2000 BC, its
+                                purpose remains a mystery, though it is thought
+                                to have had religious or astronomical
+                                significance. The site is famous for its
+                                alignment with the sun during solstices.
+                                Stonehenge is a UNESCO World Heritage site and
+                                one of the most recognized and enigmatic
+                                landmarks in the world.</p>
+                        </div>
                     </div>
                 </div>
-                <div class="item">
-                    <img src="../images/North/red-square.webp">
-                    <div class="content">
-                        Red Square
+                <div class="col-md-4">
+                    <div class="card">
+                        <div
+                            class="card-img-overlay d-flex flex-column justify-content-start">
+                            <h5 class="card-title text-white">Red Square</h5>
+                            <button class="btn-learn-more"
+                                onclick="toggleCardText(this)">Learn
+                                More</button>
+                        </div>
+                        <img src="../images/North/red-square.webp"
+                            class="card-img-top" alt="Red Square">
+                        <div class="card-body d-none">
+                            <p class="card-text">Red Square is a historic city
+                                square located in the heart of Moscow, Russia.
+                                It is bordered by iconic landmarks such as the
+                                Kremlin, St. Basil's Cathedral, and the State
+                                Historical Museum. Historically, it has been the
+                                site of many significant events, including
+                                military parades and political demonstrations.
+                                Red Square is a UNESCO World Heritage site and a
+                                symbol of Russian history and culture,
+                                attracting millions of visitors each year.</p>
+                        </div>
                     </div>
                 </div>
-                <div class="item">
-                    <img src="../images/North/mount-rushmore.webp">
-                    <div class="content">
-                        Mount Rushmore
-                    </div>
-                </div>
-                <div class="item">
-                    <img src="../images/North/niagara-falls.webp">
-                    <div class="content">
-                        Niagara Falls
-                    </div>
-                </div>
-                <div class="item">
-                    <img src="../images/North/edinburgh-castle.webp">
-                    <div class="content">
-                        Edinburgh Castle
-                    </div>
-                </div>
-                <div class="item">
-                    <img src="../images/North/bran-castle.webp">
-                    <div class="content">
-                        Bran Castle
+                <div class="col-md-4">
+                    <div class="card">
+                        <div
+                            class="card-img-overlay d-flex flex-column justify-content-start">
+                            <h5 class="card-title text-white">Mount
+                                Rushmore</h5>
+                            <button class="btn-learn-more"
+                                onclick="toggleCardText(this)">Learn
+                                More</button>
+                        </div>
+                        <img src="../images/North/mount-rushmore.webp"
+                            class="card-img-top" alt="Mount Rushmore">
+                        <div class="card-body d-none">
+                            <p class="card-text">Mount Rushmore is a national
+                                memorial located in the Black Hills of South
+                                Dakota, USA. It features the 60-foot-high faces
+                                of four U.S. presidents—George Washington,
+                                Thomas Jefferson, Theodore Roosevelt, and
+                                Abraham Lincoln—carved into granite. The
+                                monument was completed in 1941 and was designed
+                                by sculptor Gutzon Borglum. It symbolizes the
+                                nation's history and ideals and remains one of
+                                the most visited and iconic landmarks in the
+                                United States.</p>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="container mt-5 b text-light">
-            <h2 class="text-center">Unique Features of Northern Monuments</h2>
-            <p class="text-center">Northern monuments are known for their resilience and historical significance. Here are some unique features:</p>
-            <ul>
-                <li>Resilience against harsh climates</li>
-                <li>Historical significance</li>
-                <li>Architectural uniqueness</li>
-            </ul>
-        </div>
-        <h1 class="text-center mt-5 text-dark b scroll-animation">MORE INFO ABOUT MONUMENTS</h1>
-        <div class="row mt-5 scroll-animation">
-            <div class="col-md-4">
-                <div class="card">
-                    <div class="card-img-overlay d-flex flex-column justify-content-start">
-                        <h5 class="card-title text-white">Stonehenge</h5>
-                        <button class="btn-learn-more" onclick="toggleCardText(this)">Learn More</button>
+            <!-- INFO CARD -->
+            <div class="row mt-5 scroll-animation">
+                <div class="col-md-4">
+                    <div class="card">
+                        <div
+                            class="card-img-overlay d-flex flex-column justify-content-start">
+                            <h5 class="card-title text-white">Niagara Falls</h5>
+                            <button class="btn-learn-more"
+                                onclick="toggleCardText(this)">Learn
+                                More</button>
+                        </div>
+                        <img src="../images/North/niagara-falls.webp"
+                            class="card-img-top" alt="Niagara Falls">
+                        <div class="card-body d-none">
+                            <p class="card-text">Niagara Falls is a
+                                world-renowned natural wonder located on the
+                                border between the United States and Canada. It
+                                consists of three waterfalls—the American Falls,
+                                Bridal Veil Falls, and Horseshoe Falls—spanning
+                                over 3,000 feet. The falls are known for their
+                                breathtaking beauty and immense power, with
+                                millions of gallons of water cascading every
+                                minute. Niagara Falls is a popular tourist
+                                destination and a symbol of nature's
+                                grandeur.</p>
+                        </div>
                     </div>
-                    <img src="../images/North/stonehenge.webp" class="card-img-top" alt="Stonehenge">
-                    <div class="card-body d-none">
-                        <p class="card-text">A prehistoric monument in Wiltshire, England, consisting of a ring of standing stones.</p>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <div
+                            class="card-img-overlay d-flex flex-column justify-content-start">
+                            <h5 class="card-title text-white">Edinburgh
+                                Castle</h5>
+                            <button class="btn-learn-more"
+                                onclick="toggleCardText(this)">Learn
+                                More</button>
+                        </div>
+                        <img src="../images/North/edinburgh-castle.webp"
+                            class="card-img-top" alt="Edinburgh Castle">
+                        <div class="card-body d-none">
+                            <p class="card-text">Edinburgh Castle is a historic
+                                fortress located on Castle Rock, a volcanic rock
+                                formation in the heart of Edinburgh, Scotland.
+                                The castle has been a royal residence and
+                                military stronghold for over 1,000 years. It is
+                                home to significant artifacts, including the
+                                Crown Jewels of Scotland and the Stone of
+                                Destiny. With stunning views of the city,
+                                Edinburgh Castle is one of Scotland's most
+                                popular tourist attractions and a symbol of its
+                                rich history.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <div
+                            class="card-img-overlay d-flex flex-column justify-content-start">
+                            <h5 class="card-title text-white">Bran Castle</h5>
+                            <button class="btn-learn-more"
+                                onclick="toggleCardText(this)">Learn
+                                More</button>
+                        </div>
+                        <img src="../images/North/bran-castle.webp"
+                            class="card-img-top" alt="Bran Castle">
+                        <div class="card-body d-none">
+                            <p class="card-text">Bran Castle, located in
+                                Romania, is a medieval fortress perched on a
+                                hilltop in the Carpathian Mountains. It is often
+                                associated with the Dracula legend due to its
+                                resemblance to the castle described in Bram
+                                Stoker's novel, although there is no evidence
+                                that Stoker had Bran Castle in mind when
+                                writing. Built in the 14th century, it served as
+                                a royal residence and strategic military
+                                stronghold. Today, Bran Castle is a popular
+                                tourist destination, known for its Gothic
+                                architecture and its connection to Romanian
+                                folklore.</p>
+                        </div>
                     </div>
                 </div>
             </div>
-            <div class="col-md-4">
-                <div class="card">
-                    <div class="card-img-overlay d-flex flex-column justify-content-start">
-                        <h5 class="card-title text-white">Red Square</h5>
-                        <button class="btn-learn-more" onclick="toggleCardText(this)">Learn More</button>
-                    </div>
-                    <img src="../images/North/red-square.webp" class="card-img-top" alt="Red Square">
-                    <div class="card-body d-none">
-                        <p class="card-text">A historic square in Moscow, Russia, known for its iconic buildings including the Kremlin and St. Basil's Cathedral.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="card">
-                    <div class="card-img-overlay d-flex flex-column justify-content-start">
-                        <h5 class="card-title text-white">Mount Rushmore</h5>
-                        <button class="btn-learn-more" onclick="toggleCardText(this)">Learn More</button>
-                    </div>
-                    <img src="../images/North/mount-rushmore.webp" class="card-img-top" alt="Mount Rushmore">
-                    <div class="card-body d-none">
-                        <p class="card-text">A massive sculpture carved into the granite face of Mount Rushmore in South Dakota, featuring the heads of four U.S. presidents.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    <!-- INFO CARD -->
-        <div class="row mt-5 scroll-animation">
-            <div class="col-md-4">
-                <div class="card">
-                    <div class="card-img-overlay d-flex flex-column justify-content-start">
-                        <h5 class="card-title text-white">Niagara Falls</h5>
-                        <button class="btn-learn-more" onclick="toggleCardText(this)">Learn More</button>
-                    </div>
-                    <img src="../images/North/niagara-falls.webp" class="card-img-top" alt="Niagara Falls">
-                    <div class="card-body d-none">
-                        <p class="card-text">A group of three waterfalls at the southern end of Niagara Gorge, spanning the border between Ontario, Canada, and New York, USA.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="card">
-                    <div class="card-img-overlay d-flex flex-column justify-content-start">
-                        <h5 class="card-title text-white">Edinburgh Castle</h5>
-                        <button class="btn-learn-more" onclick="toggleCardText(this)">Learn More</button>
-                    </div>
-                    <img src="../images/North/edinburgh-castle.webp" class="card-img-top" alt="Edinburgh Castle">
-                    <div class="card-body d-none">
-                        <p class="card-text">A historic fortress which dominates the skyline of Edinburgh, Scotland, from its position on the Castle Rock.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="card">
-                    <div class="card-img-overlay d-flex flex-column justify-content-start">
-                        <h5 class="card-title text-white">Bran Castle</h5>
-                        <button class="btn-learn-more" onclick="toggleCardText(this)">Learn More</button>
-                    </div>
-                    <img src="../images/North/bran-castle.webp" class="card-img-top" alt="Bran Castle">
-                    <div class="card-body d-none">
-                        <p class="card-text">A national monument and landmark in Romania, commonly known as "Dracula's Castle".</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- INFO CARD -->
-    </section>
+            <!-- INFO CARD -->
+        </section>
 
-    <footer style="border-top: 5px black solid;margin-top: 20px;" class="py-5 bg-dark scroll-animation">
-        <div class="container">
-            <div class="row">
-                <div class="col-12 col-md">
-                    <img src="../images/logo.png" alt="Logo" class="rounded" width="60" height="60" class="mb-2">
-                    <small class="d-block mt-2 text-light">&copy; 2025</small>
-                    <div class="mt-1">
-                        <a href="#" class="text-light me-2"><i class="bi bi-facebook"></i></a>
-                        <a href="#" class="text-light me-2"><i class="bi bi-twitter"></i></a>
-                        <a href="#" class="text-light me-2"><i class="bi bi-instagram"></i></a>
-                        <a href="#" class="text-light me-2"><i class="bi bi-linkedin"></i></a>
+        <footer style="border-top: 5px black solid;margin-top: 20px;"
+            class="py-5 bg-dark scroll-animation">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 col-md">
+                        <img src="../images/logo.png" alt="Logo" class="rounded"
+                            width="60" height="60" class="mb-2">
+                        <small class="d-block mt-2 text-light">&copy;
+                            2025</small>
+                        <div class="mt-1">
+                            <a href="#" class="text-light me-2"><i
+                                    class="bi bi-facebook"></i></a>
+                            <a href="#" class="text-light me-2"><i
+                                    class="bi bi-twitter"></i></a>
+                            <a href="#" class="text-light me-2"><i
+                                    class="bi bi-instagram"></i></a>
+                            <a href="#" class="text-light me-2"><i
+                                    class="bi bi-linkedin"></i></a>
+                        </div>
+                    </div>
+                    <div style="font-size: larger;" class="col-6 col-md">
+                        <h4>QUICK LINKS</h4>
+                        <ul class="list-unstyled text-small">
+                            <li><a class="text-light"
+                                    href="../index.html">Home</a></li>
+                            <li><a class="text-light"
+                                    href="./east.html">East</a></li>
+                            <li><a class="text-light"
+                                    href="./west.html">West</a></li>
+                            <li><a class="text-light"
+                                    href="./north.html">North</a></li>
+                            <li><a class="text-light"
+                                    href="./south.html">South</a></li>
+                            <li><a class="text-light" href="./about.html">About
+                                    Us</a></li>
+                            <li><a class="text-light"
+                                    href="./contact.html">Contact Us</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-12 col-md">
+                        <h4
+                            style="font-weight: bold;font-size: xx-large;">Feedback</h4>
+                        <form>
+                            <div class="form mb-3">
+                                <label for="feedbackEmail"
+                                    class="form-label">Email address</label>
+                                <input type="email"
+                                    class="form-control form-control-dark"
+                                    id="feedbackEmail"
+                                    placeholder="name@example.com">
+                            </div>
+                            <div class="form mb-3">
+                                <label for="feedbackMessage"
+                                    class="form-label">Message</label>
+                                <textarea class="form-control form-control-dark"
+                                    id="feedbackMessage" rows="3"></textarea>
+                            </div>
+                            <button type="submit"
+                                style="background-color: black;color:white;"
+                                class="btn">Submit</button>
+                        </form>
                     </div>
                 </div>
-                <div style="font-size: larger;" class="col-6 col-md">
-                    <h4>QUICK LINKS</h4>
-                    <ul class="list-unstyled text-small">
-                        <li><a class="text-light" href="./index.html">Home</a></li>
-                        <li><a class="text-light" href="./html/east.html">East</a></li>
-                        <li><a class="text-light" href="#">West</a></li>
-                        <li><a class="text-light" href="#">North</a></li>
-                        <li><a class="text-light" href="#">South</a></li>
-                    </ul>
-                </div>
-                <div class="col-12 col-md">
-                    <h4 style="font-weight: bold;font-size: xx-large;">Feedback</h4>
-                    <form>
-                        <div class="form mb-3">
-                            <label for="feedbackEmail" class="form-label">Email address</label>
-                            <input type="email" class="form-control form-control-dark" id="feedbackEmail"
-                                placeholder="name@example.com">
-                        </div>
-                        <div class="form mb-3">
-                            <label for="feedbackMessage" class="form-label">Message</label>
-                            <textarea class="form-control form-control-dark" id="feedbackMessage" rows="3"></textarea>
-                        </div>
-                        <button type="submit" style="background-color: black;color:white;" class="btn">Submit</button>
-                    </form>
-                </div>
             </div>
-        </div>
-    </footer>
-</body>
-<script>
+        </footer>
+    </body>
+    <script>
     $(window).on('load', function () {
         $('.loader').addClass('loaded');
         $('.loader__content').addClass('fade-out');

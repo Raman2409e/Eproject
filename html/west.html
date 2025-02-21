@@ -1,329 +1,489 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Historical Monuments-West</title>
-    <link rel="stylesheet" href="../css/bootstrap.css">
-    <link rel="shortcut icon" href="../images/logo.png" type="mage/icon">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.8.1/font/bootstrap-icons.min.css">
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.11.6/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../style.css">
-    <link rel="stylesheet" href="../css/loaders/loader.css">
-</head>
-<body>
-    <div class="loader">
-        <div class="loader__content">
-            <div class="loader__box"></div>
-            <div class="loader__shadow"></div>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Historical Monuments-West</title>
+        <link rel="stylesheet" href="../css/bootstrap.css">
+        <link rel="shortcut icon" href="../images/logo.png" type="mage/icon">
+        <link
+            href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap"
+            rel="stylesheet">
+        <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.8.1/font/bootstrap-icons.min.css">
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script
+            src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.11.6/umd/popper.min.js"></script>
+        <script
+            src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="../style.css">
+        <link rel="stylesheet" href="../css/loaders/loader.css">
+    </head>
+    <body>
+        <div class="loader">
+            <div class="loader__content">
+                <div class="loader__box"></div>
+                <div class="loader__shadow"></div>
+            </div>
         </div>
-    </div>
-    <header class="p-3 text-white scroll-animation">
-        <div class="container">
-            <div class="d-flex flex-wrap align-items-center justify-content-between">
-                <a href="/" class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none d">
-                    <img class="rounded me-3" src="../images/logo.png" alt="Logo" width="50" height="50">
-                </a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
-                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
-                        <li><a href="../index.html" class="nav-link px-2 text-white">Home</a></li>
-                        <li><a href="./east.html" class="nav-link px-2 text-white ">East</a></li>
-                        <li><a href="./west.html" class="nav-link px-2 text-white active">West</a></li>
-                        <li><a href="./north.html" class="nav-link px-2 text-white">North</a></li>
-                        <li><a href="./south.html" class="nav-link px-2 text-white">South</a></li>
-                        <li><a href="./contact.html" class="nav-link px-2 text-white">Contact Us</a></li>
-                    </ul>
-                    <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3">
-                        <input type="search" class="form-control form-control-dark" placeholder="Search..."
-                            aria-label="Search">
-                    </form>
-                </div>
-                <div class="dropdown text-end">
-                    <a href="#" class="d-block link-light text-decoration-none dropdown-toggle" id="dropdownUser1"
-                        data-toggle="dropdown" aria-expanded="false">
-                        <img src="../images/logo.png" alt="Profile Picture" class="rounded-circle" width="50"
-                            height="50">
+        <header class="p-3 text-white scroll-animation">
+            <div class="container">
+                <div
+                    class="d-flex flex-wrap align-items-center justify-content-between">
+                    <a href="/"
+                        class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none d">
+                        <img class="rounded me-3" src="../images/logo.png"
+                            alt="Logo" width="50" height="50">
                     </a>
-                    <div class="dropdown-menu dropdown-menu-right text-small" aria-labelledby="dropdownUser1">
-                        <h4 class="dropdown-item">ABOUT US</h4>
-                        <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="./about.html">Visit Page <i class="bi bi-arrow-up-circle" aria-hidden="true"></i></a>
-                        <div class="dropdown-divider"></div>
-                        <h6 class="dropdown-item" href="#">X_X</h6>
+                    <button class="navbar-toggler" type="button"
+                        data-toggle="collapse" data-target="#navbarNav"
+                        aria-controls="navbarNav" aria-expanded="false"
+                        aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul
+                            class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+                            <li><a href="../index.html"
+                                    class="nav-link px-2 text-white">Home</a></li>
+                            <li><a href="./east.html"
+                                    class="nav-link px-2 text-white ">East</a></li>
+                            <li><a href="./west.html"
+                                    class="nav-link px-2 text-white active">West</a></li>
+                            <li><a href="./north.html"
+                                    class="nav-link px-2 text-white">North</a></li>
+                            <li><a href="./south.html"
+                                    class="nav-link px-2 text-white">South</a></li>
+                            <li><a href="./contact.html"
+                                    class="nav-link px-2 text-white">Contact
+                                    Us</a></li>
+                        </ul>
+                        <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3">
+                            <input type="search"
+                                class="form-control form-control-dark"
+                                placeholder="Search..."
+                                aria-label="Search">
+                        </form>
+                    </div>
+                    <div class="dropdown text-end">
+                        <a href="#"
+                            class="d-block link-light text-decoration-none dropdown-toggle"
+                            id="dropdownUser1"
+                            data-toggle="dropdown" aria-expanded="false">
+                            <img src="../images/logo.png" alt="Profile Picture"
+                                class="rounded-circle" width="50"
+                                height="50">
+                        </a>
+                        <div
+                            class="dropdown-menu dropdown-menu-right text-small"
+                            aria-labelledby="dropdownUser1">
+                            <h4 class="dropdown-item">ABOUT US</h4>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="./about.html">Visit
+                                Page <i class="bi bi-arrow-up-circle"
+                                    aria-hidden="true"></i></a>
+                            <div class="dropdown-divider"></div>
+                            <h6 class="dropdown-item" href="#">X_X</h6>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </header>
-    <section class="container-fluid fade-up scroll-animation">
-        <div class="row banner" style="background: linear-gradient(180deg, #3b5557, #4e7072);">
-            <div class="col-md-12">
-                <h1>WEST-MONUMENTS</h1>
-                <p>Historical monuments in the West, that usually includes regions such as Europe, the Americas, and parts of Africa.</p>
-                <div class="down-arrow">
-                    <a style="color: #343a40; transition: 0.5s ease-in-out;" href="#slider"><i class="bi bi-arrow-down-circle"></i></a>
-                </div>
-            </div>
-        </div>
-        <div class="thick-line mb-5"></div>
-        <div id="slider" class="slider mt-2 scroll-animation">
-            <!-- list Items -->
-            <div class="list">
-                <div class="item active">
-                    <img src="../images/West/eiffel-tower.webp">
-                    <div class="content">
-                        <p>FRANCE</p>
-                        <h3>Eiffel Tower</h3>
-                        <p>
-                            An iconic symbol of France, the Eiffel Tower is a wrought-iron lattice tower on the Champ de Mars in Paris.
-                        </p>    
-                        <a href="https://www.skyscanner.net" class="btn-book-ticket">Book Ticket</a>
-                    </div>
-                </div>
-                <div class="item">
-                    <img src="../images/West/statue-of-liberty.webp">
-                    <div class="content">
-                        <p>USA</p>
-                        <h3>Statue of Liberty</h3>
-                        <p>
-                            A colossal neoclassical sculpture on Liberty Island in New York Harbor, the Statue of Liberty is a symbol of freedom and democracy.
-                        </p>
-                        <a href="https://www.skyscanner.net" class="btn-book-ticket">Book Ticket</a>
-                    </div>
-                </div>
-                <div class="item">
-                    <img src="../images/West/colosseum.webp">
-                    <div class="content">
-                        <p>ITALY</p>
-                        <h3>Colosseum</h3>
-                        <p>
-                            An ancient amphitheater in Rome, the Colosseum is one of the greatest works of Roman architecture and engineering.
-                        </p>
-                        <a href="https://www.skyscanner.net" class="btn-book-ticket">Book Ticket</a>
-                    </div>
-                </div>
-                <div class="item">
-                    <img src="../images/West/machu-picchu.webp">
-                    <div class="content">
-                        <p>PERU</p>
-                        <h3>Machu Picchu</h3>
-                        <p>
-                            An ancient Incan city set high in the Andes Mountains, Machu Picchu is renowned for its sophisticated dry-stone construction.
-                        </p>
-                        <a href="https://www.skyscanner.net" class="btn-book-ticket">Book Ticket</a>
-                    </div>
-                </div>
-                <div class="item">
-                    <img src="../images/West/christ-the-redeemer.webp">
-                    <div class="content">
-                        <p>BRAZIL</p>
-                        <h3>Christ the Redeemer</h3>
-                        <p>
-                            A massive statue of Jesus Christ in Rio de Janeiro, Christ the Redeemer is an iconic symbol of Christianity.
-                        </p>
-                        <a href="https://www.skyscanner.net" class="btn-book-ticket">Book Ticket</a>
-                    </div>
-                </div>
-                <div class="item">
-                    <img src="../images/West/big-ben.webp">
-                    <div class="content">
-                        <p>UK</p>
-                        <h3>Big Ben</h3>
-                        <p>
-                            The nickname for the Great Bell of the clock at the north end of the Palace of Westminster in London, Big Ben is an iconic symbol of the UK.
-                        </p>
-                        <a href="https://www.skyscanner.net" class="btn-book-ticket">Book Ticket</a>
+        </header>
+        <section class="container-fluid fade-up scroll-animation">
+            <div class="row banner"
+                style="background: linear-gradient(180deg, #3b5557, #4e7072);">
+                <div class="col-md-12">
+                    <h1>WEST-MONUMENTS</h1>
+                    <p>Historical monuments in the West, that usually includes
+                        regions such as Europe, the Americas, and parts of
+                        Africa.</p>
+                    <div class="down-arrow">
+                        <a style="color: #343a40; transition: 0.5s ease-in-out;"
+                            href="#slider"><i
+                                class="bi bi-arrow-down-circle"></i></a>
                     </div>
                 </div>
             </div>
-            <!-- button arrows -->
-            <div class="arrows">
-                <button id="prev"><</button>
-                        <button id="next">></button>
+            <div class="thick-line mb-5"></div>
+            <div id="slider" class="slider mt-2 scroll-animation">
+                <!-- list Items -->
+                <div class="list">
+                    <div class="item active">
+                        <img src="../images/West/eiffel-tower.webp">
+                        <div class="content">
+                            <p>FRANCE</p>
+                            <h3>Eiffel Tower</h3>
+                            <p>
+                                An iconic symbol of France, the Eiffel Tower is
+                                a wrought-iron lattice tower on the Champ de
+                                Mars in Paris.
+                            </p>
+                            <a href="https://www.skyscanner.net"
+                                class="btn-book-ticket">Book Ticket</a>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <img src="../images/West/statue-of-liberty.webp">
+                        <div class="content">
+                            <p>USA</p>
+                            <h3>Statue of Liberty</h3>
+                            <p>
+                                A colossal neoclassical sculpture on Liberty
+                                Island in New York Harbor, the Statue of Liberty
+                                is a symbol of freedom and democracy.
+                            </p>
+                            <a href="https://www.skyscanner.net"
+                                class="btn-book-ticket">Book Ticket</a>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <img src="../images/West/colosseum.webp">
+                        <div class="content">
+                            <p>ITALY</p>
+                            <h3>Colosseum</h3>
+                            <p>
+                                An ancient amphitheater in Rome, the Colosseum
+                                is one of the greatest works of Roman
+                                architecture and engineering.
+                            </p>
+                            <a href="https://www.skyscanner.net"
+                                class="btn-book-ticket">Book Ticket</a>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <img src="../images/West/machu-picchu.webp">
+                        <div class="content">
+                            <p>PERU</p>
+                            <h3>Machu Picchu</h3>
+                            <p>
+                                An ancient Incan city set high in the Andes
+                                Mountains, Machu Picchu is renowned for its
+                                sophisticated dry-stone construction.
+                            </p>
+                            <a href="https://www.skyscanner.net"
+                                class="btn-book-ticket">Book Ticket</a>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <img src="../images/West/christ-the-redeemer.webp">
+                        <div class="content">
+                            <p>BRAZIL</p>
+                            <h3>Christ the Redeemer</h3>
+                            <p>
+                                A massive statue of Jesus Christ in Rio de
+                                Janeiro, Christ the Redeemer is an iconic symbol
+                                of Christianity.
+                            </p>
+                            <a href="https://www.skyscanner.net"
+                                class="btn-book-ticket">Book Ticket</a>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <img src="../images/West/big-ben.webp">
+                        <div class="content">
+                            <p>UK</p>
+                            <h3>Big Ben</h3>
+                            <p>
+                                The nickname for the Great Bell of the clock at
+                                the north end of the Palace of Westminster in
+                                London, Big Ben is an iconic symbol of the UK.
+                            </p>
+                            <a href="https://www.skyscanner.net"
+                                class="btn-book-ticket">Book Ticket</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- button arrows -->
+                <div class="arrows">
+                    <button id="prev"><</button>
+                    <button id="next">></button>
+                </div>
+                <!-- thumbnail -->
+                <div class="thumbnail">
+                    <div class="item active">
+                        <img src="../images/West/eiffel-tower.webp">
+                        <div class="content">
+                            Eiffel Tower
+                        </div>
+                    </div>
+                    <div class="item">
+                        <img src="../images/West/statue-of-liberty.webp">
+                        <div class="content">
+                            Statue of Liberty
+                        </div>
+                    </div>
+                    <div class="item">
+                        <img src="../images/West/colosseum.webp">
+                        <div class="content">
+                            Colosseum
+                        </div>
+                    </div>
+                    <div class="item">
+                        <img src="../images/West/machu-picchu.webp">
+                        <div class="content">
+                            Machu Picchu
+                        </div>
+                    </div>
+                    <div class="item">
+                        <img src="../images/West/christ-the-redeemer.webp">
+                        <div class="content">
+                            Christ the Redeemer
+                        </div>
+                    </div>
+                    <div class="item">
+                        <img src="../images/West/big-ben.webp">
+                        <div class="content">
+                            Big Ben
+                        </div>
+                    </div>
+                </div>
             </div>
-            <!-- thumbnail -->
-            <div class="thumbnail">
-                <div class="item active">
-                    <img src="../images/West/eiffel-tower.webp">
-                    <div class="content">
-                        Eiffel Tower
+            <div class="container mt-5 b text-light">
+                <h2 class="text-center">Unique Features of Western
+                    Monuments</h2>
+                <p class="text-center">Western monuments are known for their
+                    architectural grandeur and historical importance. Here are
+                    some unique features:</p>
+                <ul>
+                    <li>Architectural grandeur</li>
+                    <li>Historical importance</li>
+                    <li>Cultural diversity</li>
+                </ul>
+            </div>
+            <h1 class="text-center mt-5 text-dark b scroll-animation">MORE INFO
+                ABOUT MONUMENTS</h1>
+            <div class="row mt-5 scroll-animation">
+                <div class="col-md-4">
+                    <div class="card">
+                        <div
+                            class="card-img-overlay d-flex flex-column justify-content-start">
+                            <h5 class="card-title text-white">Eiffel Tower</h5>
+                            <button class="btn-learn-more"
+                                onclick="toggleCardText(this)">Learn
+                                More</button>
+                        </div>
+                        <img src="../images/West/eiffel-tower.webp"
+                            class="card-img-top" alt="Eiffel Tower">
+                        <div class="card-body d-none">
+                            <p class="card-text">The Eiffel Tower, located in
+                                Paris, France, was completed in 1889 as the
+                                centerpiece for the 1889 World's Fair. Designed
+                                by engineer Gustave Eiffel, it was initially
+                                criticized but has since become one of the most
+                                recognizable landmarks in the world. Standing
+                                1,083 feet tall, the tower was the tallest
+                                man-made structure on Earth until the completion
+                                of the Chrysler Building in 1930. It’s a symbol
+                                of France’s modernity and is visited by millions
+                                of people each year.</p>
+                        </div>
                     </div>
                 </div>
-                <div class="item">
-                    <img src="../images/West/statue-of-liberty.webp">
-                    <div class="content">
-                        Statue of Liberty
+                <div class="col-md-4">
+                    <div class="card">
+                        <div
+                            class="card-img-overlay d-flex flex-column justify-content-start">
+                            <h5 class="card-title text-white">Statue of
+                                Liberty</h5>
+                            <button class="btn-learn-more"
+                                onclick="toggleCardText(this)">Learn
+                                More</button>
+                        </div>
+                        <img src="../images/West/statue-of-liberty.webp"
+                            class="card-img-top" alt="Statue of Liberty">
+                        <div class="card-body d-none">
+                            <p class="card-text">The Statue of Liberty, located
+                                on Liberty Island in New York Harbor, was a gift
+                                from France to the United States in 1886.
+                                Designed by Frédéric Auguste Bartholdi, it
+                                symbolizes freedom, democracy, and hope.
+                                Standing at 305 feet tall, it depicts a woman
+                                holding a torch in one hand and a tablet
+                                inscribed with the date of the U.S. Declaration
+                                of Independence in the other. The statue remains
+                                an iconic symbol for immigrants and is one of
+                                the most recognized landmarks in the world.</p>
+                        </div>
                     </div>
                 </div>
-                <div class="item">
-                    <img src="../images/West/colosseum.webp">
-                    <div class="content">
-                        Colosseum
-                    </div>
-                </div>
-                <div class="item">
-                    <img src="../images/West/machu-picchu.webp">
-                    <div class="content">
-                        Machu Picchu
-                    </div>
-                </div>
-                <div class="item">
-                    <img src="../images/West/christ-the-redeemer.webp">
-                    <div class="content">
-                        Christ the Redeemer
-                    </div>
-                </div>
-                <div class="item">
-                    <img src="../images/West/big-ben.webp">
-                    <div class="content">
-                        Big Ben
+                <div class="col-md-4">
+                    <div class="card">
+                        <div
+                            class="card-img-overlay d-flex flex-column justify-content-start">
+                            <h5 class="card-title text-white">Colosseum</h5>
+                            <button class="btn-learn-more"
+                                onclick="toggleCardText(this)">Learn
+                                More</button>
+                        </div>
+                        <img src="../images/West/colosseum.webp"
+                            class="card-img-top" alt="Colosseum">
+                        <div class="card-body d-none">
+                            <p class="card-text">The Colosseum, located in Rome,
+                                Italy, is an ancient amphitheater that was
+                                completed in 80 AD. It could hold up to 50,000
+                                spectators and was primarily used for
+                                gladiatorial contests, public spectacles, and
+                                animal hunts. Known for its impressive Roman
+                                engineering, the Colosseum is an iconic symbol
+                                of ancient Rome’s power and culture. It remains
+                                one of the most visited and recognizable
+                                historical monuments in the world today.</p>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="container mt-5 b text-light">
-            <h2 class="text-center">Unique Features of Western Monuments</h2>
-            <p class="text-center">Western monuments are known for their architectural grandeur and historical importance. Here are some unique features:</p>
-            <ul>
-                <li>Architectural grandeur</li>
-                <li>Historical importance</li>
-                <li>Cultural diversity</li>
-            </ul>
-        </div>
-        <h1 class="text-center mt-5 text-dark b scroll-animation">MORE INFO ABOUT MONUMENTS</h1>
-        <div class="row mt-5 scroll-animation">
-            <div class="col-md-4">
-                <div class="card">
-                    <div class="card-img-overlay d-flex flex-column justify-content-start">
-                        <h5 class="card-title text-white">Eiffel Tower</h5>
-                        <button class="btn-learn-more" onclick="toggleCardText(this)">Learn More</button>
+            <!-- INFO CARD -->
+            <div class="row mt-5 scroll-animation">
+                <div class="col-md-4">
+                    <div class="card">
+                        <div
+                            class="card-img-overlay d-flex flex-column justify-content-start">
+                            <h5 class="card-title text-white">Machu Picchu</h5>
+                            <button class="btn-learn-more"
+                                onclick="toggleCardText(this)">Learn
+                                More</button>
+                        </div>
+                        <img src="../images/West/machu-picchu.webp"
+                            class="card-img-top" alt="Machu Picchu">
+                        <div class="card-body d-none">
+                            <p class="card-text">Machu Picchu is an ancient
+                                Incan city located high in the Andes Mountains
+                                of Peru. Built in the 15th century, it was
+                                likely a royal estate or religious site. The
+                                site is known for its well-preserved ruins,
+                                stunning terraces, and breathtaking views.
+                                Rediscovered in 1911 by Hiram Bingham, it is now
+                                one of the most visited archaeological sites in
+                                the world and a UNESCO World Heritage site. Its
+                                precise purpose and construction methods remain
+                                a subject of fascination.</p>
+                        </div>
                     </div>
-                    <img src="../images/West/eiffel-tower.webp" class="card-img-top" alt="Eiffel Tower">
-                    <div class="card-body d-none">
-                        <p class="card-text">An iconic symbol of France, the Eiffel Tower is a wrought-iron lattice tower on the Champ de Mars in Paris.</p>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <div
+                            class="card-img-overlay d-flex flex-column justify-content-start">
+                            <h5 class="card-title text-white">Christ the
+                                Redeemer</h5>
+                            <button class="btn-learn-more"
+                                onclick="toggleCardText(this)">Learn
+                                More</button>
+                        </div>
+                        <img src="../images/West/christ-the-redeemer.webp"
+                            class="card-img-top" alt="Christ the Redeemer">
+                        <div class="card-body d-none">
+                            <p class="card-text">Christ the Redeemer is a
+                                massive statue of Jesus Christ located in Rio de
+                                Janeiro, Brazil. Standing 98 feet tall, with
+                                arms stretched wide, it overlooks the city from
+                                the top of Mount Corcovado. Completed in 1931,
+                                the statue is made of reinforced concrete and
+                                soapstone, symbolizing Christianity and serving
+                                as a symbol of peace and unity. It is one of the
+                                New Seven Wonders of the World and a major
+                                tourist attraction.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <div
+                            class="card-img-overlay d-flex flex-column justify-content-start">
+                            <h5 class="card-title text-white">Big Ben</h5>
+                            <button class="btn-learn-more"
+                                onclick="toggleCardText(this)">Learn
+                                More</button>
+                        </div>
+                        <img src="../images/West/big-ben.webp"
+                            class="card-img-top" alt="Big Ben">
+                        <div class="card-body d-none">
+                            <p class="card-text">Big Ben is the nickname for the
+                                Great Bell of the Elizabeth Tower at the Palace
+                                of Westminster in London, England. Completed in
+                                1859, the tower is 316 feet tall, and the bell
+                                itself weighs over 13 tons. The clock faces are
+                                an iconic symbol of London, and the tower is
+                                often mistakenly referred to as Big Ben itself.
+                                The structure is a major landmark and tourist
+                                attraction, representing British heritage and
+                                history.</p>
+                        </div>
                     </div>
                 </div>
             </div>
-            <div class="col-md-4">
-                <div class="card">
-                    <div class="card-img-overlay d-flex flex-column justify-content-start">
-                        <h5 class="card-title text-white">Statue of Liberty</h5>
-                        <button class="btn-learn-more" onclick="toggleCardText(this)">Learn More</button>
-                    </div>
-                    <img src="../images/West/statue-of-liberty.webp" class="card-img-top" alt="Statue of Liberty">
-                    <div class="card-body d-none">
-                        <p class="card-text">A colossal neoclassical sculpture on Liberty Island in New York Harbor, the Statue of Liberty is a symbol of freedom and democracy.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="card">
-                    <div class="card-img-overlay d-flex flex-column justify-content-start">
-                        <h5 class="card-title text-white">Colosseum</h5>
-                        <button class="btn-learn-more" onclick="toggleCardText(this)">Learn More</button>
-                    </div>
-                    <img src="../images/West/colosseum.webp" class="card-img-top" alt="Colosseum">
-                    <div class="card-body d-none">
-                        <p class="card-text">An ancient amphitheater in Rome, the Colosseum is one of the greatest works of Roman architecture and engineering.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    <!-- INFO CARD -->
-        <div class="row mt-5 scroll-animation">
-            <div class="col-md-4">
-                <div class="card">
-                    <div class="card-img-overlay d-flex flex-column justify-content-start">
-                        <h5 class="card-title text-white">Machu Picchu</h5>
-                        <button class="btn-learn-more" onclick="toggleCardText(this)">Learn More</button>
-                    </div>
-                    <img src="../images/West/machu-picchu.webp" class="card-img-top" alt="Machu Picchu">
-                    <div class="card-body d-none">
-                        <p class="card-text">An ancient Incan city set high in the Andes Mountains, Machu Picchu is renowned for its sophisticated dry-stone construction.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="card">
-                    <div class="card-img-overlay d-flex flex-column justify-content-start">
-                        <h5 class="card-title text-white">Christ the Redeemer</h5>
-                        <button class="btn-learn-more" onclick="toggleCardText(this)">Learn More</button>
-                    </div>
-                    <img src="../images/West/christ-the-redeemer.webp" class="card-img-top" alt="Christ the Redeemer">
-                    <div class="card-body d-none">
-                        <p class="card-text">A massive statue of Jesus Christ in Rio de Janeiro, Christ the Redeemer is an iconic symbol of Christianity.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="card">
-                    <div class="card-img-overlay d-flex flex-column justify-content-start">
-                        <h5 class="card-title text-white">Big Ben</h5>
-                        <button class="btn-learn-more" onclick="toggleCardText(this)">Learn More</button>
-                    </div>
-                    <img src="../images/West/big-ben.webp" class="card-img-top" alt="Big Ben">
-                    <div class="card-body d-none">
-                        <p class="card-text">The nickname for the Great Bell of the clock at the north end of the Palace of Westminster in London, Big Ben is an iconic symbol of the UK.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- INFO CARD -->
-    </section>
+            <!-- INFO CARD -->
+        </section>
 
-    <footer style="border-top: 5px black solid;margin-top: 20px;" class="py-5 bg-dark scroll-animation">
-        <div class="container">
-            <div class="row">
-                <div class="col-12 col-md">
-                    <img src="../images/logo.png" alt="Logo" class="rounded" width="60" height="60" class="mb-2">
-                    <small class="d-block mt-2 text-light">&copy; 2025</small>
-                    <div class="mt-1">
-                        <a href="#" class="text-light me-2"><i class="bi bi-facebook"></i></a>
-                        <a href="#" class="text-light me-2"><i class="bi bi-twitter"></i></a>
-                        <a href="#" class="text-light me-2"><i class="bi bi-instagram"></i></a>
-                        <a href="#" class="text-light me-2"><i class="bi bi-linkedin"></i></a>
+        <footer style="border-top: 5px black solid;margin-top: 20px;"
+            class="py-5 bg-dark scroll-animation">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 col-md">
+                        <img src="../images/logo.png" alt="Logo" class="rounded"
+                            width="60" height="60" class="mb-2">
+                        <small class="d-block mt-2 text-light">&copy;
+                            2025</small>
+                        <div class="mt-1">
+                            <a href="#" class="text-light me-2"><i
+                                    class="bi bi-facebook"></i></a>
+                            <a href="#" class="text-light me-2"><i
+                                    class="bi bi-twitter"></i></a>
+                            <a href="#" class="text-light me-2"><i
+                                    class="bi bi-instagram"></i></a>
+                            <a href="#" class="text-light me-2"><i
+                                    class="bi bi-linkedin"></i></a>
+                        </div>
+                    </div>
+                    <div style="font-size: larger;" class="col-6 col-md">
+                        <h4>QUICK LINKS</h4>
+                        <ul class="list-unstyled text-small">
+                            <li><a class="text-light"
+                                    href="../index.html">Home</a></li>
+                            <li><a class="text-light"
+                                    href="./east.html">East</a></li>
+                            <li><a class="text-light"
+                                    href="./west.html">West</a></li>
+                            <li><a class="text-light"
+                                    href="./north.html">North</a></li>
+                            <li><a class="text-light"
+                                    href="./south.html">South</a></li>
+                            <li><a class="text-light" href="./about.html">About
+                                    Us</a></li>
+                            <li><a class="text-light"
+                                    href="./contact.html">Contact Us</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-12 col-md">
+                        <h4
+                            style="font-weight: bold;font-size: xx-large;">Feedback</h4>
+                        <form>
+                            <div class="form mb-3">
+                                <label for="feedbackEmail"
+                                    class="form-label">Email address</label>
+                                <input type="email"
+                                    class="form-control form-control-dark"
+                                    id="feedbackEmail"
+                                    placeholder="name@example.com">
+                            </div>
+                            <div class="form mb-3">
+                                <label for="feedbackMessage"
+                                    class="form-label">Message</label>
+                                <textarea class="form-control form-control-dark"
+                                    id="feedbackMessage" rows="3"></textarea>
+                            </div>
+                            <button type="submit"
+                                style="background-color: black;color:white;"
+                                class="btn">Submit</button>
+                        </form>
                     </div>
                 </div>
-                <div style="font-size: larger;" class="col-6 col-md">
-                    <h4>QUICK LINKS</h4>
-                    <ul class="list-unstyled text-small">
-                        <li><a class="text-light" href="./index.html">Home</a></li>
-                        <li><a class="text-light" href="./html/east.html">East</a></li>
-                        <li><a class="text-light" href="#">West</a></li>
-                        <li><a class="text-light" href="#">North</a></li>
-                        <li><a class="text-light" href="#">South</a></li>
-                    </ul>
-                </div>
-                <div class="col-12 col-md">
-                    <h4 style="font-weight: bold;font-size: xx-large;">Feedback</h4>
-                    <form>
-                        <div class="form mb-3">
-                            <label for="feedbackEmail" class="form-label">Email address</label>
-                            <input type="email" class="form-control form-control-dark" id="feedbackEmail"
-                                placeholder="name@example.com">
-                        </div>
-                        <div class="form mb-3">
-                            <label for="feedbackMessage" class="form-label">Message</label>
-                            <textarea class="form-control form-control-dark" id="feedbackMessage" rows="3"></textarea>
-                        </div>
-                        <button type="submit" style="background-color: black;color:white;" class="btn">Submit</button>
-                    </form>
-                </div>
             </div>
-        </div>
-    </footer>
-</body>
-<script>
+        </footer>
+    </body>
+    <script>
     $(window).on('load', function () {
         $('.loader').addClass('loaded');
         $('.loader__content').addClass('fade-out');

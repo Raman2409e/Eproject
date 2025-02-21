@@ -635,7 +635,7 @@ body {
 
 .thumbnail {
     position: absolute;
-    bottom: 50px;
+    bottom: 20px;
     z-index: 11;
     display: flex;
     gap: 10px;
@@ -653,7 +653,7 @@ body {
 
 .thumbnail .item {
     width: 150px;
-    height: 220px;
+    height: 200px;
     filter: brightness(0.5);
     transition: 0.5s;
     flex-shrink: 0;
@@ -783,10 +783,7 @@ body {
 
 .card {
     margin: 20px 0;
-    border-bottom: 8px solid black;
-    border-right: 5px solid black;
-    border-left: 2px solid black;
-    border-top: 2px solid black;
+
     border-radius: 15px;
     width: 100%;
     box-sizing: border-box;

@@ -1,375 +1,541 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Historical Monuments-East</title>
-    <link rel="stylesheet" href="../css/bootstrap.css">
-    <link rel="shortcut icon" href="../images/logo.png" type="mage/icon">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.8.1/font/bootstrap-icons.min.css">
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.11.6/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../style.css">
-    <link rel="stylesheet" href="../css/loaders/loader.css">
-</head>
-<body>
-    <div class="loader">
-        <div class="loader__content">
-            <div class="loader__box"></div>
-            <div class="loader__shadow"></div>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Historical Monuments-East</title>
+        <link rel="stylesheet" href="../css/bootstrap.css">
+        <link rel="shortcut icon" href="../images/logo.png" type="mage/icon">
+        <link
+            href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap"
+            rel="stylesheet">
+        <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.8.1/font/bootstrap-icons.min.css">
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script
+            src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.11.6/umd/popper.min.js"></script>
+        <script
+            src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="../style.css">
+        <link rel="stylesheet" href="../css/loaders/loader.css">
+    </head>
+    <body>
+        <div class="loader">
+            <div class="loader__content">
+                <div class="loader__box"></div>
+                <div class="loader__shadow"></div>
+            </div>
         </div>
-    </div>
-    <header class="p-3 text-white scroll-animation">
-        <div class="container">
-            <div class="d-flex flex-wrap align-items-center justify-content-between">
-                <a href="/" class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none d">
-                    <img class="rounded me-3" src="../images/logo.png" alt="Logo" width="50" height="50">
-                </a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
-                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
-                        <li><a href="../index.html" class="nav-link px-2 text-white">Home</a></li>
-                        <li><a href="./east.html" class="nav-link px-2 text-white">East</a></li>
-                        <li><a href="./west.html" class="nav-link px-2 text-white ">West</a></li>
-                        <li><a href="./north.html" class="nav-link px-2 text-white">North</a></li>
-                        <li><a href="./south.html" class="nav-link px-2 text-white active">South</a></li>
-                        <li><a href="#" class="nav-link px-2 text-white">Contact Us</a></li>
-                    </ul>
-                    <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3">
-                        <input type="search" class="form-control form-control-dark" placeholder="Search..."
-                            aria-label="Search">
-                    </form>
-                </div>
-                <div class="dropdown text-end">
-                    <a href="#" class="d-block link-light text-decoration-none dropdown-toggle" id="dropdownUser1"
-                        data-toggle="dropdown" aria-expanded="false">
-                        <img src="../images/logo.png" alt="Profile Picture" class="rounded-circle" width="50"
-                            height="50">
+        <header class="p-3 text-white scroll-animation">
+            <div class="container">
+                <div
+                    class="d-flex flex-wrap align-items-center justify-content-between">
+                    <a href="/"
+                        class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none d">
+                        <img class="rounded me-3" src="../images/logo.png"
+                            alt="Logo" width="50" height="50">
                     </a>
-                    <div class="dropdown-menu dropdown-menu-right text-small" aria-labelledby="dropdownUser1">
-                        <h4 class="dropdown-item">ABOUT US</h4>
-                        <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="./about.html">Visit Page <i class="bi bi-arrow-up-circle" aria-hidden="true"></i></a>
-                        <div class="dropdown-divider"></div>
-                        <h6 class="dropdown-item" href="#">X_X</h6>
+                    <button class="navbar-toggler" type="button"
+                        data-toggle="collapse" data-target="#navbarNav"
+                        aria-controls="navbarNav" aria-expanded="false"
+                        aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul
+                            class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+                            <li><a href="../index.html"
+                                    class="nav-link px-2 text-white">Home</a></li>
+                            <li><a href="./east.html"
+                                    class="nav-link px-2 text-white">East</a></li>
+                            <li><a href="./west.html"
+                                    class="nav-link px-2 text-white ">West</a></li>
+                            <li><a href="./north.html"
+                                    class="nav-link px-2 text-white">North</a></li>
+                            <li><a href="./south.html"
+                                    class="nav-link px-2 text-white active">South</a></li>
+                            <li><a href="#"
+                                    class="nav-link px-2 text-white">Contact
+                                    Us</a></li>
+                        </ul>
+                        <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3">
+                            <input type="search"
+                                class="form-control form-control-dark"
+                                placeholder="Search..."
+                                aria-label="Search">
+                        </form>
                     </div>
-                </div>
-            </div>
-        </div>
-    </header>
-    <section class="container-fluid fade-up scroll-animation">
-        <div class="row banner">
-            <div class="col-md-12">
-                <h1>SOUTH-MONUMENTS</h1>
-                <p> historical monuments in the East, that usually includes regions such as Asia, the Middle East, and
-                    parts of Eastern Europe.</p>
-                <div class="down-arrow">
-                    <a style="color: #343a40; transition: 0.5s ease-in-out;" href="#slider"><i
-                            class="bi bi-arrow-down-circle"></i>
-                    </a>
-
-                </div>
-            </div>
-        </div>
-        <div class="thick-line mb-5"></div>
-        <div id="slider" class="slider mt-2 scroll-animation">
-            <!-- list Items -->
-            <div class="list">
-                <div class="item active">
-                    <img src="../images/East/chinawall.webp">
-                    <div class="content">
-                        <p>CHINA</p>
-                        <h3>Great Wall of China</h3>
-                        <p>
-                            A series of fortifications built to protect the northern borders of China from invasions, stretching over 13,000 miles.
-                        </p>    
-                        <a href="https://www.skyscanner.net" class="btn-book-ticket">Book Ticket</a>
-                    </div>
-                </div>
-                <div class="item">
-                    <img src="../images/East/pyramit-of-giza.webp">
-                    <div class="content">
-                        <p>EGYPT</p>
-                        <h3>Pyramids of Giza</h3>
-                        <p>
-                            The iconic pyramids, including the Great Pyramid of Khufu, are among the most famous and ancient monuments in the world, dating back to around 2580-2560 BCE.
-                        </p>
-                        <a href="https://www.skyscanner.net" class="btn-book-ticket">Book Ticket</a>
-                    </div>
-                </div>
-                <div class="item">
-                    <img src="../images/East/Petra.webp">
-                    <div class="content">
-                        <p>JORDAN</p>
-                        <h3>Petra</h3>
-                        <p>
-                            An ancient city carved into rose-red cliffs, Petra was the capital of the Nabataean Kingdom and a major trade center in antiquity.
-                        </p>
-                        <a href="https://www.skyscanner.net" class="btn-book-ticket">Book Ticket</a>
-                    </div>
-                </div>
-                <div class="item">
-                    <img src="../images/East/babylon.webp">
-                    <div class="content">
-                        <p>IRAQ</p>
-                        <h3>Babylon</h3>
-                        <p>
-                            The ruins of the ancient city of Babylon, once the center of the Babylonian Empire, featuring the Ishtar Gate and remnants of the Hanging Gardens (one of the Seven Wonders of the Ancient World).
-                        </p>
-                        <a href="https://www.skyscanner.net" class="btn-book-ticket">Book Ticket</a>
-                    </div>
-                </div>
-                <div class="item">
-                    <img src="../images/East/dome-of-the-rock.webp">
-                    <div class="content">
-                        <p>JERUSALEM</p>
-                        <h3>Dome of the Rock</h3>
-                        <p>
-                            A significant Islamic shrine located on Temple Mount, with great religious and historical importance to Muslims, Jews, and Christians.
-                        </p>
-                        <a href="https://www.skyscanner.net" class="btn-book-ticket">Book Ticket</a>
-                    </div>
-                </div>
-                <div class="item">
-                    <img src="../images/East/angkor-wat.webp">
-                    <div class="content">
-                        <p>CAMBODIA</p>
-                        <h3>Angkor Wat</h3>
-                        <p>
-                            A massive temple complex built in the 12th century, originally dedicated to the Hindu god Vishnu, later converted to a Buddhist temple. It's the largest religious monument in the world.
-                        </p>
-                        <a href="https://www.skyscanner.net" class="btn-book-ticket">Book Ticket</a>
-                    </div>
-                </div>
-                <div class="item">
-                    <img src="../images/East/himeji castle.webp">
-                    <div class="content">
-                        <p>JAPAN</p>
-                        <h3>Himeji Castle</h3>
-                        <p>
-                            A well-preserved samurai-era castle with stunning architecture.
-                        </p>
-                        <a href="https://www.skyscanner.net" class="btn-book-ticket">Book Ticket</a>
-                    </div>
-                </div>
-                <div class="item">
-                    <img src="../images/East/Gyeongbokgung Palace.webp">
-                    <div class="content">
-                        <p>SOUTH KOREA</p>
-                        <h3>Gyeongbokgung Palace</h3>
-                        <p>
-                            The main palace of the Joseon Dynasty, known for its elegant design.
-                        </p>
-                        <a href="https://www.skyscanner.net" class="btn-book-ticket">Book Ticket</a>
-                    </div>
-                </div>
-                <div class="item">
-                    <img src="../images/East/Persepolis.webp">
-                    <div class="content">
-                        <p>IRAN</p>
-                        <h3>Persepolis</h3>
-                        <p>
-                            The main palace of the Joseon Dynasty, known for its elegant design.
-                        </p>
-                        <a href="https://www.skyscanner.net" class="btn-book-ticket">Book Ticket</a>
-                    </div>
-                </div>
-            </div>
-            <!-- button arrows -->
-            <div class="arrows">
-                <button id="prev"><</button>
-                        <button id="next">></button>
-            </div>
-            <!-- thumbnail -->
-            <div class="thumbnail">
-                <div class="item active">
-                    <img src="../images/East/chinawall.webp">
-                    <div class="content">
-                        The Great Wall Of China
-                    </div>
-                </div>
-                <div class="item">
-                    <img src="../images/East/pyramit-of-giza.webp">
-                    <div class="content">
-                        Pyramids of Giza
-                    </div>
-                </div>
-                <div class="item">
-                    <img src="../images/East/Petra.webp">
-                    <div class="content">
-                        Petra
-                    </div>
-                </div>
-                <div class="item">
-                    <img src="../images/East/babylon.webp">
-                    <div class="content">
-                        Babylon
-                    </div>
-                </div>
-                <div class="item">
-                    <img src="../images/East/dome-of-the-rock.webp">
-                    <div class="content">
-                        Dome of the Rock
-                    </div>
-                </div>
-                <div class="item">
-                    <img src="../images/East/angkor-wat.webp">
-                    <div class="content">
-                        Angkor Wat
-                    </div>
-                </div>
-                <div class="item">
-                    <img src="../images/East/himeji castle.webp">
-                    <div class="content">
-                        Himeji Castle
-                    </div>
-                </div>
-                <div class="item">
-                    <img src="../images/East/Gyeongbokgung Palace.webp">
-                    <div class="content">
-                        Gyeongbokgung Palace
-                    </div>
-                </div>
-                <div class="item">
-                    <img src="../images/East/Persepolis.webp">
-                    <div class="content">
-                        Persepolis
-                    </div>
-                </div>
-            </div>
-        </div>
-        <h1 class="text-center mt-5 text-dark b scroll-animation">MORE INFO ABOUT MONUMENTS</h1>
-        <div class="row mt-5 scroll-animation">
-            <div class="col-md-4">
-                <div class="card">
-                    <div class="card-img-overlay d-flex flex-column justify-content-start">
-                        <h5 class="card-title text-white">Great Wall of China</h5>
-                        <button class="btn-learn-more" onclick="toggleCardText(this)">Learn More</button>
-                    </div>
-                    <img src="../images/East/chinawall.webp" class="card-img-top" alt="Great Wall of China">
-                    <div class="card-body d-none">
-                        <p class="card-text">A series of fortifications built to protect the northern borders of China from invasions, stretching over 13,000 miles.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="card">
-                    <div class="card-img-overlay d-flex flex-column justify-content-start">
-                        <h5 class="card-title text-white">Pyramids of Giza</h5>
-                        <button class="btn-learn-more" onclick="toggleCardText(this)">Learn More</button>
-                    </div>
-                    <img src="../images/East/pyramit-of-giza.webp" class="card-img-top" alt="Pyramids of Giza">
-                    <div class="card-body d-none">
-                        <p class="card-text">The iconic pyramids, including the Great Pyramid of Khufu, are among the most famous and ancient monuments in the world, dating back to around 2580-2560 BCE.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="card">
-                    <div class="card-img-overlay d-flex flex-column justify-content-start">
-                        <h5 class="card-title text-white">Petra</h5>
-                        <button class="btn-learn-more" onclick="toggleCardText(this)">Learn More</button>
-                    </div>
-                    <img src="../images/East/Petra.webp" class="card-img-top" alt="Petra">
-                    <div class="card-body d-none">
-                        <p class="card-text">An ancient city carved into rose-red cliffs, Petra was the capital of the Nabataean Kingdom and a major trade center in antiquity.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    <!-- INFO CARD -->
-        <div class="row mt-5 scroll-animation">
-            <div class="col-md-4">
-                <div class="card">
-                    <div class="card-img-overlay d-flex flex-column justify-content-start">
-                        <h5 class="card-title text-white">Babylon</h5>
-                        <button class="btn-learn-more" onclick="toggleCardText(this)">Learn More</button>
-                    </div>
-                    <img src="../images/East/babylon.webp" class="card-img-top" alt="Babylon">
-                    <div class="card-body d-none">
-                        <p class="card-text">The ruins of the ancient city of Babylon, once the center of the Babylonian Empire, featuring the Ishtar Gate and remnants of the Hanging Gardens (one of the Seven Wonders of the Ancient World).</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="card">
-                    <div class="card-img-overlay d-flex flex-column justify-content-start">
-                        <h5 class="card-title text-white">Dome of the Rock</h5>
-                        <button class="btn-learn-more" onclick="toggleCardText(this)">Learn More</button>
-                    </div>
-                    <img src="../images/East/dome-of-the-rock.webp" class="card-img-top" alt="Dome of the Rock">
-                    <div class="card-body d-none">
-                        <p class="card-text">A significant Islamic shrine located on Temple Mount, with great religious and historical importance to Muslims, Jews, and Christians.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="card">
-                    <div class="card-img-overlay d-flex flex-column justify-content-start">
-                        <h5 class="card-title text-white">Angkor Wat</h5>
-                        <button class="btn-learn-more" onclick="toggleCardText(this)">Learn More</button>
-                    </div>
-                    <img src="../images/East/angkor-wat.webp" class="card-img-top" alt="Angkor Wat">
-                    <div class="card-body d-none">
-                        <p class="card-text">A massive temple complex built in the 12th century, originally dedicated to the Hindu god Vishnu, later converted to a Buddhist temple. It's the largest religious monument in the world.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- INFO CARD -->
-    </section>
-
-    <footer style="border-top: 5px black solid;margin-top: 20px;" class="py-5 bg-dark scroll-animation">
-        <div class="container">
-            <div class="row">
-                <div class="col-12 col-md">
-                    <img src="../images/logo.png" alt="Logo" class="rounded" width="60" height="60" class="mb-2">
-                    <small class="d-block mt-2 text-light">&copy; 2025</small>
-                    <div class="mt-1">
-                        <a href="#" class="text-light me-2"><i class="bi bi-facebook"></i></a>
-                        <a href="#" class="text-light me-2"><i class="bi bi-twitter"></i></a>
-                        <a href="#" class="text-light me-2"><i class="bi bi-instagram"></i></a>
-                        <a href="#" class="text-light me-2"><i class="bi bi-linkedin"></i></a>
-                    </div>
-                </div>
-                <div style="font-size: larger;" class="col-6 col-md">
-                    <h4>QUICK LINKS</h4>
-                    <ul class="list-unstyled text-small">
-                        <li><a class="text-light" href="./index.html">Home</a></li>
-                        <li><a class="text-light" href="./html/east.html">East</a></li>
-                        <li><a class="text-light" href="#">West</a></li>
-                        <li><a class="text-light" href="#">North</a></li>
-                        <li><a class="text-light" href="#">South</a></li>
-                    </ul>
-                </div>
-                <div class="col-12 col-md">
-                    <h4 style="font-weight: bold;">Feedback</h4>
-                    <form>
-                        <div class="form mb-3">
-                            <label for="feedbackEmail" class="form-label">Email address</label>
-                            <input type="email" class="form-control form-control-dark" id="feedbackEmail"
-                                placeholder="name@example.com">
+                    <div class="dropdown text-end">
+                        <a href="#"
+                            class="d-block link-light text-decoration-none dropdown-toggle"
+                            id="dropdownUser1"
+                            data-toggle="dropdown" aria-expanded="false">
+                            <img src="../images/logo.png" alt="Profile Picture"
+                                class="rounded-circle" width="50"
+                                height="50">
+                        </a>
+                        <div
+                            class="dropdown-menu dropdown-menu-right text-small"
+                            aria-labelledby="dropdownUser1">
+                            <h4 class="dropdown-item">ABOUT US</h4>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="./about.html">Visit
+                                Page <i class="bi bi-arrow-up-circle"
+                                    aria-hidden="true"></i></a>
+                            <div class="dropdown-divider"></div>
+                            <h6 class="dropdown-item" href="#">X_X</h6>
                         </div>
-                        <div class="form mb-3">
-                            <label for="feedbackMessage" class="form-label">Message</label>
-                            <textarea class="form-control form-control-dark" id="feedbackMessage" rows="3"></textarea>
-                        </div>
-                        <button type="submit" style="background-color: black;color:white;" class="btn">Submit</button>
-                    </form>
+                    </div>
                 </div>
             </div>
-        </div>
-    </footer>
-</body>
-<script>
+        </header>
+        <section class="container-fluid fade-up scroll-animation">
+            <div class="row banner">
+                <div class="col-md-12">
+                    <h1>SOUTH-MONUMENTS</h1>
+                    <p> historical monuments in the East, that usually includes
+                        regions such as Asia, the Middle East, and
+                        parts of Eastern Europe.</p>
+                    <div class="down-arrow">
+                        <a style="color: #343a40; transition: 0.5s ease-in-out;"
+                            href="#slider"><i
+                                class="bi bi-arrow-down-circle"></i>
+                        </a>
+
+                    </div>
+                </div>
+            </div>
+            <div class="thick-line mb-5"></div>
+            <div id="slider" class="slider mt-2 scroll-animation">
+                <!-- list Items -->
+                <div class="list">
+                    <div class="item active">
+                        <img src="../images/East/chinawall.webp">
+                        <div class="content">
+                            <p>CHINA</p>
+                            <h3>Great Wall of China</h3>
+                            <p>
+                                A series of fortifications built to protect the
+                                northern borders of China from invasions,
+                                stretching over 13,000 miles.
+                            </p>
+                            <a href="https://www.skyscanner.net"
+                                class="btn-book-ticket">Book Ticket</a>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <img src="../images/East/pyramit-of-giza.webp">
+                        <div class="content">
+                            <p>EGYPT</p>
+                            <h3>Pyramids of Giza</h3>
+                            <p>
+                                The iconic pyramids, including the Great Pyramid
+                                of Khufu, are among the most famous and ancient
+                                monuments in the world, dating back to around
+                                2580-2560 BCE.
+                            </p>
+                            <a href="https://www.skyscanner.net"
+                                class="btn-book-ticket">Book Ticket</a>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <img src="../images/East/Petra.webp">
+                        <div class="content">
+                            <p>JORDAN</p>
+                            <h3>Petra</h3>
+                            <p>
+                                An ancient city carved into rose-red cliffs,
+                                Petra was the capital of the Nabataean Kingdom
+                                and a major trade center in antiquity.
+                            </p>
+                            <a href="https://www.skyscanner.net"
+                                class="btn-book-ticket">Book Ticket</a>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <img src="../images/East/babylon.webp">
+                        <div class="content">
+                            <p>IRAQ</p>
+                            <h3>Babylon</h3>
+                            <p>
+                                The ruins of the ancient city of Babylon, once
+                                the center of the Babylonian Empire, featuring
+                                the Ishtar Gate and remnants of the Hanging
+                                Gardens (one of the Seven Wonders of the Ancient
+                                World).
+                            </p>
+                            <a href="https://www.skyscanner.net"
+                                class="btn-book-ticket">Book Ticket</a>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <img src="../images/East/dome-of-the-rock.webp">
+                        <div class="content">
+                            <p>JERUSALEM</p>
+                            <h3>Dome of the Rock</h3>
+                            <p>
+                                A significant Islamic shrine located on Temple
+                                Mount, with great religious and historical
+                                importance to Muslims, Jews, and Christians.
+                            </p>
+                            <a href="https://www.skyscanner.net"
+                                class="btn-book-ticket">Book Ticket</a>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <img src="../images/East/angkor-wat.webp">
+                        <div class="content">
+                            <p>CAMBODIA</p>
+                            <h3>Angkor Wat</h3>
+                            <p>
+                                A massive temple complex built in the 12th
+                                century, originally dedicated to the Hindu god
+                                Vishnu, later converted to a Buddhist temple.
+                                It's the largest religious monument in the
+                                world.
+                            </p>
+                            <a href="https://www.skyscanner.net"
+                                class="btn-book-ticket">Book Ticket</a>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <img src="../images/East/himeji castle.webp">
+                        <div class="content">
+                            <p>JAPAN</p>
+                            <h3>Himeji Castle</h3>
+                            <p>
+                                A well-preserved samurai-era castle with
+                                stunning architecture.
+                            </p>
+                            <a href="https://www.skyscanner.net"
+                                class="btn-book-ticket">Book Ticket</a>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <img src="../images/East/Gyeongbokgung Palace.webp">
+                        <div class="content">
+                            <p>SOUTH KOREA</p>
+                            <h3>Gyeongbokgung Palace</h3>
+                            <p>
+                                The main palace of the Joseon Dynasty, known for
+                                its elegant design.
+                            </p>
+                            <a href="https://www.skyscanner.net"
+                                class="btn-book-ticket">Book Ticket</a>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <img src="../images/East/Persepolis.webp">
+                        <div class="content">
+                            <p>IRAN</p>
+                            <h3>Persepolis</h3>
+                            <p>
+                                The main palace of the Joseon Dynasty, known for
+                                its elegant design.
+                            </p>
+                            <a href="https://www.skyscanner.net"
+                                class="btn-book-ticket">Book Ticket</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- button arrows -->
+                <div class="arrows">
+                    <button id="prev"><</button>
+                    <button id="next">></button>
+                </div>
+                <!-- thumbnail -->
+                <div class="thumbnail">
+                    <div class="item active">
+                        <img src="../images/East/chinawall.webp">
+                        <div class="content">
+                            The Great Wall Of China
+                        </div>
+                    </div>
+                    <div class="item">
+                        <img src="../images/East/pyramit-of-giza.webp">
+                        <div class="content">
+                            Pyramids of Giza
+                        </div>
+                    </div>
+                    <div class="item">
+                        <img src="../images/East/Petra.webp">
+                        <div class="content">
+                            Petra
+                        </div>
+                    </div>
+                    <div class="item">
+                        <img src="../images/East/babylon.webp">
+                        <div class="content">
+                            Babylon
+                        </div>
+                    </div>
+                    <div class="item">
+                        <img src="../images/East/dome-of-the-rock.webp">
+                        <div class="content">
+                            Dome of the Rock
+                        </div>
+                    </div>
+                    <div class="item">
+                        <img src="../images/East/angkor-wat.webp">
+                        <div class="content">
+                            Angkor Wat
+                        </div>
+                    </div>
+                    <div class="item">
+                        <img src="../images/East/himeji castle.webp">
+                        <div class="content">
+                            Himeji Castle
+                        </div>
+                    </div>
+                    <div class="item">
+                        <img src="../images/East/Gyeongbokgung Palace.webp">
+                        <div class="content">
+                            Gyeongbokgung Palace
+                        </div>
+                    </div>
+                    <div class="item">
+                        <img src="../images/East/Persepolis.webp">
+                        <div class="content">
+                            Persepolis
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <h1 class="text-center mt-5 text-dark b scroll-animation">MORE INFO
+                ABOUT MONUMENTS</h1>
+            <div class="row mt-5 scroll-animation">
+                <div class="col-md-4">
+                    <div class="card">
+                        <div
+                            class="card-img-overlay d-flex flex-column justify-content-start">
+                            <h5 class="card-title text-white">Great Wall of
+                                China</h5>
+                            <button class="btn-learn-more"
+                                onclick="toggleCardText(this)">Learn
+                                More</button>
+                        </div>
+                        <img src="../images/East/chinawall.webp"
+                            class="card-img-top" alt="Great Wall of China">
+                        <div class="card-body d-none">
+                            <p class="card-text">The Great Wall of China is an
+                                ancient series of fortifications that stretches
+                                over 13,000 miles across northern China. Built
+                                over several dynasties, starting in the 7th
+                                century BC, it was primarily constructed to
+                                protect Chinese states from invasions by nomadic
+                                tribes. Made from materials like stone, brick,
+                                and earth, it features watchtowers and gates.
+                                The Great Wall is an architectural marvel and a
+                                UNESCO World Heritage site, symbolizing China’s
+                                strength and historical resilience.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <div
+                            class="card-img-overlay d-flex flex-column justify-content-start">
+                            <h5 class="card-title text-white">Pyramids of
+                                Giza</h5>
+                            <button class="btn-learn-more"
+                                onclick="toggleCardText(this)">Learn
+                                More</button>
+                        </div>
+                        <img src="../images/East/pyramit-of-giza.webp"
+                            class="card-img-top" alt="Pyramids of Giza">
+                        <div class="card-body d-none">
+                            <p class="card-text">The iconic pyramids, including
+                                the Great Pyramid of Khufu, are among the most
+                                famous and ancient monuments in the world,
+                                dating back to around 2580-2560 BCE.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <div
+                            class="card-img-overlay d-flex flex-column justify-content-start">
+                            <h5 class="card-title text-white">Petra</h5>
+                            <button class="btn-learn-more"
+                                onclick="toggleCardText(this)">Learn
+                                More</button>
+                        </div>
+                        <img src="../images/East/Petra.webp"
+                            class="card-img-top" alt="Petra">
+                        <div class="card-body d-none">
+                            <p class="card-text">The Pyramid of Giza, located
+                                near Cairo, Egypt, is one of the Seven Wonders
+                                of the Ancient World and the only one still
+                                standing. Built around 4,500 years ago for the
+                                Pharaoh Khufu, it is the largest of the three
+                                pyramids at Giza. The pyramid was originally
+                                covered in smooth limestone casing, making it
+                                shine brightly under the sun. It stands as a
+                                testament to ancient Egyptian engineering and
+                                remains one of the most iconic landmarks in the
+                                world..</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- INFO CARD -->
+            <div class="row mt-5 scroll-animation">
+                <div class="col-md-4">
+                    <div class="card">
+                        <div
+                            class="card-img-overlay d-flex flex-column justify-content-start">
+                            <h5 class="card-title text-white">Babylon</h5>
+                            <button class="btn-learn-more"
+                                onclick="toggleCardText(this)">Learn
+                                More</button>
+                        </div>
+                        <img src="../images/East/babylon.webp"
+                            class="card-img-top" alt="Babylon">
+                        <div class="card-body d-none">
+                            <p class="card-text">Babylon was an ancient city
+                                located in present-day Iraq, known for its
+                                cultural, architectural, and scientific
+                                achievements. It was the capital of the
+                                Babylonian Empire, particularly under King
+                                Nebuchadnezzar II, who is believed to have
+                                constructed the legendary Hanging Gardens of
+                                Babylon, one of the Seven Wonders of the Ancient
+                                World. The Ishtar Gate, with its blue-glazed
+                                bricks and intricate carvings, was another
+                                iconic feature of the city. Babylon played a
+                                significant role in the development of law,
+                                astronomy, and literature in ancient
+                                Mesopotamia.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <div
+                            class="card-img-overlay d-flex flex-column justify-content-start">
+                            <h5 class="card-title text-white">Dome of the
+                                Rock</h5>
+                            <button class="btn-learn-more"
+                                onclick="toggleCardText(this)">Learn
+                                More</button>
+                        </div>
+                        <img src="../images/East/dome-of-the-rock.webp"
+                            class="card-img-top" alt="Dome of the Rock">
+                        <div class="card-body d-none">
+                            <p class="card-text">The Dome of the Rock is an
+                                iconic Islamic shrine located on the Temple
+                                Mount in Jerusalem. Completed in 691 CE, it is
+                                one of the oldest and most beautiful examples of
+                                Islamic architecture. The golden dome sits over
+                                a rock that holds religious significance for
+                                both Muslims, who believe it is the site of
+                                Prophet Muhammad's ascension to heaven, and
+                                Jews, who regard it as the location of the
+                                ancient Jewish Temple. The Dome of the Rock is a
+                                major religious landmark and a symbol of
+                                Jerusalem's historical and spiritual
+                                importance.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <div
+                            class="card-img-overlay d-flex flex-column justify-content-start">
+                            <h5 class="card-title text-white">Angkor Wat</h5>
+                            <button class="btn-learn-more"
+                                onclick="toggleCardText(this)">Learn
+                                More</button>
+                        </div>
+                        <img src="../images/East/angkor-wat.webp"
+                            class="card-img-top" alt="Angkor Wat">
+                        <div class="card-body d-none">
+                            <p class="card-text">Angkor Wat, located in
+                                Cambodia, is the largest religious monument in
+                                the world. Built in the early 12th century by
+                                the Khmer King Suryavarman II, it was originally
+                                a Hindu temple dedicated to the god Vishnu, but
+                                later became a Buddhist temple. Known for its
+                                stunning architecture, intricate bas-reliefs,
+                                and vast scale, Angkor Wat is a symbol of
+                                Cambodia's cultural heritage and is a UNESCO
+                                World Heritage site. It remains one of the most
+                                visited archaeological sites in the world.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- INFO CARD -->
+        </section>
+
+        <footer style="border-top: 5px black solid;margin-top: 20px;"
+            class="py-5 bg-dark scroll-animation">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 col-md">
+                        <img src="../images/logo.png" alt="Logo" class="rounded"
+                            width="60" height="60" class="mb-2">
+                        <small class="d-block mt-2 text-light">&copy;
+                            2025</small>
+                        <div class="mt-1">
+                            <a href="#" class="text-light me-2"><i
+                                    class="bi bi-facebook"></i></a>
+                            <a href="#" class="text-light me-2"><i
+                                    class="bi bi-twitter"></i></a>
+                            <a href="#" class="text-light me-2"><i
+                                    class="bi bi-instagram"></i></a>
+                            <a href="#" class="text-light me-2"><i
+                                    class="bi bi-linkedin"></i></a>
+                        </div>
+                    </div>
+                    <div style="font-size: larger;" class="col-6 col-md">
+                        <h4>QUICK LINKS</h4>
+                        <ul class="list-unstyled text-small">
+                            <li><a class="text-light"
+                                    href="../index.html">Home</a></li>
+                            <li><a class="text-light"
+                                    href="./east.html">East</a></li>
+                            <li><a class="text-light"
+                                    href="./west.html">West</a></li>
+                            <li><a class="text-light"
+                                    href="./north.html">North</a></li>
+                            <li><a class="text-light"
+                                    href="./south.html">South</a></li>
+                            <li><a class="text-light" href="./about.html">About
+                                    Us</a></li>
+                            <li><a class="text-light"
+                                    href="./contact.html">Contact Us</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-12 col-md">
+                        <h4 style="font-weight: bold;">Feedback</h4>
+                        <form>
+                            <div class="form mb-3">
+                                <label for="feedbackEmail"
+                                    class="form-label">Email address</label>
+                                <input type="email"
+                                    class="form-control form-control-dark"
+                                    id="feedbackEmail"
+                                    placeholder="name@example.com">
+                            </div>
+                            <div class="form mb-3">
+                                <label for="feedbackMessage"
+                                    class="form-label">Message</label>
+                                <textarea class="form-control form-control-dark"
+                                    id="feedbackMessage" rows="3"></textarea>
+                            </div>
+                            <button type="submit"
+                                style="background-color: black;color:white;"
+                                class="btn">Submit</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </body>
+    <script>
     $(window).on('load', function () {
         $('.loader').addClass('loaded');
         $('.loader__content').addClass('fade-out');
