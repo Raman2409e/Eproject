@@ -129,7 +129,7 @@ header:hover .nav-link {
 
 @media (max-width: 992px) {
     .dropdown {
-        display: none;
+        
     }
 
     .d {
@@ -1357,7 +1357,7 @@ h4 {
 }
 
 .c {
-    background-color: #87acac;
+    background-color: #aec2c2;
     font-weight: bold;
     padding: 250px;
     position: relative;
@@ -1438,4 +1438,46 @@ h4 {
     .c .social-icons {
         gap: 2rem;
     }
+}
+
+.gallery-img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    object-fit: cover;
+}
+.gallery-nav {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+.filter-btn {
+    padding: 10px 20px;
+    background-color: #fff;
+    color: #000;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    font-weight: bold;
+}
+.filter-btn.active {
+    background-color: #5e923f;
+    color: white;
+}
+.btn-group .btn.active {
+    transition: 0.3s ease-in-out;
+    background-color: #5e923f;
+    color: white;
+    border-color: #ffffff;
+}
+.g::after {
+    content: '';
+    display: block;
+    width: 15%;
+    height: 10px;
+    background-color: #58724e;
+    margin: 10px auto 0;
+    border-radius: 5px;
 }

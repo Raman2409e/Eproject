@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Historical Monuments-Contact Us</title>
+    <title>Historical Monuments-Gallery</title>
     <link rel="stylesheet" href="../css/bootstrap.css">
     <link rel="shortcut icon" href="../images/logo.png" type="mage/icon">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
@@ -18,7 +18,7 @@
     <link rel="stylesheet" href="../css/loaders/loader.css">
 </head>
 
-<body style="background-color: #f8f9fa;">
+<body style="    background-image: linear-gradient(to top, #304647, 90%, #000);">
     <div class="loader">
         <div class="loader__content">
             <div class="loader__box"></div>
@@ -42,8 +42,8 @@
                         <li><a href="./west.html" class="nav-link px-2 text-white ">West</a></li>
                         <li><a href="./north.html" class="nav-link px-2 text-white">North</a></li>
                         <li><a href="./south.html" class="nav-link px-2 text-white">South</a></li>
-                        <li><a href="./contact.html" class="nav-link px-2 text-white active">Contact Us</a></li>
-                        <li><a href="./gallery.html" class="nav-link px-2 text-white">Gallery</a></li>
+                        <li><a href="./contact.html" class="nav-link px-2 text-white ">Contact Us</a></li>
+                        <li><a href="./gallery.html" class="nav-link px-2 text-white active">Gallery</a></li>
                     </ul>
                     <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3">
                         <input type="search" class="form-control form-control-dark" placeholder="Search..."
@@ -69,121 +69,125 @@
 
         </div>
     </header>
-    <section>
-        <div class="container-fluid c">
-            <h1 class="text-dark text-center fade-in">Contact Us</h1>
-            <p class="text-center mt-3 fade-in">"Have questions or need assistance? Contact us for inquiries, support,
-                or business collaborations—we're here to help!"</p>
+    <section class="text-center text-light my-4">
+        <h1 class="fw-bold mb-4 g">OUR GALLERY</h1>
+
+        <!-- Gallery Filter Navbar -->
+        <div class="btn-group mb-4" role="group" aria-label="Gallery Filter">
+            <button class="btn btn-outline-light active" data-target="east">East</button>
+            <button class="btn btn-outline-light" data-target="west">West</button>
+            <button class="btn btn-outline-light" data-target="north">North</button>
+            <button class="btn btn-outline-light" data-target="south">South</button>
         </div>
-        <div class="container mt-5">
-            <div class="row">
-                <div class="col-md-7 fade-in scroll-animation">
-                    <form>
-                        <div class="row">
-                            <div class="col-md-6">
-                                <label for="exampleInputEmail1" class="form-label"></label>
-                                <input type="email" class="form-control form-control-dark" id="exampleInputEmail1"
-                                    aria-describedby="emailHelp" placeholder="Email">
+
+        <!-- Gallery Sections -->
+        <!-- EAST Section (Default Visible) -->
+        <div class="container">
+            <div class="row gallery-section" id="east">
+                <div class="col-12 p-3 rounded"
+                    style="background-image: linear-gradient(to top, #5e923f, 70%, transparent); box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);">
+                    <h2 class="text-start fw-bold mb-3">EAST</h2>
+                    <div class="row g-2">
+                        <div class="col-md-4"><img src="../images/East/chinawall.webp" alt="China Wall"
+                                class="img-fluid rounded shadow"></div>
+                        <div class="col-md-4"><img src="../images/East/angkor-wat.webp" alt="Angkor Wat"
+                                class="img-fluid rounded shadow"></div>
+                        <div class="col-md-4"><img src="../images/East/babylon.webp" alt="Babylon"
+                                class="img-fluid rounded shadow"></div>
+                        <div class="col-md-4"><img src="../images/East/dome-of-the-rock.webp" alt="Dome of the Rock"
+                                class="img-fluid rounded shadow"></div>
+                        <div class="col-md-4"><img src="../images/East/Gyeongbokgung Palace.webp"
+                                alt="Gyeongbokgung Palace" class="img-fluid rounded shadow"></div>
+                        <div class="col-md-4"><img src="../images/East/pyramit-of-giza.webp" alt="Pyramid of Giza"
+                                class="img-fluid rounded shadow"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- WEST Section (Hidden by Default) -->
+        <div class="container">
+            <div class="row gallery-section d-none" id="west">
+                <div class="col-12 p-3 rounded"
+                    style="background-image: linear-gradient(to top, #dab027, 80%, transparent); box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);">
+                    <h2 class="text-start fw-bold mb-3">WEST</h2>
+                    <div class="row g-2">
+                        <div class="col-md-6">
+                            <img src="../images/West/big-ben.webp" alt="Big Ben" class="img-fluid rounded shadow"
+                                style="height: 100%; object-fit: cover;">
+                        </div>
+                        <div class="col-md-6">
+                            <div class="row g-2">
+                                <div class="col-6">
+                                    <img src="../images/West/christ-the-redeemer.webp" alt="Christ the Redeemer"
+                                        class="img-fluid rounded shadow">
+                                </div>
+                                <div class="col-6">
+                                    <img src="../images/West/colosseum.webp" alt="Colosseum"
+                                        class="img-fluid rounded shadow">
+                                </div>
+                                <div class="col-12">
+                                    <img src="../images/West/eiffel-tower.webp" alt="Eiffel Tower"
+                                        class="img-fluid rounded shadow">
+                                </div>
                             </div>
-                            <div class="col-md-6">
-                                <label for="exampleInputPhone1" class="form-label"></label>
-                                <input type="phone" class="form-control form-control-dark" id="exampleInputPhone1"
-                                    aria-describedby="phoneHelp" placeholder="Phone">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="container">
+            <div class="row gallery-section d-none" id="north"> <!-- Default hidden -->
+                <div class="col-12 p-3 rounded"
+                    style="background-image: linear-gradient(to top, #4b5f7a, 80%, transparent); box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);">
+                    <h2 class="text-start fw-bold mb-3">NORTH</h2>
+                    <div class="row g-2">
+                        <div class="col-md-6">
+                            <img src="../images/North/bran-castle.webp" alt="Bran Castle"
+                                class="img-fluid rounded shadow">
+                        </div>
+                        <div class="col-md-6">
+                            <img src="../images/North/edinburgh-castle.webp" alt="Edinburgh Castle"
+                                class="img-fluid rounded shadow">
+                        </div>
+                        <div class="col-md-4">
+                            <img src="../images/North/mount-rushmore.webp" alt="Mount Rushmore"
+                                class="img-fluid rounded shadow">
+                        </div>
+                        <div class="col-md-4">
+                            <img src="../images/North/niagara-falls.webp" alt="Niagara Falls"
+                                class="img-fluid rounded shadow">
+                        </div>
+                        <div class="col-md-4">
+                            <img src="../images/North/stonehenge.webp" alt="Stonehenge"
+                                class="img-fluid rounded shadow">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+            <div class="container">
+            <div class="row gallery-section d-none" id="south">
+                <div class="col-12 p-3 rounded"
+                    style="background-image: linear-gradient(to top, #923f3f, 80%, transparent); box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);">
+                    <h2 class="text-start fw-bold mb-3">SOUTH</h2>
+                    <div class="row g-2">
+                        <div class="col-md-6">
+                            <img src="../images/South/chichen-itza.webp" class="img-fluid rounded shadow" style="height: 740px;">
+                        </div>
+                        <div class="col-md-6">
+                            <div class="row g-2">
+                                <div class="col-12"><img src="../images/South/taj-mahal.webp" class="img-fluid rounded shadow"></div>
+                                <div class="col-12"><img src="../images/East/Petra.webp" class="img-fluid rounded shadow"></div>
                             </div>
                         </div>
-                        <div class=" col-md-12">
-                            <label for="exampleInputPassword1" class="form-label"></label>
-                            <input type="text" class="form-control form-control-dark" id="exampleInputName1"
-                                placeholder="Name">
-                        </div>
-                        <div class="form mb-3 col-md-12">
-                            <label for="feedbackMessage" class="form-label"></label>
-                            <textarea class="form-control form-control-dark" id="feedbackMessage" rows="3"
-                                placeholder="Message"></textarea>
-                        </div>
-                        <button type="submit" style="background-color: black;color:white;"
-                            class="btn form-control-dark">Submit</button>
-                    </form>
-                </div>
-                <div class="col-md-5 fade-in scroll-animation">
-                    <div style="background-color: #476769; padding: 20px;border-radius: 20px;" class="ms-5 col-md-12">
-                        <h2>
-                            Our Newsletter
-                        </h2>
-                        <p>
-                            "Subscribe to our newsletter for the latest updates and exclusive offers!"
-                        </p>
-                        <div class="col-md-12 mt-3 mb-3">
-                            <label for="exampleInputEmail1" class="form-label"></label>
-                            <input type="email" class="form-control form-control-dark" id="exampleInputEmail1"
-                                aria-describedby="emailHelp" placeholder="Email">
-                        </div>
-                        <button type="submit" style="background-color: black;color:white;"
-                            class="btn form-control-dark col-md-12 mb-3">Submit</button>
-
                     </div>
                 </div>
             </div>
-            <div class="row mb-5 mt-5">
-                <div class="col-md-4 fade-in scroll-animation">
-                    <div style="background-color: #719396;padding: 25px;border-radius: 20px;font-weight: 700;"
-                        class="col-md-12 mt-4 mb-4">
-                        <i style="font-size: 2rem;" class="bi bi-earbuds">
-                            <h3 style="font-weight: bold;" class="text-center">
-                                (+92) 0345 1234567
-                            </h3>
-                        </i>
-                        <p class="text-center">"For business inquiries, please contact us at (+92) 0345 1234567 ."</p>
-                    </div>
-
-                </div>
-                <div class="col-md-4 fade-in scroll-animation">
-                    <div style="background-color: #5b6b6d;padding: 25px;border-radius: 20px;font-weight: 700;"
-                        class="col-md-12 mt-4 mb-4">
-                        <i style="font-size: 2rem;" class="bi bi-envelope">
-                            <h3 style="font-weight: bold;" class="text-center text-dark">
-                                abc@gmail.com
-                            </h3>
-                        </i>
-                        <p class="text-center text-dark">"For business inquiries, please email us at abc@gmail.com."</p>
-                    </div>
-
-                </div>
-                <div class="col-md-4 fade-in scroll-animation">
-                    <div style="background-color:white;padding: 25px;border-radius: 20px;font-weight: 700;box-shadow: 0 0 30px rgb(0,0,0,0.5);"
-                        class="col-md-12 mt-4 mb-4">
-                        <i style="font-size: 2rem;" class="bi bi-geo-alt text-dark">
-                            <h3 style="font-weight: bold;" class="text-center text-dark">
-                                Soldier Bazar, Karachi
-                            </h3>
-                        </i>
-                        <p class="text-center text-dark">"For business visits, find us at Soldier Bazar, Karachi."</p>
-                    </div>
-
-                </div>
-            </div>
-            <div class="row mb-5">
-                <div class="col-md-12 fade-in scroll-animation">
-                    <div
-                        style="max-width:100%;list-style:none; transition: none;overflow:hidden;width:100%;height:300px;border-radius: 20px;">
-                        <div id="embedded-map-display" style="height:100%; width:100%;max-width:100%;"><iframe
-                                style="height:100%;width:100%;border:0;" frameborder="0"
-                                src="https://www.google.com/maps/embed/v1/place?q=soldier+bazar+karachi&key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8"></iframe>
-                        </div><a class="google-map-code-enabler" href="https://www.bootstrapskins.com/themes"
-                            id="enable-map-info">premium bootstrap themes</a>
-                        <style>
-                            #embedded-map-display img.text-marker {
-                                max-width: none !important;
-                                background: none !important;
-                            }
-
-                            img {
-                                max-width: none
-                            }
-                        </style>
-                    </div>
-                </div>
-            </div>
+        </div>
         </div>
         </div>
     </section>
@@ -233,6 +237,24 @@
         </div>
     </footer>
     <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const buttons = document.querySelectorAll(".btn-group .btn");
+            const sections = document.querySelectorAll(".gallery-section");
+
+            buttons.forEach(button => {
+                button.addEventListener("click", function () {
+                    let target = this.getAttribute("data-target");
+
+                    sections.forEach(section => section.classList.add("d-none"));
+                    document.getElementById(target).classList.remove("d-none");
+
+                    buttons.forEach(btn => btn.classList.remove("active"));
+                    this.classList.add("active");
+                });
+            });
+
+            document.getElementById("east").classList.remove("d-none");
+        });
         $(window).on('load', function () {
             $('.loader').addClass('loaded');
             $('.loader__content').addClass('fade-out');
