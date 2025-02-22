@@ -1357,7 +1357,6 @@ h4 {
 }
 
 .c {
-    
     background-color: #87acac;
     font-weight: bold;
     padding: 250px;
@@ -1419,4 +1418,24 @@ h4 {
     opacity: 1;
     color: #d47f86;
     transform: scale(1.1);
+}
+
+@media (max-width: 768px) {
+    .c {
+        padding: 100px 20px;
+    }
+
+    .c h1 {
+        font-size: 3rem;
+    }
+
+    .c p {
+        font-size: 1rem;
+        width: 80%;
+        margin-left: 10%;
+    }
+
+    .c .social-icons {
+        gap: 2rem;
+    }
 }
