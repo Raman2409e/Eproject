@@ -1481,3 +1481,6 @@ h4 {
     margin: 10px auto 0;
     border-radius: 5px;
 }
+.gallery-section img{
+    object-fit: cover;
+}
