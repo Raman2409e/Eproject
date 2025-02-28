@@ -828,23 +828,23 @@ body {
     transform: translateY(0);
 }
 
-.title {
+.sp .title {
     margin: 30px;
     text-align: center;
 }
 
-.title h1 {
-    font-size: 4.5rem;
+.h1 {
+    font-size: 6rem;
     font-weight: bold;
     color: #343638;
 }
 
-.title p {
+.sp .title p {
     font-size: 1.5rem;
     color: #343638;
 }
 
-.title .btn a {
+ .sp .title .btn a {
     font-size: 1.5rem;
     font-weight: bold;
     color: #343638;
@@ -861,28 +861,114 @@ body {
     transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
 }
 
-.title .btn a:hover {
+.sp .title .btn a:hover {
     background-color: #d47f86;
     transform: scale(1.01);
 }
 
 @media (max-width: 768px) {
-    .title {
+    .sp .title {
         margin: 20px;
         text-align: center;
     }
 
-    .title h1 {
-        font-size: 2.5rem;
+    .h1 {
+        font-size: 5rem;
     }
 
-    .title p {
+    .sp .title p {
         font-size: 1rem;
     }
 
-    .title .btn a {
+    .sp .title .btn a {
         font-size: 1rem;
         padding: 8px 16px;
+    }
+}
+
+@media (max-width: 425px) {
+    .h1 {
+        font-size: 4rem;
+    }
+
+    .sp .title p {
+        font-size: 0.8rem;
+    }
+}
+
+@media (max-width: 365px) {
+    .h1 {
+        font-size: 3rem;
+    }
+
+    .sp .title p {
+        font-size: 0.8rem;
+    }
+
+    .sp .title .btn a {
+        font-size: 1rem;
+        padding: 8px 16px;
+    }
+
+    .imgs {
+        margin-left: 0;
+        text-align: center;
+    }
+
+    .img1,
+    .img2,
+    .img3 {
+        margin-left: 0;
+        margin-top: 10px;
+        margin: 5px;
+        width: 100%;
+        max-width: 100px;
+        height: auto;
+    }
+
+    .boxes .col-lg-4 {
+        margin: 10px;
+        padding: 10px;
+        max-width: 100%;
+    }
+
+    .boxes-btn {
+        font-size: 1rem;
+        padding: 8px 16px;
+    }
+
+    .main-article img {
+        height: auto;
+    }
+
+    .article img {
+        width: 50px;
+        height: 50px;
+    }
+
+    .article h4 {
+        font-size: 0.875rem;
+    }
+
+    .article p {
+        font-size: 0.75rem;
+    }
+
+    .subscription-box {
+        padding: 20px;
+    }
+
+    .subscription-box h2 {
+        font-size: 20px;
+    }
+
+    .subscription-box input {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .subscription-box button {
+        width: 100%;
     }
 }
 
@@ -1468,7 +1554,7 @@ h4 {
 }
 .btn-group .btn.active {
     transition: 0.3s ease-in-out;
-    background-color: #5e923f;
+    background-color: #3a3a3a;
     color: white;
     border-color: #ffffff;
 }
@@ -1483,4 +1569,89 @@ h4 {
 }
 .gallery-section img{
     object-fit: cover;
+}
+.i{
+    margin-left: 20px;
+}
+@media (max-width: 365px) {
+    .title h1 {
+        font-size: 2rem;
+    }
+
+    .title p {
+        font-size: 0.8rem;
+    }
+
+    .title .btn a {
+        font-size: 1rem;
+        padding: 8px 16px;
+    }
+
+    .imgs {
+        margin-left: 0;
+        text-align: center;
+    }
+
+    .img1,
+    .img2,
+    .img3 {
+        margin-left: 0;
+        margin-top: 10px;
+        margin: 5px;
+        width: 100%;
+        max-width: 100px;
+        height: auto;
+    }
+
+    .boxes .col-lg-4 {
+        margin: 10px;
+        padding: 10px;
+        max-width: 100%;
+    }
+
+    .boxes-btn {
+        font-size: 1rem;
+        padding: 8px 16px;
+    }
+
+    .main-article img {
+        height: auto;
+    }
+
+    .article img {
+        width: 50px;
+        height: 50px;
+    }
+
+    .article h4 {
+        font-size: 0.875rem;
+    }
+
+    .article p {
+        font-size: 0.75rem;
+    }
+
+    .subscription-box {
+        padding: 20px;
+    }
+
+    .subscription-box h2 {
+        font-size: 20px;
+    }
+
+    .subscription-box input {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .subscription-box button {
+        width: 100%;
+    }
+}
+
+@media (max-width: 365){
+    #historical-monuments{
+        right: 0;
+    }
+    
 }
