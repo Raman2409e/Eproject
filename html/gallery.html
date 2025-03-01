@@ -74,10 +74,10 @@
 
         <!-- Gallery Filter Navbar -->
         <div class="btn-group mb-4" role="group" aria-label="Gallery Filter">
-            <button class="btn btn-outline-light active" data-target="east">East</button>
-            <button class="btn btn-outline-light" data-target="west">West</button>
-            <button class="btn btn-outline-light" data-target="north">North</button>
-            <button class="btn btn-outline-light" data-target="south">South</button>
+            <button class="btn btn-outline-light filter-btn" data-target="east">East</button>
+            <button class="btn btn-outline-light filter-btn" data-target="west">West</button>
+            <button class="btn btn-outline-light filter-btn" data-target="north">North</button>
+            <button class="btn btn-outline-light filter-btn" data-target="south">South</button>
         </div>
 
         <!-- Gallery Sections -->
@@ -248,13 +248,25 @@
                     sections.forEach(section => section.classList.add("d-none"));
                     document.getElementById(target).classList.remove("d-none");
 
-                    buttons.forEach(btn => btn.classList.remove("active"));
+                    buttons.forEach(btn => btn.classList.remove("active", "btn-success", "btn-warning", "btn-primary", "btn-danger"));
                     this.classList.add("active");
+
+                    // Change button color based on target
+                    if (target === "east") {
+                        this.classList.add("btn-success");
+                    } else if (target === "west") {
+                        this.classList.add("btn-warning");
+                    } else if (target === "north") {
+                        this.classList.add("btn-primary");
+                    } else if (target === "south") {
+                        this.classList.add("btn-danger");
+                    }
                 });
             });
 
-            document.getElementById("east").classList.remove("d-none");
+            document.querySelector(".filter-btn[data-target='east']").click();
         });
+
         $(window).on('load', function () {
             $('.loader').addClass('loaded');
             $('.loader__content').addClass('fade-out');

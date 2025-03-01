@@ -1549,13 +1549,12 @@ h4 {
     font-weight: bold;
 }
 .filter-btn.active {
-    background-color: #5e923f;
-    color: white;
+    background-color: #d47f86;
+    color: black
 }
 .btn-group .btn.active {
     transition: 0.3s ease-in-out;
-    background-color: #3a3a3a;
-    color: white;
+    color:black;
     border-color: #ffffff;
 }
 .g::after {
